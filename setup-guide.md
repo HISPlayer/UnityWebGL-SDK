@@ -143,3 +143,6 @@ Input the license key that is associated with the SDK. If there is no license ke
 
 ## Build and Run
 Now the configuration it’s done, so it’s time to **Build And Run**. Open **Build Settings** and test it.
+<p align="center">
+<img src="./assets/build-run.png" width=45%>
+</p>
