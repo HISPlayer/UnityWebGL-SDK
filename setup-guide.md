@@ -15,3 +15,9 @@ Importing the package is the same as importing other normal packages in Unity. S
 ## Configure Unity for WebGL
 Once the package is imported, it is time to do some configuration inside Unity.
 First of all switch the platform for **WebGL**. Open **File > Build Settings** and then select **WebGL platform** and **switch platform**.
+
+<p align="center">
+<img src="./assets/build-settings.png" width="45%"/>
+&nbsp; &nbsp; &nbsp; &nbsp;  
+<img src="./assets/switch-platform.png" width="45%"/> 
+</p>
