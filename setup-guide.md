@@ -119,5 +119,21 @@ HISPlayer WebGL SDK supports multi streams to run multiple players with differen
 * **Material**: Attach the **Material** asset created to the **Material** section of the element.
 * **Raw Image**: Attach the **RawImage** asset created to the **RawImage** section of the element.
 * **Render Texture**: Attach the **RenderTexture** to the **RenderTexture** section of the element.
-
+<p align="center">
+<img src="./assets/multistream-properties.png">
+</p>
 If you just need a single stream, then you just need to add 1 element with 1 URL.
+
+### Auto Play
+Property to determine whether all the players will start automatically after set up. This property is shared for all players. Keep in mind that even if the Autoplay is enabled, the videos will have no sound from the beginning due to the browsers autoplay policy.
+
+### Loop Play
+Property to determine whether all the players will play the same content again automatically after reaching the end of the content. This property is shared for all players.
+
+### Disable ABR
+Property to determine whether all the players will disable ABR after set up. This property is shared for all players. This property is set to false by default. 
+Disabling ABR by setting this API to true might improve performance, especially for multi stream usage which will set all streams to the lowest resolution in the beginning.
+If you want to enable or disable the ABR of each player or stream, please refer to the DisableABR and EnableABR API in **HisPlayer API** section.
+
+### License Key
+Input the license key that is associated with the SDK. If there is no license key inputted, the default license key will be used. If the license key is not valid, the player will not work and throw an error message.
