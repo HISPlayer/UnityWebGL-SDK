@@ -23,3 +23,13 @@ First of all switch the platform for **WebGL**. Open **File > Build Settings** a
 </p>
 
 Inside the previous image in the right there is a button in the bottom left corner to open **Player Settings**. Now inside Player configuration, select **WebGL > Other Settings**. The Color Space can be Gamma or Linear. In the second case, it is needed to disable the **Auto Graphics API** option. 
+
+<p align="center">
+<img src="./assets/player-settings.png" width="45%"/>
+&nbsp; &nbsp; &nbsp; &nbsp;  
+<img src="./assets/linear-space.png" width="45%"/> 
+</p>
+
+Select the **HisPlayerTemplate** inside the **Resolution and Presentation** section.
+
+If this option doesn’t appear, then copy the **WebGLTemplates** folder from the **HISPlayer** package folder into the **Unity Assets** folder.
