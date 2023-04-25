@@ -64,3 +64,11 @@ public class WebGLStreamController : HisPlayerManager
 }
 ```
 It is strictly necessary to use **SetUpPlayer** before using anything else, because this function will initialize everything from the SDK in order to be able to use the rest of the functions (Play, Pause, Seek…).
+
+## Attach Unity Resources
+Let’s move to **Unity Editor** to attach all the resources. The rendering system supports **Material, RawImage** and **RenderTexture** Unity’s components.
+
+### Attach Material
+Move into Assets’ folder for creating a new **Material**. It is possible to create a new **Material** into **Assets > Create > Material**.
+
+Attach the material to the GameObject which is going to be used as a screen.
