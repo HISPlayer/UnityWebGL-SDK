@@ -137,3 +137,9 @@ If you want to enable or disable the ABR of each player or stream, please refer 
 
 ### License Key
 Input the license key that is associated with the SDK. If there is no license key inputted, the default license key will be used. If the license key is not valid, the player will not work and throw an error message.
+<p align="center">
+<img src="./assets/license-key.png">
+</p>
+
+## Build and Run
+Now the configuration it’s done, so it’s time to **Build And Run**. Open **Build Settings** and test it.
