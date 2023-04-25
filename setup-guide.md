@@ -70,5 +70,14 @@ Let’s move to **Unity Editor** to attach all the resources. The rendering syst
 
 ### Attach Material
 Move into Assets’ folder for creating a new **Material**. It is possible to create a new **Material** into **Assets > Create > Material**.
-
+<p align="center">
+<img src="./assets/material.png">
+</p>
 Attach the material to the GameObject which is going to be used as a screen.
+<p align="center">
+<img src="./assets/attach-material.png">
+</p>
+
+### Attach RawImage
+This action will be related to Unity’s Canvas. If there is not a Canvas created yet, creating a **Raw Image** will create one automatically. 
+For the creation select, select **GameObject > UI > Raw Image**
