@@ -81,3 +81,14 @@ Attach the material to the GameObject which is going to be used as a screen.
 ### Attach RawImage
 This action will be related to Unity’s Canvas. If there is not a Canvas created yet, creating a **Raw Image** will create one automatically. 
 For the creation select, select **GameObject > UI > Raw Image**
+<p align="center">
+<img src="./assets/rawimage.png">
+</p>
+Once it is created, it can be associated with the stream controller script without doing anything else (Refer to **Configure HisPlayer Properties**).
+
+### Attach RenderTexture
+First of all, check if the **Resources** folder exists and contains the **RenderTextures** folder. If it doesn’t exist then do the same process as we did before with the WebGLTemplates. In this case, look for the Resources folder and copy its contents into the Unity Assets folder. This folder contains Unity RenderTexture resources. Another option is creating RenderTexture in Assets directly.
+<br>
+The RenderTexture has to be attached to the GameObject which will be a screen for rendering the multimedia stream.
+<br>
+For creating this object, select GameObject > 3D Object > Quad. Then select the GameObject and remove the material attached to its Mesh Renderer component, then replace it with the RenderTexture created. The RenderTextures folder provided by the SDK contains the Material folder and this material is the one which is needed to be used for the replacement . If the RenderTexture resource has been created from 0, then another option is to grab the RenderTexture from the Assets folder and drop it at the end of the GameObject’s Inspector, this will create a new material automatically.
