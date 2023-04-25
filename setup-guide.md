@@ -41,3 +41,26 @@ If this option doesn’t appear, then copy the **WebGLTemplates** folder from th
 &nbsp; &nbsp; &nbsp; &nbsp;  
 <img src="./assets/webgl-assets.png" width="45%" height="50%"/> 
 </p>
+
+## Setup HISPlayer Manager
+Create a script (for example **WebGLStreamController**) which is going to inherit from **HisPlayerManager**. It is needed to include the namespace by adding **‘using HisPlayerAPI;’** and add this component to a GameObject. It is recommended to create an **Empty GameObject** for this.
+<br>
+Now it’s time to call the **‘SetUpPlayer()’** function in order to initialize the stream environment internally. This function can be called whenever it’s needed, so it could be from the beginning of with an input.
+<br>
+For example, using the Awake function:
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using HisPlayerAPI;
+
+public class WebGLStreamController : HisPlayerManager
+{
+    protected override void Awake()
+    {
+        base.Awake();
+        SetUpPlayer();
+    }
+}
+```
+It is strictly necessary to use **SetUpPlayer** before using anything else, because this function will initialize everything from the SDK in order to be able to use the rest of the functions (Play, Pause, Seek…).
