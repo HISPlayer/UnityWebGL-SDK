@@ -31,5 +31,13 @@ Inside the previous image in the right there is a button in the bottom left corn
 </p>
 
 Select the **HisPlayerTemplate** inside the **Resolution and Presentation** section.
+<p align="center">
+<img src="./assets/resolution-presentation.png"/>
+</p>
 
 If this option doesn’t appear, then copy the **WebGLTemplates** folder from the **HISPlayer** package folder into the **Unity Assets** folder.
+<p align="center">
+<img src="./assets/webgl.png" width="45%" height="50%"/>
+&nbsp; &nbsp; &nbsp; &nbsp;  
+<img src="./assets/webgl-assets.png" width="45%" height="50%"/> 
+</p>
