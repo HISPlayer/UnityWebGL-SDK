@@ -21,3 +21,5 @@ First of all switch the platform for **WebGL**. Open **File > Build Settings** a
 &nbsp; &nbsp; &nbsp; &nbsp;  
 <img src="./assets/switch-platform.png" width="45%"/> 
 </p>
+
+Inside the previous image in the right there is a button in the bottom left corner to open **Player Settings**. Now inside Player configuration, select **WebGL > Other Settings**. The Color Space can be Gamma or Linear. In the second case, it is needed to disable the **Auto Graphics API** option. 
