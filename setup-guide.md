@@ -108,5 +108,16 @@ For creating this object, select **GameObject > 3D Object > Quad**. Then select 
 &nbsp; &nbsp; &nbsp; &nbsp;  
 <img src="./assets/rendertexture-added.png" width="45%" height="50%"/> 
 </p>
-Once all this process it’s done, it’s time to associate the **RenderTexture** to the script component.
+Once all this process it’s done, it’s time to associate the RenderTexture to the script component.
 
+## Configure HISPlayer Properties
+
+### Multi Stream Properties
+HISPlayer WebGL SDK supports multi streams to run multiple players with different configurations and contents (not supported on Windows Editor). Use **Multi Stream Properties** to set all configuration needed for multi stream. It starts with 0 elements. Each element added has its own configuration for multiple players and corresponds to 1 Render Surface.
+* **Render Mode**: Select the render surface. It can be **RenderTexture, Material** or **RawImage**.
+* **URL**: Add the **URL** associated to the Render Material. Each URL corresponds to 1 player. Each element can have multiple URLs, therefore users can use the same Render Surface to use multiple players and play different URLs.
+* **Material**: Attach the **Material** asset created to the **Material** section of the element.
+* **Raw Image**: Attach the **RawImage** asset created to the **RawImage** section of the element.
+* **Render Texture**: Attach the **RenderTexture** to the **RenderTexture** section of the element.
+
+If you just need a single stream, then you just need to add 1 element with 1 URL.
