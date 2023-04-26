@@ -1,7 +1,7 @@
 - [HISPlayer Unity WebGL SDK](/introduction.md)
 - [Quickstart Guide](/setup-guide.md)
     - [Import Package](/setup-guide.md#Import-package)
-    - [Configure Unity for Android](/setup-guide.md#Configure-Unity-for-Android)
+    - [Configure Unity for WebGL](/setup-guide.md#Configure-Unity-for-WebGL)
     - [Setup HISPlayer Manager](/setup-guide.md#Setup-HISPlayer-Manager)
     - [Attach Unity Resources](/setup-guide.md#Attach-Unity-resources)
     - [Configure HISPlayer properties](/setup-guide.md#Configure-HISPlayer-properties)
