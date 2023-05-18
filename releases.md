@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 1.5.0
+##### May 17, 2023
+- [Add] Added MacOS Editor support.
+
 ### Version 1.4.0
 ##### April 4, 2023
 - [Add] Added VideoTrackChange event.
