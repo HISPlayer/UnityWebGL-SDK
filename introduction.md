@@ -27,3 +27,4 @@
 
 ### Supported Unity Editor
 * Windows (Multi stream is not supported)
+* MacOS
