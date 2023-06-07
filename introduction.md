@@ -16,6 +16,7 @@
 * Firefox
 * Opera
 * Edge
+* Safari
 
 ### Supported Rendering Mode
 * Render Texture
