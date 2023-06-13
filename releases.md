@@ -1,5 +1,13 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 1.6.0
+##### June 12, 2023
+- [Added] ChangeVideoContent API for MacOS Editor.
+- [Added] GetTracks API for MacOS Editor.
+- [Improvement] Optimized Release API.
+- [Improvement] Removed GLManager.js and Queue.js files.
+- [Improvement] Optimized Low Latency playback.
+
 ### Version 1.5.0
 ##### May 17, 2023
 - [Added] MacOS Editor support.
