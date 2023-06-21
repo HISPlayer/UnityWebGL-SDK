@@ -29,3 +29,7 @@
 ### Supported Unity Editor
 * Windows (Multi stream is not supported)
 * MacOS
+
+### Supported Unity Render Pipeline
+* URP (Universal Render Pipeline)
+* HDRP (High Definition Render Pipeline)
