@@ -1,5 +1,10 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 1.7.0
+##### June 29, 2023
+- [Improvement] Optimized Release API when changing Unity scene.
+- [Improvement] Optimized SetupPlayer API during runtime for Windows Editor.
+
 ### Version 1.6.0
 ##### June 12, 2023
 - [Added] ChangeVideoContent API for MacOS Editor.
