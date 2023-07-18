@@ -1,5 +1,10 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 1.8.0
+##### July 18, 2023
+- [Added] SetLogLevel API to filter the logs by the types : Error, Warning, Info, Debug, None.
+- [Improvement] Optimized seek functionality on Windows Editor.
+
 ### Version 1.7.0
 ##### June 29, 2023
 - [Improvement] Optimized Release API when changing Unity scene.
