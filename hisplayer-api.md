@@ -5,16 +5,21 @@
 The following public APIs are provided by **HISPlayerManager**
 
 * **public List < StreamProperties > multiStreamProperties**: List of properties for multi stream
+
 * **public class StreamProperties**:
   * **public HisPlayerRenderMode renderMode**: Type of texture for rendering. Currently only RenderTexture is supported.
   * **public List < string > url**: List of the URLs for the stream.
   * **public RenderTexture renderTexture**: Reference to the Unity Render Texture.
+
 * **public bool autoPlay**: If true, the players will start playing automatically after set-up.
+
 * **public string licenseKey**: The license key associated with the SDK.
+
 * **public enum HISPlayerRenderMode**: Type of texture for rendering.
     * **RenderTexture**
     * **Material**
     * **RawImage**
+
 * **public enum HISPlayerEvent**: The list of events provided by HisPlayer SDK. You can use the event using the virtual functions in the next section.
   * **HISPLAYER_EVENT_INIT_COMPLETE**
   * **HISPLAYER_EVENT_PLAYBACK_PLAY**
@@ -23,9 +28,17 @@ The following public APIs are provided by **HISPlayerManager**
   * **HISPLAYER_EVENT_PLAYBACK_PAUSE**
   * **HISPLAYER_EVENT_PLAYBACK_STOP**
   * **HISPLAYER_EVENT_PLAYBACK_SEEK**
+
 * **public struct HISPlayerEventInfo**: The information of the triggered event.
   * **public HisPlayerEvent eventType**: The type of the triggered event.
   * **public int playerIndex**: The index of the player where the event is triggered.
+
+* **public enum LogLevel**: The current logging level to filter which log messages are output.
+  * **ERROR** : Indicates critical errors that may prevent the application from functioning correctly.
+  * **WARNING** : Indicates potential issues or situations that may require attention.
+  * **INFO** : Provides general informational messages about the application's execution.
+  * **DEBUG** : Logs messages useful for debugging and troubleshooting purposes, typically only visible during development.
+  * **NONE** : No log messages will appear.
 
 ## Functions
 The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script which inherits from **HISPlayerManager**.
@@ -102,3 +115,5 @@ Get the duration of a certain stream. The **playerIndex** is associated with the
 Returns true if a certain stream is a live stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 #### protected void ChangeVideoContent(int playerIndex, string url)
 Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+#### public void SetLogLevel(LogLevel logLevel)
+Establishes the amount of logs to be shown. The log level to be used (0 : DEBUG, 1 : INFO, 2 : WARNING, 3 : ERROR, 4 : NONE)
