@@ -4,7 +4,7 @@ Through this guide, you will be introduced to the basic steps for setting up the
 ## Import package
 Importing the package is the same as importing other normal packages in Unity. Select the package of HISPlayer SDK and import it.
 <br>
-**Assets > Import Package > Custom Package**
+**Assets > Import Package > Custom Package > HISPlayerWebGLSDK unity package**
 
 <p align="center">
 <img src="./assets/import-package.png">
@@ -13,7 +13,7 @@ Importing the package is the same as importing other normal packages in Unity. S
 <br>
 
 ## Configure Unity for WebGL
-Once the package is imported, it is time to do some configuration inside Unity.
+Once the package is imported, please follow below steps.
 First of all switch the platform for **WebGL**. Open **File > Build Settings** and then select **WebGL platform** and **switch platform**.
 
 <p align="center">
@@ -30,16 +30,16 @@ Inside the previous image in the right there is a button in the bottom left corn
 <img src="./assets/linear-space.png" width="45%"/> 
 </p>
 
-Select the **HisPlayerTemplate** inside the **Resolution and Presentation** section.
-<p align="center">
-<img src="./assets/resolution-presentation.png"/>
-</p>
-
-If this option doesn’t appear, then copy the **WebGLTemplates** folder from the **HISPlayer** package folder into the **Unity Assets** folder.
+Copy the **WebGLTemplates** folder from the **HISPlayer** package folder into the **Unity Assets** folder.
 <p align="center">
 <img src="./assets/webgl.png" width="45%" height="50%"/>
 &nbsp; &nbsp; &nbsp; &nbsp;  
 <img src="./assets/webgl-assets.png" width="45%" height="50%"/> 
+</p>
+
+Select the **HisPlayerTemplate** inside the **Resolution and Presentation** section.
+<p align="center">
+<img src="./assets/resolution-presentation.png"/>
 </p>
 
 ## Setup HISPlayer Manager
