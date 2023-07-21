@@ -11,6 +11,7 @@ Importing the package is the same as importing other normal packages in Unity. S
 <img src="./assets/import-package.png">
 </p>
   
+
 Open the scene **Assets/HISPlayerWebGLSample/Scenes/HISPlayerWebGLSample.unity** and add it to the Build Settings. 
 
 To check how to set up the SDK and API usage, please refer to **Assets/HISPlayerWebGLSample/Scripts/HISPlayerWebGLSample.cs** and **WebGLStreamController GameObject** in the Editor.
