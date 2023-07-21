@@ -1,6 +1,6 @@
 - [HISPlayer Unity WebGL SDK](/introduction.md)
 - [Quickstart Guide](/setup-guide.md)
-- [Import HISPlayerSample](/download-demo.md)
+- [Import HISPlayer Sample](/download-demo.md)
 - [Unity URP](/unity-urp.md)
 - [Unity HDRP](/unity-hdrp.md)
 - [HISPlayer API](/hisplayer-api.md)
