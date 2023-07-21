@@ -3,9 +3,9 @@ For simple use cases, getting started with HISPlayer consists of implementing th
 
 1. Import and configure package   
 
-      1.1. [Import package](https://hisplayer.github.io/UnityWebGL-SDK/#/setup-guide?id=_11-import-package)
+      1.1. [Import package](/setup-guide?id=_11-import-package)
  
-      1.2. [Configure Unity for WebGL](https://hisplayer.github.io/UnityWebGL-SDK/#/setup-guide?id=_12-configure-unity-for-webgl)
+      1.2. [Configure Unity for WebGL](/setup-guide?id=_12-configure-unity-for-WebGL)
    
 2. Create your own sample
    
