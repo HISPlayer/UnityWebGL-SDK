@@ -3,7 +3,7 @@ For simple use cases, getting started with HISPlayer consists of implementing th
 
 1. Import and configure package   
 
-      1.1. [Import package](#1-1)
+      1.1. [Import package](/setup-guide.md#1.1-Import-package)
  
       1.2. [Configure Unity for WebGL](#1-2)
    
