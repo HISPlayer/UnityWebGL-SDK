@@ -1,7 +1,7 @@
 ## Import Sample
-You can download the sample here -> [HISPlayer WebGL Sample](https://downloads.hisplayer.com/Unity/WebGL/HISPlayerUnityWebGLSample.unitypackage)
+Please, download the sample here -> [HISPlayer WebGL Sample](https://downloads.hisplayer.com/Unity/WebGL/HISPlayerUnityWebGLSample.unitypackage)
 
-Please, configure the player before running this sample on WebGL platform ->  [**Configure Unity for WebGL**](./setup-guide.md#Configure-Unity-for-WebGL)
+Before running this sample, please complete the configuration for WebGL ->  [**Configure Unity for WebGL**](./setup-guide.md#Configure-Unity-for-WebGL)
 
 Importing the package is the same as importing other normal packages in Unity. Select the downloaded package and import it.
 
