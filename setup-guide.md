@@ -1,13 +1,13 @@
 # QuickStart Guide
 For simple use cases, getting started with HISPlayer consists of implementing the following steps:
 
-1. Import and configure package
+[1. Import and configure package](#1-1)   
+
+      1.1. Import package
+ 
+      1.2. Configure Unity for WebGL
    
-    1.1 Import package
-   
-    1.2 Configure Unity for WebGL
-   
-2. Create your own sample
+[2. Create your own sample](#2-1)
    
     2.1 Setup HISPlayer Manager
    
@@ -17,9 +17,31 @@ For simple use cases, getting started with HISPlayer consists of implementing th
 
     2.4 Build and Run
 
+ <ol>
+  <li>[Import and configure package](#1-1)   
+     <ol>
+      <li> Import package</li>
+      <li> Configure Unity for WebGL</li>
+    </ol>
+  </li>
+  <li>[2. Create your own sample](#2-1)
+       <ol>
+      <li> Setup HISPlayer Manager</li>
+      <li> Attach Unity Resources</li>
+      <li> Configure HISPlayer Properties</li>
+      <li> Build and Run</li>
+       </ol>
+  </li>
+    
+  <li>Third item
+    
+  </li>
+  <li>Fourth item</li>
+</ol>
+
 It's also possible to download the [HISPlayerSample](/download-demo.md) after completing the first step. The sample is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
 
-## 1.1 Import package
+## 1.1 Import package <a name = "1-1"></a>
 Importing the package is the same as importing other normal packages in Unity. Select the package of HISPlayer SDK and import it.
 <br>
 **Assets > Import Package > Custom Package > HISPlayerWebGLSDK unity package**
@@ -30,7 +52,7 @@ Importing the package is the same as importing other normal packages in Unity. S
 
 <br>
 
-## 1.2 Configure Unity for WebGL
+## 1.2 Configure Unity for WebGL<a name = "step1-2"></a>
 Once the package is imported, please follow below steps.
 First of all switch the platform for **WebGL**. Open **File > Build Settings** and then select **WebGL platform** and **switch platform**.
 
@@ -60,7 +82,7 @@ Select the **HisPlayerTemplate** inside the **Resolution and Presentation** sect
 <img src="./assets/resolution-presentation.png"/>
 </p>
 
-## 2.1 Setup HISPlayer Manager
+## 2.1 Setup HISPlayer Manager<a name = "2-1"></a>
 Create a script (for example **WebGLStreamController**) which is going to inherit from **HisPlayerManager**. It is needed to include the namespace by adding **‘using HisPlayerAPI;’** and add this component to a GameObject. It is recommended to create an **Empty GameObject** for this.
 <br>
 Now it’s time to call the **‘SetUpPlayer()’** function in order to initialize the stream environment internally. This function can be called whenever it’s needed, so it could be from the beginning of with an input.
