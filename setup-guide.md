@@ -1,13 +1,13 @@
 # QuickStart Guide
 For simple use cases, getting started with HISPlayer consists of implementing the following steps:
 
-[1. Import and configure package](#1-1)   
+1. [Import and configure package](#1-1)   
 
       1.1. Import package
  
       1.2. Configure Unity for WebGL
    
-[2. Create your own sample](#2-1)
+2. [Create your own sample](#2-1)
    
     2.1 Setup HISPlayer Manager
    
@@ -17,29 +17,7 @@ For simple use cases, getting started with HISPlayer consists of implementing th
 
     2.4 Build and Run
 
- <ol>
-  <li>[Import and configure package](#1-1)   
-     <ol>
-      <li> Import package</li>
-      <li> Configure Unity for WebGL</li>
-    </ol>
-  </li>
-  <li>[2. Create your own sample](#2-1)
-       <ol>
-      <li> Setup HISPlayer Manager</li>
-      <li> Attach Unity Resources</li>
-      <li> Configure HISPlayer Properties</li>
-      <li> Build and Run</li>
-       </ol>
-  </li>
-    
-  <li>Third item
-    
-  </li>
-  <li>Fourth item</li>
-</ol>
-
-It's also possible to download the [HISPlayerSample](/download-demo.md) after completing the first step. The sample is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
+It's also possible to download the [HISPlayer Sample](/download-demo.md) after completing the first step. The sample is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
 
 ## 1.1 Import package <a name = "1-1"></a>
 Importing the package is the same as importing other normal packages in Unity. Select the package of HISPlayer SDK and import it.
@@ -190,6 +168,3 @@ Now the configuration it’s done, so it’s time to **Build And Run**. Open **B
 <p align="center">
 <img src="./assets/build-run.png" width=45%>
 </p>
-
-## HISPlayerSample
-In the case you want to use a completed sample, please go to [Import HISPlayer Sample](/download-demo.md).
