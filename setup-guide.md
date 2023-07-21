@@ -48,6 +48,7 @@ Create a script (for example **WebGLStreamController**) which is going to inheri
 Now it’s time to call the **‘SetUpPlayer()’** function in order to initialize the stream environment internally. This function can be called whenever it’s needed, so it could be from the beginning of with an input.
 <br>
 For example, using the Awake function:
+
 ```C#
 using System.Collections;
 using System.Collections.Generic;
@@ -63,6 +64,7 @@ public class WebGLStreamController : HisPlayerManager
     }
 }
 ```
+
 It is strictly necessary to use **SetUpPlayer** before using anything else, because this function will initialize everything from the SDK in order to be able to use the rest of the functions (Play, Pause, Seek…).
 
 ## Attach Unity Resources
@@ -81,9 +83,11 @@ Attach the material to the GameObject which is going to be used as a screen.
 ### Attach RawImage
 This action will be related to Unity’s Canvas. If there is not a Canvas created yet, creating a **Raw Image** will create one automatically. 
 For the creation select, select **GameObject > UI > Raw Image**
+
 <p align="center">
 <img src="./assets/rawimage.png">
 </p>
+
 Once it is created, it can be associated with the stream controller script without doing anything else (Refer to **Configure HisPlayer Properties**).
 
 ### Attach RenderTexture
