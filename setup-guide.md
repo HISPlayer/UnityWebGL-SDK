@@ -88,7 +88,7 @@ For the creation select, select **GameObject > UI > Raw Image**
 <img src="./assets/rawimage.png">
 </p>
 
-Once it is created, it can be associated with the stream controller script without doing anything else (Refer to **Configure HisPlayer Properties**).
+Once it is created, it can be associated with the stream controller script without doing anything else (Refer to Configure HisPlayer Properties).
 
 ### Attach RenderTexture
 First of all, check if the **Resources** folder exists and contains the **RenderTextures** folder. If it doesn’t exist then do the same process as we did before with the WebGLTemplates. In this case, look for the Resources folder and copy its contents into the Unity **Assets** folder. This folder contains **Unity RenderTexture** resources. Another option is creating **RenderTexture** in **Assets** directly.
