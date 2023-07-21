@@ -14,6 +14,9 @@ Importing the package is the same as importing other normal packages in Unity. S
 Open the scene **Assets/HISPlayerWebGLSample/Scenes/HISPlayerWebGLSample.unity** and add it to the Build Settings. 
 To check how to set up the SDK and API usage, please refer to **Assets/HISPlayerWebGLSample/Scripts/HISPlayerWebGLSample.cs** and **WebGLStreamController GameObject** in the Editor.
 
+### UI Demo
+A comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
+
 <p align="center">
-<img width="600" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/928ca4d0-5bfe-4231-a511-63e13292b892">
+<img width="900" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/928ca4d0-5bfe-4231-a511-63e13292b892">
 </p>
