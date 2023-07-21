@@ -9,13 +9,13 @@ For simple use cases, getting started with HISPlayer consists of implementing th
    
 2. Create your own sample
    
-    2.1 [Setup HISPlayer Manager](https://hisplayer.github.io/UnityWebGL-SDK/#/setup-guide?id=_21-setup-hisplayer-manager)
+    2.1 [Setup HISPlayer Manager](/setup-guide?id=_21-Setup-HISPlayer-manager)
    
-    2.2 [Attach Unity Resources](https://hisplayer.github.io/UnityWebGL-SDK/#/setup-guide?id=_22-attach-unity-resources)
+    2.2 [Attach Unity Resources](/setup-guide?id=_22-Attach-Unity-Resources)
 
-    2.3 [Configure HISPlayer Properties](https://hisplayer.github.io/UnityWebGL-SDK/#/setup-guide?id=_23-configure-hisplayer-properties)
+    2.3 [Configure HISPlayer Properties](/setup-guide?id=_23-Configure-HISPlayer-Properties)
 
-    2.4 [Build and Run](https://hisplayer.github.io/UnityWebGL-SDK/#/setup-guide?id=_24-build-and-run)
+    2.4 [Build and Run](/setup-guide?id=_24-Build-and-Run)
 
 It's also possible to download the [HISPlayer Sample](/download-demo.md) after completing the first step. The sample is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
 
