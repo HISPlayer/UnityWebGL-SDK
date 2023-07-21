@@ -1,5 +1,5 @@
 # Setup Guide
-Through this guide, you will be introduced to the basic steps for setting up the playback.  You can also download a fully free demo [here](/download-demo.md), but don't run the sample before [Configure Unity WebGL](./setup-guide.md#Configure-Unity-for-WebGL) is completed.
+Through this guide, you will be introduced to the basic steps for setting up the playback.  You can also download a fully free sample [here](/download-demo.md), but don't run the sample before [Configure Unity WebGL](./setup-guide.md#Configure-Unity-for-WebGL) is completed.
 
 ## Import package
 Importing the package is the same as importing other normal packages in Unity. Select the package of HISPlayer SDK and import it.
@@ -147,7 +147,7 @@ Now the configuration it’s done, so it’s time to **Build And Run**. Open **B
 <img src="./assets/build-run.png" width=45%>
 </p>
 
-## Demo
-In the case you want to use a fully sample, plese go to [Import Sample](/download-demo.md).
+## Sample
+In the case you want to use a completed sample, please go to [Import HISPlayer Sample](/download-demo.md).
 
 Read about the included demo scenes as these are also a good quick start reference for typical use-cases.
