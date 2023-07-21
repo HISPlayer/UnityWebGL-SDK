@@ -1,7 +1,26 @@
-# Setup Guide
-Through this guide, you will be introduced to the basic steps for setting up the playback.  You can also download a fully free sample [here](/download-demo.md), but don't run the sample before [Configure Unity WebGL](./setup-guide.md#Configure-Unity-for-WebGL) is completed.
+# QuickStart Guide
+For simple use cases, getting started with HISPlayer consists of implementing the following steps:
 
-## Import package
+1. Import package
+   
+    1.1 Import package
+   
+    1.2 Configure Unity for WebGL
+   
+2. Create your own sample
+   
+    2.1 Setup HISPlayer Manager
+   
+
+    2.2 Attach Unity Resources
+
+    2.3 Configure HISPlayer Properties
+
+    2.4 Build and Run
+
+It's also possible to use the [HISPlayerSample](/setup-guide.md#) after completing step [1. Import package](/setup-guide.md#1.1-Import-package). The samplle is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
+
+## 1.1 Import package
 Importing the package is the same as importing other normal packages in Unity. Select the package of HISPlayer SDK and import it.
 <br>
 **Assets > Import Package > Custom Package > HISPlayerWebGLSDK unity package**
@@ -12,7 +31,7 @@ Importing the package is the same as importing other normal packages in Unity. S
 
 <br>
 
-## Configure Unity for WebGL
+## 1.2 Configure Unity for WebGL
 Once the package is imported, please follow below steps.
 First of all switch the platform for **WebGL**. Open **File > Build Settings** and then select **WebGL platform** and **switch platform**.
 
@@ -42,7 +61,7 @@ Select the **HisPlayerTemplate** inside the **Resolution and Presentation** sect
 <img src="./assets/resolution-presentation.png"/>
 </p>
 
-## Setup HISPlayer Manager
+## 2.1 Setup HISPlayer Manager
 Create a script (for example **WebGLStreamController**) which is going to inherit from **HisPlayerManager**. It is needed to include the namespace by adding **‘using HisPlayerAPI;’** and add this component to a GameObject. It is recommended to create an **Empty GameObject** for this.
 <br>
 Now it’s time to call the **‘SetUpPlayer()’** function in order to initialize the stream environment internally. This function can be called whenever it’s needed, so it could be from the beginning of with an input.
@@ -67,7 +86,7 @@ public class WebGLStreamController : HisPlayerManager
 
 It is strictly necessary to use **SetUpPlayer** before using anything else, because this function will initialize everything from the SDK in order to be able to use the rest of the functions (Play, Pause, Seek…).
 
-## Attach Unity Resources
+## 2.2 Attach Unity Resources
 Let’s move to **Unity Editor** to attach all the resources. The rendering system supports **Material, RawImage** and **RenderTexture** Unity’s components.
 
 ### Attach Material
@@ -114,7 +133,7 @@ For creating this object, select **GameObject > 3D Object > Quad**. Then select 
 </p>
 Once all this process it’s done, it’s time to associate the RenderTexture to the script component.
 
-## Configure HISPlayer Properties
+## 2.3 Configure HISPlayer Properties
 
 ### Multi Stream Properties
 HISPlayer WebGL SDK supports multi streams to run multiple players with different configurations and contents (not supported on Windows Editor). Use **Multi Stream Properties** to set all configuration needed for multi stream. It starts with 0 elements. Each element added has its own configuration for multiple players and corresponds to 1 Render Surface.
@@ -145,7 +164,7 @@ Input the license key that is associated with the SDK. If there is no license ke
 <img src="./assets/license-key.png">
 </p>
 
-## Build and Run
+## 2.4 Build and Run
 Now the configuration it’s done, so it’s time to **Build And Run**. Open **Build Settings** and test it.
 <p align="center">
 <img src="./assets/build-run.png" width=45%>
