@@ -146,3 +146,8 @@ Now the configuration it’s done, so it’s time to **Build And Run**. Open **B
 <p align="center">
 <img src="./assets/build-run.png" width=45%>
 </p>
+
+## Demo
+In the case you want to use a fully sample, plese go to [Import Sample](/download-demo.md).
+
+Read about the included demo scenes as these are also a good quick start reference for typical use-cases.
