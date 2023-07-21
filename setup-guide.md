@@ -151,5 +151,5 @@ Now the configuration it’s done, so it’s time to **Build And Run**. Open **B
 <img src="./assets/build-run.png" width=45%>
 </p>
 
-## Sample
+## HISPlayerSample
 In the case you want to use a completed sample, please go to [Import HISPlayer Sample](/download-demo.md).
