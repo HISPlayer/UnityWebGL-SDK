@@ -1,4 +1,4 @@
-# Import HISPlayerSample
+# Import HISPlayer Sample
 Please, download the sample here -> [HISPlayer WebGL Sample](https://downloads.hisplayer.com/Unity/WebGL/HISPlayerUnityWebGLSample.unitypackage)
 
 Before running this sample, please complete the configuration for WebGL ->  [**Configure Unity for WebGL**](./setup-guide.md#Configure-Unity-for-WebGL)
@@ -17,7 +17,7 @@ Open the scene **Assets/HISPlayerWebGLSample/Scenes/HISPlayerWebGLSample.unity**
 To check how to set up the SDK and API usage, please refer to **Assets/HISPlayerWebGLSample/Scripts/HISPlayerWebGLSample.cs** and **WebGLStreamController GameObject** in the Editor.
 
 ## UI Demo
-A comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
+A comprehensive example scene using the HISPlayer SDK to help demonstrate features like play, pause, seek, video streaming, etc.
 
 <p align="center">
 <img width="900" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/928ca4d0-5bfe-4231-a511-63e13292b892">
