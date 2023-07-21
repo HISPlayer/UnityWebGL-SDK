@@ -1,7 +1,7 @@
 # QuickStart Guide
 For simple use cases, getting started with HISPlayer consists of implementing the following steps:
 
-1. Import package
+1. Import and configure package
    
     1.1 Import package
    
@@ -11,14 +11,13 @@ For simple use cases, getting started with HISPlayer consists of implementing th
    
     2.1 Setup HISPlayer Manager
    
-
     2.2 Attach Unity Resources
 
     2.3 Configure HISPlayer Properties
 
     2.4 Build and Run
 
-It's also possible to use the [HISPlayerSample](/setup-guide.md#) after completing step [1. Import package](/setup-guide.md#1.1-Import-package). The samplle is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
+It's also possible to use the [HISPlayerSample](/setup-guide.md#HISPlayerSample) after completing the first step. The sample is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
 
 ## 1.1 Import package
 Importing the package is the same as importing other normal packages in Unity. Select the package of HISPlayer SDK and import it.
