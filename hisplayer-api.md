@@ -39,11 +39,33 @@ The following public APIs are provided by **HISPlayerManager**
   * **INFO** : Provides general informational messages about the application's execution.
   * **DEBUG** : Logs messages useful for debugging and troubleshooting purposes, typically only visible during development.
   * **NONE** : No log messages will appear.
+ 
+These log levels are represented as an enum of integers, so every type of log whose representative integer is greater or equal to the established log level will be shown. Code example:
+
+```cs
+public enum LogLevel
+{
+    DEBUG, // = 0
+    INFO, // = 1
+    WARNING, // = 2
+    ERROR, // = 3
+    NONE // = 4
+}
+public void Log(LogLevel level, string message)
+{
+    // level is the type of log used to show the current message
+    // logLevel is the established level
+    if (level >= logLevel)
+    {
+        // SHOW THE LOGS
+    }
+ }
+```
 
 ## Functions
-The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script which inherits from **HISPlayerManager**.
+The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script that inherits from **HISPlayerManager**.
 
-### Virtual functions - These functions can be overriden
+### Virtual functions - These functions can be overridden
 
 #### protected virtual void Awake()
 MonoBehaviour function which will be called from the beginning of the scene. It can be overridden but to make the system work it’s necessary to call **base.Awake()** into the overridden function.
@@ -70,10 +92,10 @@ This event occurs whenever an internal playback has been stopped.
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK** is triggered.
 This event occurs whenever an internal playback has finished seeking.
 #### protected virtual void EventVideoTrackChange (HisPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_VIDEO_TRACK_CHANGE** is triggered. This event occurs whenever an internal playback has track change.
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_VIDEO_TRACK_CHANGE** is triggered. This event occurs whenever an internal playback has a track change.
 
 ### Non-virtual functions
-These functions can’t be overridden and they can be used only inside the inherited script. If it’s needed to use some of these functions into the Unity scene, for example with buttons, it is needed to create a public function which connects the button with the API.
+These functions can’t be overridden and they can be used only inside the inherited script. If it’s needed to use some of these functions in the Unity scene, for example with buttons, it is needed to create a public function that connects the button with the API.
 
 #### protected void SetUpPlayer()
 Initialize the player video stream system internally. It is necessary to use this function before anything else.
@@ -116,4 +138,4 @@ Returns true if a certain stream is a live stream. The **playerIndex** is associ
 #### protected void ChangeVideoContent(int playerIndex, string url)
 Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 #### public void SetLogLevel(LogLevel logLevel)
-Establishes the amount of logs to be shown. The log level to be used (0 : DEBUG, 1 : INFO, 2 : WARNING, 3 : ERROR, 4 : NONE)
+Establishes the number of logs to be shown. The log level to be used (0 : DEBUG, 1 : INFO, 2 : WARNING, 3 : ERROR, 4 : NONE)
