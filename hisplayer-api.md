@@ -40,7 +40,7 @@ The following public APIs are provided by **HISPlayerManager**
   * **DEBUG** : Logs messages useful for debugging and troubleshooting purposes, typically only visible during development.
   * **NONE** : No log messages will appear.
  
-These log levels are represented as an enum of integers, so every type of log whose representative integer is greater or equal to the established log level will be shown. Code example:
+These log levels are represented as an enum of integers, so every type of log whose representative integer is greater or equal to the established log level will be shown. The log levels are represented as follows:
 
 ```cs
 public enum LogLevel
@@ -51,15 +51,6 @@ public enum LogLevel
     ERROR, // = 3
     NONE // = 4
 }
-public void Log(LogLevel level, string message)
-{
-    // level is the type of log used to show the current message
-    // logLevel is the established level
-    if (level >= logLevel)
-    {
-        // SHOW THE LOGS
-    }
- }
 ```
 
 ## Functions
@@ -138,4 +129,4 @@ Returns true if a certain stream is a live stream. The **playerIndex** is associ
 #### protected void ChangeVideoContent(int playerIndex, string url)
 Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 #### public void SetLogLevel(LogLevel logLevel)
-Establishes the number of logs to be shown. The log level to be used (0 : DEBUG, 1 : INFO, 2 : WARNING, 3 : ERROR, 4 : NONE)
+Establishes the number of logs to be shown. The log levels are represented as an enum of integers, so every type of log whose representative integer is greater or equal to the established log level will be shown. The log levels to be used are (0 : DEBUG, 1 : INFO, 2 : WARNING, 3 : ERROR, 4 : NONE)
