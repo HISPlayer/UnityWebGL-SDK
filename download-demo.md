@@ -1,5 +1,5 @@
 # Import HISPlayer Sample
-Please, download the sample here -> [HISPlayer WebGL Sample](https://downloads.hisplayer.com/Unity/WebGL/HISPlayerUnityWebGLSample.unitypackage)
+Please, download the sample here -> [**HISPlayer WebGL Sample**](https://downloads.hisplayer.com/Unity/WebGL/HISPlayerUnityWebGLSample.unitypackage)
 
 Before running this sample, please complete the configuration for WebGL ->  [**Configure Unity for WebGL**](./setup-guide.md#Configure-Unity-for-WebGL)
 
