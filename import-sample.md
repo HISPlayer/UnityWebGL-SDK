@@ -1,8 +1,6 @@
 # Import HISPlayer Sample
 Please, download the sample here -> [**HISPlayer WebGL Sample**](https://downloads.hisplayer.com/Unity/WebGL/HISPlayerUnityWebGLSample.unitypackage)
 
-Before running this sample, please complete the configuration for WebGL ->  [**Configure Unity for WebGL**](./setup-guide.md#Configure-Unity-for-WebGL)
-
 Importing the package is the same as importing other normal packages in Unity. Select the downloaded package and import it.
 
 - **Assets > Import Package > Custom Package > HISPlayerUnityWebGLSample.unitypackage**
@@ -10,9 +8,16 @@ Importing the package is the same as importing other normal packages in Unity. S
 <p align="center">
 <img src="./assets/import-package.png">
 </p>
-  
 
-Open the scene **Assets/HISPlayerWebGLSample/Scenes/HISPlayerWebGLSample.unity** and add it to the Build Settings. 
+- Complete the configuration for WebGL ->  [**Configure Unity for WebGL**](./setup-guide.md#12-configure-unity-for-webgl)
+
+- Open the scene **Assets/HISPlayerWebGLSample/Scenes/HISPlayerWebGLSample.unity** and add it to the Build Settings.
+
+- Input the license key through the Inspector Window. **WebGLStreamController** game object -> **HISPlayerWebGLSample** component -> **License Key**
+
+<p align="center">
+<img src="./assets/license-key.png">
+</p>
 
 To check how to set up the SDK and API usage, please refer to **Assets/HISPlayerWebGLSample/Scripts/HISPlayerWebGLSample.cs** and **WebGLStreamController GameObject** in the Editor.
 
