@@ -17,13 +17,15 @@ Importing the package is the same as importing other normal packages in Unity. S
 <img src="./assets/webglsample-addscene.PNG" width=50%>
 </p>
 
+- Import TextMesh Pro Essential
+
 - Input the license key through the Inspector Window. **WebGLStreamController** game object -> **HISPlayerWebGLSample** component -> **License Key**
 
 <p align="center">
 <img src="./assets/license-key.png">
 </p>
 
-- Open **File** > **Build Settings** > **Add Open Scenes**.
+- Open **File** > **Build Settings** > **Add Open Scenes**
 
 <p align="center">
 <img src="./assets/webglsample-buildsetting.PNG" width=80%>
