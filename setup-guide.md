@@ -17,7 +17,7 @@ Getting started with HISPlayer consists of implementing the following steps:
 
     2.4 Build and Run
 
-It's also possible to download the [HISPlayer Sample](/download-demo.md) after completing the first step. The sample is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
+It's also possible to download the [HISPlayer Sample](/import-sample.md) after completing the first step. The sample is a comprehensive example scene using the HISPlayerSDK to help demonstrate features like play, pause, seek, video streaming, etc.
 
 ## 1.1 Import package
 Importing the package is the same as importing other normal packages in Unity. Select the package of HISPlayer SDK and import it.
