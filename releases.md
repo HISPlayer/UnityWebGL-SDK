@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 1.10.0
+##### September 6, 2023
+- [Improvement] Optimized LogLevel API.
+
 ### Version 1.9.0
 ##### September 1, 2023
 - [Improvement] Optimized video playback on Safari browser.
