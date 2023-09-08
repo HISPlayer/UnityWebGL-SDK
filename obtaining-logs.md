@@ -7,7 +7,7 @@ Open the console by **Right Click** > **Inspect** > **Console**. All the log mes
 It's the same process for both MacOS and Windows.
 
 <p align="center">
-<img width=90% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/2f025f4b-caf0-4f37-a3f4-19ed604556e0">
+<img width=100% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/2f025f4b-caf0-4f37-a3f4-19ed604556e0">
 </p>
 
 ## Mozilla Firefox
@@ -15,7 +15,7 @@ Open the console by **Right Click** > **Inspect** > **Console**. All the log mes
 It's the same process for both MacOS and Windows.
 
 <p align="center">
-<img width=90% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/be44f0fa-6c4a-43fa-b156-e771feb82bb0">
+<img width=100% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/be44f0fa-6c4a-43fa-b156-e771feb82bb0">
 </p>
 
 By default the **Inspect Window** will appear docked at the bottom side of the browser, but you can change it by clicking the 3 points
@@ -30,7 +30,7 @@ Open the console by **Right Click** > **Inspect Element** > **Console**. All the
 It's the same process for both MacOS and Windows.
 
 <p align="center">
-<img width=90% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/30b0b73c-4f92-4ef2-8d48-8893ae561726">
+<img width=100% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/30b0b73c-4f92-4ef2-8d48-8893ae561726">
 </p>
 
 ## Safari
@@ -49,7 +49,7 @@ Enable the **Develop Menu** using the **Safari Settings**
 Open the console by **Right Click** > **Inspect Element** > **Console**. All the log messages will be displayed there.
 
 <p align="center">
-<img width=90% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/46e6bc34-9921-45b4-8ae9-2c7a8d992211">
+<img width=100% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/46e6bc34-9921-45b4-8ae9-2c7a8d992211">
 </p>
 
 By default the **Inspect Window** will appear docked at the bottom side of the browser, but you can change it by clicking the desired icon
@@ -63,5 +63,5 @@ on the upper-left side of the **Inspect Window**.
 Open the console by **Right Click** > **Inspect** > **Console**. All the log messages will be displayed there.
 
 <p align="center">
-<img width=90% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/a9c7aae3-f681-4acb-82b1-e7b5725e9a72">
+<img width=100% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/a9c7aae3-f681-4acb-82b1-e7b5725e9a72">
 </p>
