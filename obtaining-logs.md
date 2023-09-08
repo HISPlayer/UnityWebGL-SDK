@@ -60,3 +60,8 @@ on the upper-left side of the **Inspect Window**.
 </p>
 
 ## Microsoft Edge
+Open the console by **Right Click** > **Inspect** > **Console**. All the log messages will be displayed there.
+
+<p align="center">
+<img width=90% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/a9c7aae3-f681-4acb-82b1-e7b5725e9a72">
+</p>
