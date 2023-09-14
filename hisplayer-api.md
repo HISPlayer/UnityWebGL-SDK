@@ -31,6 +31,9 @@ The following public APIs are provided by **HISPlayerManager**
 
 * **public struct HISPlayerEventInfo**: The information of the triggered event.
   * **public HisPlayerEvent eventType**: The type of the triggered event.
+  * **public int param1**: This will have different meanings depending on the event.
+  * **public int param2**: This will have different meanings depending on the event.
+  * **public int param3**: This will have different meanings depending on the event.
   * **public int playerIndex**: The index of the player where the event is triggered.
 
 * **public enum LogLevel**: The current logging level to filter which log messages are output.
@@ -84,6 +87,21 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_P
 This event occurs whenever an internal playback has finished seeking.
 #### protected virtual void EventVideoTrackChange (HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_VIDEO_TRACK_CHANGE** is triggered. This event occurs whenever an internal playback has a track change.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>param1</td>
+    <td>Width of the video.</td>
+  </tr>
+   <tr>
+    <td>param2</td>
+    <td>Heigth of the video.</td>
+  </tr>
+</table>
 
 ### Non-virtual functions
 These functions can’t be overridden and they can be used only inside the inherited script. If it’s needed to use some of these functions in the Unity scene, for example with buttons, it is needed to create a public function that connects the button with the API.
