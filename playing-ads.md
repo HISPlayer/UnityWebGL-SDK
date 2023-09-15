@@ -73,3 +73,61 @@ To use MediaTailor:
 <p align="center">
 <img src="./assets/mediatailor.png">
 </p>
+
+## Related APIs
+
+* **public enum HisPlayerAdsMode**: Type of the advertisement library.
+    * **None**
+    * **GoogleDAI**
+    * **MediaTailor**
+
+### Event and Virtual Functions
+
+* **public enum HisPlayerEvent**: The list of events provided by HISPlayer SDK for playing advertisements. You can use the event using the virtual functions in the next section.
+  * **HISPLAYER_EVENT_AD_BLOCK_STARTED**
+  * **HISPLAYER_EVENT_AD_BLOCK_ENDY**
+  * **HISPLAYER_EVENT_AD_STARTED**
+  * **HISPLAYER_EVENT_AD_STOPPED**
+  * **HISPLAYER_EVENT_AD_PODS_INFO**
+
+#### protected virtual void EventAdBlockStarted(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_STARTED** is triggered. This event occurs whenever a group of advertisements starts.
+
+#### protected virtual void EventAdBlockEnd(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_END** is triggered. This event occurs whenever a group of advertisements ends.
+
+#### protected virtual void EventAdStarted(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STARTED** is triggered. This event occurs whenever a single advertisement starts.
+
+#### protected virtual void EventAdStopped(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STOPPED** is triggered. This event occurs whenever a single advertisement ends.
+
+#### protected virtual void EventAdPodsInfo(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_PODS_INFO** is triggered. This event occurs whenever there is an advertisement pods information indicating cue points of ad breaks.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>param1</td>
+    <td>Start cue point of ad break in milliseconds</td>
+  </tr>
+   <tr>
+    <td>param2</td>
+    <td>End cue point of ad break in milliseconds</td>
+  </tr>
+</table>
+
+### Non-virtual Functions
+
+#### protected float GetAdDuration(int playerIndex)
+Get the duration of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected float GetAdRemainingTime(int playerIndex)
+Get the remaining time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected float GetAdCurrentTime(int playerIndex)
+Get the current time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
