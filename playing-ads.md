@@ -21,7 +21,7 @@ Use Ads Properties to set all configuration needed to play advertisements for ea
   - Ads Params : Contains “Params: string” this is the Ad URL to be attached to the baseURL
 
 <p align="center">
-<img src="./assets/ads-properties.PNG">
+<img src="./assets/ads-properties.JPG">
 </p>
 
 ## Server-Side Advertisement Systems
@@ -42,20 +42,20 @@ Google DAI has a dependency on the DAI SDK. Hence, this library needs to be incl
 For Live :
 - Ads Mode : Google DAI
 - DAI Properties :
-  - Asset Key : <YOUR_ASSET_KEY>
+  - Asset Key : <YOUR_ASSET_KEY> (e.g. **PSzZMzAkSXCmlJOWDmRj8Q**)
 
 <p align="center">
-<img src="./assets/dai-live.PNG">
+<img src="./assets/dai-live.png">
 </p>
 
 For VoD : 
 - Ads Mode : Google DAI
 - DAI Properties :
-  - Content Src Id : <YOUR_CONTENT_SRC_ID>
-  - Video Id : <YOUR_VIDEO_ID>
+  - Content Src Id : <YOUR_CONTENT_SRC_ID> (e.g. **2542753**)
+  - Video Id : <YOUR_VIDEO_ID> (e.g. **WNET0056239080000200**)
 
 <p align="center">
-<img src="./assets/dai-vod.PNG">
+<img src="./assets/dai-vod.png">
 </p>
 
 ### MediaTailor
@@ -67,11 +67,9 @@ To use MediaTailor:
 #### Configure the Ads Properties
 - Ads Mode : Media Tailor
 - Media Tailor Properties :
-  - Base Url : <YOUR_BASE_URL>
-  - Manifest Url : <YOUR_MANIFEST_PATH>
+  - Base Url : <YOUR_BASE_URL> (e.g. **https://ad391cc0d55b44c6a86d232548adc225.mediatailor.us-east-1.amazonaws.com**)
+  - Manifest Url : <YOUR_MANIFEST_PATH> (e.g. **/v1/session/d02fedbbc5a68596164208dd24e9b48aa60dadc7/singssai/master.m3u8**)
 
 <p align="center">
-<img src="./assets/mediatailor.PNG">
+<img src="./assets/mediatailor.png">
 </p>
-
-
