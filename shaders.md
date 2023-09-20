@@ -5,7 +5,7 @@ and graphics.
 We provide examples that simulate the Gamma color space even if you are using Linear color space. The color space plays an important role when rendering the scene and there are differences between Gamma and Linear color spaces 
 (refer to this [Unity Manual](https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html))
  
-If you follow the [Import Sample]() section, please, refer to the GameObject **ScreenRawImage** and check the **Raw Image** component. You
+If you follow the [Import Sample](https://hisplayer.github.io/UnityWebGL-SDK/#/import-sample) section, please, refer to the GameObject **ScreenRawImage** and check the **Raw Image** component. You
 will see there is a material attach to the **material** attribute named **HISPlayerDefaultMaterialRawImage**.
 
 <p align="center">
