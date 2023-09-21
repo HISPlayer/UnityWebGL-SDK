@@ -7,22 +7,18 @@ Supported advertisement systems :
 
 ## Ads Properties
 Use Ads Properties to set all configuration needed to play advertisements for each stream. This property is part of [**Multi Stream Properties**](./setup-guide.md#multi-stream-properties). 
-- Ads Mode : Select the types of the advertisement library.
-  - None
-  - Google DAI
-  - Media Tailor
-- DAI Properties :
+- AdsMode : Select the types of the advertisement library.
+  - DAI
+  - MEDIA_TAILOR
+  - NONE
+- DAI Config :
   - Asset Key : For LIVE streams. This is used to determine which stream should be played
   - Content Src Id : For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS
   - Video Id : For VoD (on-demand) streams. Identifier for the video content source
-- Media Tailor Properties :
+- Media Tailor Config :
   - Base Url : Base URL for Video and Ads
   - Manifest Url : Video URL to be attached to the baseURL
   - Ads Params : Contains “Params: string” this is the Ad URL to be attached to the baseURL
-
-<p align="center">
-<img src="./assets/ads-properties.JPG">
-</p>
 
 ## Server-Side Advertisement Systems
 ### Google DAI
@@ -40,23 +36,19 @@ Google DAI has a dependency on the DAI SDK. Hence, this library needs to be incl
 
 #### Configure the Ads Properties
 For Live :
-- Ads Mode : Google DAI
-- DAI Properties :
+- Ads Mode : DAI
+- DAI Config :
   - Asset Key : <YOUR_ASSET_KEY> (e.g. **PSzZMzAkSXCmlJOWDmRj8Q**)
 
-<p align="center">
-<img src="./assets/dai-live.png">
-</p>
+![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/c7aea3a1-89d7-44c2-bc82-f9c905b1ec9d)
 
 For VoD : 
 - Ads Mode : Google DAI
-- DAI Properties :
+- DAI Config :
   - Content Src Id : <YOUR_CONTENT_SRC_ID> (e.g. **2542753**)
   - Video Id : <YOUR_VIDEO_ID> (e.g. **WNET0056239080000200**)
 
-<p align="center">
-<img src="./assets/dai-vod.png">
-</p>
+![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/991ab9b9-4e3f-4947-b876-94f61109ba29)
 
 ### MediaTailor
 MediaTailor is a service that provides scalable ad insertion and channel assembly. It is able to serve targeted ad content to viewers and create linear streams while maintaining broadcast quality in over-the-top (OTT) video applications. It supports HLS and DASH for both VOD and live workflows.
@@ -66,20 +58,13 @@ To use MediaTailor:
 
 #### Configure the Ads Properties
 - Ads Mode : Media Tailor
-- Media Tailor Properties :
+- Media Tailor Config :
   - Base Url : <YOUR_BASE_URL> (e.g. **https://ad391cc0d55b44c6a86d232548adc225.mediatailor.us-east-1.amazonaws.com**)
   - Manifest Url : <YOUR_MANIFEST_PATH> (e.g. **/v1/session/d02fedbbc5a68596164208dd24e9b48aa60dadc7/singssai/master.m3u8**)
 
-<p align="center">
-<img src="./assets/mediatailor.png">
-</p>
+![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/5fd63fb6-a713-4a8e-af1f-066e664271f9)
 
 ## Related APIs
-
-* **public enum HisPlayerAdsMode**: Type of the advertisement library.
-    * **None**
-    * **GoogleDAI**
-    * **MediaTailor**
 
 ### Event and Virtual Functions
 
@@ -130,4 +115,7 @@ Get the remaining time of a certain advertisement in milliseconds (ms). The **pl
 
 #### protected float GetAdCurrentTime(int playerIndex)
 Get the current time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected void ChangeVideoContent(int playerIndex, string url, int resumePosition, AdsProperties ads)
+Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **resumePosition** is time position in milliseconds where the new content is starting the playback. The **AdsProperties** is an ads properties to use when loading the new content. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
