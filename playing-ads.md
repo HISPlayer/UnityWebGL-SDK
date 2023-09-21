@@ -117,5 +117,5 @@ Get the remaining time of a certain advertisement in milliseconds (ms). The **pl
 Get the current time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### protected void ChangeVideoContent(int playerIndex, string url, int resumePosition, AdsProperties ads)
-Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **resumePosition** is time position in milliseconds where the new content is starting the playback. The **AdsProperties** is an ads properties to use when loading the new content. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **resumePosition** is time position in milliseconds (ms) where the new content is starting the playback. The **AdsProperties** is an ads properties to use when loading the new content. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
