@@ -1,5 +1,10 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 1.11.0
+##### September 22, 2023
+- [Added] Server-side ads insertion.
+- [Added] Custom Shaders for Linear Color Space.
+
 ### Version 1.10.0
 ##### September 6, 2023
 - [Improvement] Optimized LogLevel API.
