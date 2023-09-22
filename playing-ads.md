@@ -26,7 +26,7 @@ Google DAI is a Server-Side Ad-Insertion solution offered by Google where HISPla
 
 To use Google DAI:
 - It is needed to include the Google DAI SDK
-- It is needed to set Ads Properties > AdsMode : **Google DAI**
+- It is needed to set Ads Properties > AdsMode : **DAI**
 
 #### Include the DAI SDK
 Google DAI has a dependency on the DAI SDK. Hence, this library needs to be included in your page, otherwise the playback will start without ads. The following snippets demonstrates how this SDK can be included in your html or javascript file :
@@ -43,7 +43,7 @@ For Live :
 ![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/c7aea3a1-89d7-44c2-bc82-f9c905b1ec9d)
 
 For VoD : 
-- Ads Mode : Google DAI
+- Ads Mode : DAI
 - DAI Config :
   - Content Src Id : <YOUR_CONTENT_SRC_ID> (e.g. **2542753**)
   - Video Id : <YOUR_VIDEO_ID> (e.g. **WNET0056239080000200**)
@@ -57,7 +57,7 @@ To use MediaTailor:
 - It is needed to set Ads Properties > AdsMode : **Media Tailor**
 
 #### Configure the Ads Properties
-- Ads Mode : Media Tailor
+- Ads Mode : MEDIA_TAILOR
 - Media Tailor Config :
   - Base Url : <YOUR_BASE_URL> (e.g. **https://ad391cc0d55b44c6a86d232548adc225.mediatailor.us-east-1.amazonaws.com**)
   - Manifest Url : <YOUR_MANIFEST_PATH> (e.g. **/v1/session/d02fedbbc5a68596164208dd24e9b48aa60dadc7/singssai/master.m3u8**)
