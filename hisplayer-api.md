@@ -4,10 +4,10 @@
 
 The following public APIs are provided by **HISPlayerManager**
 
-* **public List < StreamProperties > multiStreamProperties**: List of properties for multi stream
+* **public List <StreamProperties> multiStreamProperties**: List of properties for multi stream
 
 * **public class StreamProperties**:
-  * **public HisPlayerRenderMode renderMode**: Type of texture for rendering. Currently only RenderTexture is supported.
+  * **public HisPlayerRenderMode renderMode**: Type of texture for rendering.
   * **public List < string > url**: List of the URLs for the stream.
   * **public RenderTexture renderTexture**: Reference to the Unity Render Texture.
 
@@ -28,6 +28,11 @@ The following public APIs are provided by **HISPlayerManager**
   * **HISPLAYER_EVENT_PLAYBACK_PAUSE**
   * **HISPLAYER_EVENT_PLAYBACK_STOP**
   * **HISPLAYER_EVENT_PLAYBACK_SEEK**
+  * **HISPLAYER_EVENT_AD_BLOCK_STARTED**
+  * **HISPLAYER_EVENT_AD_BLOCK_ENDY**
+  * **HISPLAYER_EVENT_AD_STARTED**
+  * **HISPLAYER_EVENT_AD_STOPPED**
+  * **HISPLAYER_EVENT_AD_PODS_INFO**
 
 * **public struct HISPlayerEventInfo**: The information of the triggered event.
   * **public HisPlayerEvent eventType**: The type of the triggered event.
@@ -56,6 +61,28 @@ public enum LogLevel
 }
 ```
 
+* **public List <AdsProperties> multiStreamProperties**: List of properties to configure advertisement insertions for each player in the scene
+
+* **public class AdsProperties**:
+  * **public enum AdsMode**: Types of the advertisement library.
+  * **public struct DaiConfig**: Config for DAI ads mode.
+  * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
+
+* **public enum AdsMode**: Types of the advertisement library.
+    * **DAI**
+    * **MEDIA_TAILOR**
+    * **NONE**
+ 
+ * **public struct DaiConfig**: Config for DAI ads mode.
+    * **public string assetKey**: For live streams. This is used to determine which stream should be played.
+    * **public string contentSrcId**: For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS.
+    * **public string videoId**: For VoD (on-demand) streams. Identifier for the video content source.
+  
+ * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
+    * **public string baseUrl**: Base URL for video and ads.
+    * **public string manifestUrl**: Video URL to be attached to the baseURL.
+    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL. 
+
 ## Functions
 The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script that inherits from **HISPlayerManager**.
 
@@ -67,24 +94,31 @@ MonoBehaviour function which will be called from the beginning of the scene. It 
 #### protected virtual void EventInitComplete(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_INIT_COMPLETE** is triggered.
 This event occurs whenever the internal system of the player has been set up.
+
 #### protected virtual void EventPlaybackPlay(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_PLAYBACK_PLAY** is triggered.
 This event occurs whenever an internal playback has been played
+
 #### protected virtual void EventEndOfContent(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_END_OF_CONTENT** is triggered.
 This event occurs whenever an internal playback reaches the end of the video content.
+
 #### protected virtual void EventOnTime(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_ON_TIME** is triggered.
 This event occurs once per second.
+
 #### protected virtual void EventPlaybackPause(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_PLAYBACK_PAUSE** is triggered.
 This event occurs whenever an internal playback has been paused.
+
 #### protected virtual void EventPlaybackStop(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_PLAYBACK_STOP** is triggered.
 This event occurs whenever an internal playback has been stopped.
+
 #### protected virtual void EventPlaybackSeek(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK** is triggered.
 This event occurs whenever an internal playback has finished seeking.
+
 #### protected virtual void EventVideoTrackChange (HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_VIDEO_TRACK_CHANGE** is triggered. This event occurs whenever an internal playback has a track change.
 
@@ -103,49 +137,111 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_V
   </tr>
 </table>
 
+#### protected virtual void EventAdBlockStarted(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_STARTED** is triggered. This event occurs whenever a group of advertisements starts.
+
+#### protected virtual void EventAdBlockEnd(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_END** is triggered. This event occurs whenever a group of advertisements ends.
+
+#### protected virtual void EventAdStarted(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STARTED** is triggered. This event occurs whenever a single advertisement starts.
+
+#### protected virtual void EventAdStopped(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STOPPED** is triggered. This event occurs whenever a single advertisement ends.
+
+#### protected virtual void EventAdPodsInfo(HisPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_PODS_INFO** is triggered. This event occurs whenever there is an advertisement pods information indicating cue points of ad breaks.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>param1</td>
+    <td>Start cue point of ad break in milliseconds</td>
+  </tr>
+   <tr>
+    <td>param2</td>
+    <td>End cue point of ad break in milliseconds</td>
+  </tr>
+</table>
+
 ### Non-virtual functions
 These functions can’t be overridden and they can be used only inside the inherited script. If it’s needed to use some of these functions in the Unity scene, for example with buttons, it is needed to create a public function that connects the button with the API.
 
 #### protected void SetUpPlayer()
 Initialize the player video stream system internally. It is necessary to use this function before anything else.
+
 #### protected void Release()
 Free all resources internally.
+
 #### protected void Play(int playerIndex)
 Play a certain stream giving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void Pause(int playerIndex)
 Pause a certain stream giving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void Stop(int playerIndex)
 Stop a certain stream giving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void Seek(int playerIndex, int milliseconds)
 Seek a certain stream to a certain time giving a **playerIndex** and the time of the track to be sought in **milliseconds**. The stream is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void SetVolume(int playerIndex, float volume)
 Modify the volume of a certain stream giving a **playerIndex**. The **volume** of the track value ranges between 0.0f and 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 Call this API after having interaction with the web page/screen, otherwise audio will not play on WebGL due to browser autoplay policy.
+
 #### protected HisPlayerTrack[] GetTracks(int playerIndex)
 Get the track information of a certain stream fiving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected int GetTrackBitrate(int playerIndex, int trackIndex)
 Get the bitrate of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. 	
+
 #### protected int GetTrackWidth(int playerIndex, int trackIndex)
 Get the width of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected int GetTrackHeight(int playerIndex, int trackIndex)
 Get the height of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 of the list. 
+
 #### protected int GetTrackID(int playerIndex, int trackIndex)
 Get the ID of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected int GetTrackCount(int playerIndex)
 Get the number of tracks of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void SetTrack(int playerIndex, int trackIndex)
 Set the track to be used.  Using this disables ABR. The possible tracks can be obtained from the tracks returned from the method **GetTracks**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void DisableABR(int playerIndex)
 Disables the ABR to prevent the player from changing tracks regardless of bandwidth. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void EnableABR(int playerIndex)
 Enables the ABR to change automatically between tracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected float GetCurrentTime(int playerIndex)
 Get the playback's current time of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected float GetDuration(int playerIndex)
 Get the duration of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected bool IsLive(int playerIndex)
 Returns true if a certain stream is a live stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void ChangeVideoContent(int playerIndex, string url)
 Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### public void SetLogLevel(LogLevel logLevel)
 Establishes the number of logs to be shown. The log levels are represented as an enum of integers, so every type of log whose representative integer is greater or equal to the established log level will be shown. The log levels to be used are (0 : DEBUG, 1 : INFO, 2 : WARNING, 3 : ERROR, 4 : NONE)
+
+#### protected float GetAdDuration(int playerIndex)
+Get the duration of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected float GetAdRemainingTime(int playerIndex)
+Get the remaining time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected float GetAdCurrentTime(int playerIndex)
+Get the current time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected void ChangeVideoContent(int playerIndex, string url, int resumePosition, AdsProperties ads)
+Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **resumePosition** is time position in milliseconds (ms) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
