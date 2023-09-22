@@ -61,7 +61,7 @@ public enum LogLevel
 }
 ```
 
-* **public List <AdsProperties> multiStreamProperties**: List of properties to configure advertisement insertions for each player in the scene
+* **public List <AdsProperties> adsProperties**: List of properties to configure advertisement insertions for each player in the scene
 
 * **public class AdsProperties**:
   * **public enum AdsMode**: Types of the advertisement library.
