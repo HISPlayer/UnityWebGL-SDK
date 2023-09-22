@@ -66,6 +66,30 @@ To use MediaTailor:
 
 ## Related APIs
 
+### Properties
+
+* **public List <AdsProperties> adsProperties**: List of properties to configure advertisement insertions for each player in the scene
+
+* **public class AdsProperties**:
+  * **public enum AdsMode**: Types of the advertisement library.
+  * **public struct DaiConfig**: Config for DAI ads mode.
+  * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
+
+* **public enum AdsMode**: Types of the advertisement library.
+    * **DAI**
+    * **MEDIA_TAILOR**
+    * **NONE**
+ 
+ * **public struct DaiConfig**: Config for DAI ads mode.
+    * **public string assetKey**: For live streams. This is used to determine which stream should be played.
+    * **public string contentSrcId**: For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS.
+    * **public string videoId**: For VoD (on-demand) streams. Identifier for the video content source.
+  
+ * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
+    * **public string baseUrl**: Base URL for video and ads.
+    * **public string manifestUrl**: Video URL to be attached to the baseURL.
+    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL. 
+
 ### Event and Virtual Functions
 
 * **public enum HisPlayerEvent**: The list of events provided by HISPlayer SDK for playing advertisements. You can use the event using the virtual functions in the next section.
