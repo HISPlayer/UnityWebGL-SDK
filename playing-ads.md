@@ -15,9 +15,10 @@ Use Ads Properties to set all configuration needed to play advertisements for ea
   - MEDIA_TAILOR
   - IMA
   - NONE
-- Ad Tag Uri: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If IMA is ad mode is used this parameter is mandatory.
-- Enable Vpaid: Enables the usage of VPAID. The ads mode must be IMA.
-- Page Url: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. The ad mode must be IMA.
+- IMA Config:
+  - Ad Tag Uri: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If IMA is ad mode is used this parameter is mandatory.
+  - Enable Vpaid: Enables the usage of VPAID. The ads mode must be IMA.
+  - Page Url: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. The ad mode must be IMA.
 - DAI Config :
   - Asset Key : For LIVE streams. This is used to determine which stream should be played
   - Content Src Id : For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS
@@ -107,6 +108,7 @@ To use MediaTailor:
 
 * **public class AdsProperties**:
   * **public enum AdsMode**: Types of the advertisement library.
+  * **public struct ImaConfig**: Config for IMA ads mode.
   * **public struct DaiConfig**: Config for DAI ads mode.
   * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
 
@@ -115,9 +117,11 @@ To use MediaTailor:
     * **MEDIA_TAILOR**
     * **IMA**
     * **NONE**
-* **public string adTagUri**: Client-side ad to be used. AdsMode must be IMA.
-* **public bool enableVpaid**: Enables the usage of VPAID. AdsMode must be IMA.
-* **public bool pageUrl**: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. AdsMode must be IMA.
+
+* **public struct ImaConfig**: Config for DAI ads mode.
+    * **public string adTagUri**: Client-side ad to be used. AdsMode must be IMA.
+    * **public bool enableVpaid**: Enables the usage of VPAID. AdsMode must be IMA.
+    * **public bool pageUrl**: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. AdsMode must be IMA.
 
 * **public struct DaiConfig**: Config for DAI ads mode.
     * **public string assetKey**: For live streams. This is used to determine which stream should be played.
