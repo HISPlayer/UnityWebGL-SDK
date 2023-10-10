@@ -1,16 +1,23 @@
 # Playing Ads
 
-Supported advertisement systems : 
+Supported advertisement systems:
+- Client-side advertisements:
+  - Google IMA
+
 - Server-side advertisements
   - Google DAI
   - AWS Media Tailor
 
 ## Ads Properties
-Use Ads Properties to set all configuration needed to play advertisements for each stream. This property is part of [**Multi Stream Properties**](./setup-guide.md#multi-stream-properties). 
-- AdsMode : Select the types of the advertisement library.
+Use Ads Properties to set all configuration needed to play advertisements for each stream. This property is part of [**Multi Stream Properties**](./setup-guide.md#multi-stream-properties).
+- Ads Mode : Select the types of the advertisement library.
   - DAI
   - MEDIA_TAILOR
+  - IMA
   - NONE
+- Ad Tag Uri: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If IMA is ad mode is used this parameter is mandatory.
+- Enable Vpaid: Enables the usage of VPAID. The ads mode must be IMA.
+- Page Url: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. The ad mode must be IMA.
 - DAI Config :
   - Asset Key : For LIVE streams. This is used to determine which stream should be played
   - Content Src Id : For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS
@@ -20,9 +27,37 @@ Use Ads Properties to set all configuration needed to play advertisements for ea
   - Manifest Url : Video URL to be attached to the baseURL
   - Ads Params : Contains “Params: string” this is the Ad URL to be attached to the baseURL
 
+## Client-Side Advertisement
+### Google IMA
+Google IMA SDK is a client-side ad insertion solution offered by Google pre-integrated with HISPlayer that allows to integrate multimedia ads into your websites and apps.
+
+To use Google IMA:
+- It is needed to include the Google IMA SDK
+- It is needed to set Ads Properties > AdsMode : **IMA**
+
+#### Include the IMA SDK
+Google IMA has a dependency on the IMA SDK. Hence, this library needs to be included in your page, otherwise the playback will start without ads. The following snippets demonstrates how this SDK can be included in your html or javascript file :
+```
+<script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+```
+
+#### Configure the Ads Properties
+- Ads Mode: IMA
+- Ad Tag Uri : <YOUR_AD_URI> (e.g. **https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=**)
+
+![image](./assets/ima-adtaguri.png)
+
+- Enable Vpaid: optional (true or false).
+
+![image](./assets/ima-enablevpaid.png)
+
+- Page Url: <YOUR_PAGE_URL> (e.g. **https://demos.hisplayer.com/html5-demo/index_ima.html**)
+
+![image](./assets/ima-pageurl.png)
+
 ## Server-Side Advertisement Systems
 ### Google DAI
-Google DAI is a Server-Side Ad-Insertion solution offered by Google where HISPlayer is pre-integrated and offers playback for HLS and DASH Streams.
+Google DAI is a server-side ad insertion solution offered by Google pre-integrated with HISPlayer and offers playback for HLS and DASH Streams.
 
 To use Google DAI:
 - It is needed to include the Google DAI SDK
@@ -42,7 +77,7 @@ For Live :
 
 ![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/c7aea3a1-89d7-44c2-bc82-f9c905b1ec9d)
 
-For VoD : 
+For VoD :
 - Ads Mode : DAI
 - DAI Config :
   - Content Src Id : <YOUR_CONTENT_SRC_ID> (e.g. **2542753**)
@@ -78,17 +113,21 @@ To use MediaTailor:
 * **public enum AdsMode**: Types of the advertisement library.
     * **DAI**
     * **MEDIA_TAILOR**
+    * **IMA**
     * **NONE**
- 
- * **public struct DaiConfig**: Config for DAI ads mode.
+* **public string adTagUri**: Client-side ad to be used. AdsMode must be IMA.
+* **public bool enableVpaid**: Enables the usage of VPAID. AdsMode must be IMA.
+* **public bool pageUrl**: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. AdsMode must be IMA.
+
+* **public struct DaiConfig**: Config for DAI ads mode.
     * **public string assetKey**: For live streams. This is used to determine which stream should be played.
     * **public string contentSrcId**: For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS.
     * **public string videoId**: For VoD (on-demand) streams. Identifier for the video content source.
-  
- * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
+
+* **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
     * **public string baseUrl**: Base URL for video and ads.
     * **public string manifestUrl**: Video URL to be attached to the baseURL.
-    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL. 
+    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL.
 
 ### Event and Virtual Functions
 
