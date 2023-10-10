@@ -43,7 +43,7 @@ Google IMA has a dependency on the IMA SDK. Hence, this library needs to be incl
 
 #### Configure the Ads Properties
 - Ads Mode: IMA
-- Ad Tag Uri : <YOUR_AD_URI> (e.g. **https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=**)
+- Ad Tag Uri : "YOUR_AD_URI" (e.g. **https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=**)
 
 ![image](./assets/ima-adtaguri.png)
 
@@ -51,7 +51,7 @@ Google IMA has a dependency on the IMA SDK. Hence, this library needs to be incl
 
 ![image](./assets/ima-enablevpaid.png)
 
-- Page Url: <YOUR_PAGE_URL> (e.g. **https://demos.hisplayer.com/html5-demo/index_ima.html**)
+- Page Url: "YOUR_PAGE_URL" (e.g. **https://demos.hisplayer.com/html5-demo/index_ima.html**)
 
 ![image](./assets/ima-pageurl.png)
 
@@ -73,15 +73,15 @@ Google DAI has a dependency on the DAI SDK. Hence, this library needs to be incl
 For Live :
 - Ads Mode : DAI
 - DAI Config :
-  - Asset Key : <YOUR_ASSET_KEY> (e.g. **PSzZMzAkSXCmlJOWDmRj8Q**)
+  - Asset Key : "YOUR_ASSET_KEY" (e.g. **PSzZMzAkSXCmlJOWDmRj8Q**)
 
 ![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/c7aea3a1-89d7-44c2-bc82-f9c905b1ec9d)
 
 For VoD :
 - Ads Mode : DAI
 - DAI Config :
-  - Content Src Id : <YOUR_CONTENT_SRC_ID> (e.g. **2542753**)
-  - Video Id : <YOUR_VIDEO_ID> (e.g. **WNET0056239080000200**)
+  - Content Src Id : "YOUR_CONTENT_SRC_ID" (e.g. **2542753**)
+  - Video Id : "YOUR_VIDEO_ID" (e.g. **WNET0056239080000200**)
 
 ![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/991ab9b9-4e3f-4947-b876-94f61109ba29)
 
@@ -94,8 +94,8 @@ To use MediaTailor:
 #### Configure the Ads Properties
 - Ads Mode : MEDIA_TAILOR
 - Media Tailor Config :
-  - Base Url : <YOUR_BASE_URL> (e.g. **https://ad391cc0d55b44c6a86d232548adc225.mediatailor.us-east-1.amazonaws.com**)
-  - Manifest Url : <YOUR_MANIFEST_PATH> (e.g. **/v1/session/d02fedbbc5a68596164208dd24e9b48aa60dadc7/singssai/master.m3u8**)
+  - Base Url : "YOUR_BASE_URL" (e.g. **https://ad391cc0d55b44c6a86d232548adc225.mediatailor.us-east-1.amazonaws.com**)
+  - Manifest Url : "YOUR_MANIFEST_PATH" (e.g. **/v1/session/d02fedbbc5a68596164208dd24e9b48aa60dadc7/singssai/master.m3u8**)
 
 ![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/5fd63fb6-a713-4a8e-af1f-066e664271f9)
 
