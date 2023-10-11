@@ -16,7 +16,7 @@ Use Ads Properties to set all configuration needed to play advertisements for ea
   - IMA
   - NONE
 - IMA Config:
-  - Ad Tag Uri: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If IMA is ad mode is used this parameter is mandatory.
+  - Ad Tag Uri: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If the IMA ad mode is used this parameter is mandatory.
   - Enable Vpaid: Enables the usage of VPAID. The ads mode must be IMA.
   - Page Url: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. The ad mode must be IMA.
 - DAI Config :

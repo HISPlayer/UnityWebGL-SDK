@@ -47,7 +47,7 @@ The following public APIs are provided by **HISPlayerManager**
   * **INFO** : Provides general informational messages about the application's execution.
   * **DEBUG** : Logs messages useful for debugging and troubleshooting purposes, typically only visible during development.
   * **NONE** : No log messages will appear.
- 
+
 These log levels are represented as an enum of integers, so every type of log whose representative integer is greater or equal to the established log level will be shown. The log levels are represented as follows:
 
 ```cs
@@ -65,23 +65,30 @@ public enum LogLevel
 
 * **public class AdsProperties**:
   * **public enum AdsMode**: Types of the advertisement library.
+  * **public struct ImaConfig**: Config for IMA ads mode.
   * **public struct DaiConfig**: Config for DAI ads mode.
   * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
 
 * **public enum AdsMode**: Types of the advertisement library.
     * **DAI**
     * **MEDIA_TAILOR**
+    * **IMA**
     * **NONE**
- 
+
+ * **public struct ImaConfig**: Config for DAI ads mode.
+    * **public string adTagUri**: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If the IMA ad mode is used this parameter is mandatory.
+    * **public bool enableVpaid**: Enables the usage of VPAID. The ads mode must be IMA.
+    * **public string pageUrl**: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. The ad mode must be IMA.
+
  * **public struct DaiConfig**: Config for DAI ads mode.
     * **public string assetKey**: For live streams. This is used to determine which stream should be played.
     * **public string contentSrcId**: For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS.
     * **public string videoId**: For VoD (on-demand) streams. Identifier for the video content source.
-  
+
  * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
     * **public string baseUrl**: Base URL for video and ads.
     * **public string manifestUrl**: Video URL to be attached to the baseURL.
-    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL. 
+    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL.
 
 ## Functions
 The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script that inherits from **HISPlayerManager**.
@@ -196,13 +203,13 @@ Call this API after having interaction with the web page/screen, otherwise audio
 Get the track information of a certain stream fiving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### protected int GetTrackBitrate(int playerIndex, int trackIndex)
-Get the bitrate of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. 	
+Get the bitrate of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### protected int GetTrackWidth(int playerIndex, int trackIndex)
 Get the width of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### protected int GetTrackHeight(int playerIndex, int trackIndex)
-Get the height of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 of the list. 
+Get the height of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 of the list.
 
 #### protected int GetTrackID(int playerIndex, int trackIndex)
 Get the ID of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
