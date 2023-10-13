@@ -1,7 +1,7 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
 ### Version 1.12.0
-##### Octobre 13, 2023
+##### October 13, 2023
 - [Added] Client-side ads insertion.
 
 ### Version 1.11.0
