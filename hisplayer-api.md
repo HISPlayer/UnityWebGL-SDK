@@ -4,7 +4,7 @@
 
 The following public APIs are provided by **HISPlayerManager**
 
-* **public List <StreamProperties> multiStreamProperties**: List of properties for multi stream. Any change to the propery member must be set before calling SetupPlayer().
+* **public List <StreamProperties> multiStreamProperties**: List of properties for multi stream. Any change to the property member must be set before calling SetupPlayer(), otherwise it will not have effect.
 
 * **public class StreamProperties**:
   * **public HisPlayerRenderMode renderMode**: Type of texture for rendering.
