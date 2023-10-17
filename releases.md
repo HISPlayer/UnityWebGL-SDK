@@ -1,5 +1,10 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 1.13.0
+##### October 17, 2023
+- [Improvement] Increased default connection timeout.
+- [Added] Connection manifest and segments timeout control API.
+
 ### Version 1.12.0
 ##### October 13, 2023
 - [Added] Client-side ads insertion.
