@@ -10,6 +10,11 @@ The following public APIs are provided by **HISPlayerManager**
   * **public HisPlayerRenderMode renderMode**: Type of texture for rendering.
   * **public List < string > url**: List of the URLs for the stream.
   * **public RenderTexture renderTexture**: Reference to the Unity Render Texture.
+  * **public Material material**: Reference to the Unity Material.
+  * **public RawImage rawImage**: Reference to the Unity RawImage.
+  * **public List <AdsProperties> adsProperties**: List of properties to configure advertisement insertions for each player in the scene.
+  * **public int manifestTimeout**: The manifest request connection timeout, in milliseconds. Zero means unlimited. Defaults to 10000 milliseconds.
+  * **public int segmentsTimeout**: The segments requests connection timeout, in milliseconds. Zero means unlimited. Defaults to 5000 milliseconds.
 
 * **public bool autoPlay**: If true, the players will start playing automatically after set-up.
 
@@ -19,6 +24,34 @@ The following public APIs are provided by **HISPlayerManager**
     * **RenderTexture**
     * **Material**
     * **RawImage**
+
+* **public class AdsProperties**:
+  * **public enum AdsMode**: Types of the advertisement library.
+  * **public struct ImaConfig**: Config for IMA ads mode.
+  * **public struct DaiConfig**: Config for DAI ads mode.
+  * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
+
+* **public enum AdsMode**: Types of the advertisement library.
+    * **DAI**
+    * **MEDIA_TAILOR**
+    * **IMA**
+    * **NONE**
+
+ * **public struct ImaConfig**: Config for DAI ads mode.
+    * **public string adTagUri**: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If the IMA ad mode is used this parameter is mandatory.
+    * **public bool enableVpaid**: Enables the usage of VPAID. The ads mode must be IMA.
+    * **public string pageUrl**: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. The ad mode must be IMA.
+
+ * **public struct DaiConfig**: Config for DAI ads mode.
+    * **public string assetKey**: For live streams. This is used to determine which stream should be played.
+    * **public string contentSrcId**: For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS.
+    * **public string videoId**: For VoD (on-demand) streams. Identifier for the video content source.
+
+ * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
+    * **public string baseUrl**: Base URL for video and ads.
+    * **public string manifestUrl**: Video URL to be attached to the baseURL.
+    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL.
+
 
 * **public enum HISPlayerEvent**: The list of events provided by HisPlayer SDK. You can use the event using the virtual functions in the next section.
   * **HISPLAYER_EVENT_INIT_COMPLETE**
@@ -60,35 +93,6 @@ public enum LogLevel
     NONE // = 4
 }
 ```
-
-* **public List <AdsProperties> adsProperties**: List of properties to configure advertisement insertions for each player in the scene
-
-* **public class AdsProperties**:
-  * **public enum AdsMode**: Types of the advertisement library.
-  * **public struct ImaConfig**: Config for IMA ads mode.
-  * **public struct DaiConfig**: Config for DAI ads mode.
-  * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
-
-* **public enum AdsMode**: Types of the advertisement library.
-    * **DAI**
-    * **MEDIA_TAILOR**
-    * **IMA**
-    * **NONE**
-
- * **public struct ImaConfig**: Config for DAI ads mode.
-    * **public string adTagUri**: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If the IMA ad mode is used this parameter is mandatory.
-    * **public bool enableVpaid**: Enables the usage of VPAID. The ads mode must be IMA.
-    * **public string pageUrl**: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. The ad mode must be IMA.
-
- * **public struct DaiConfig**: Config for DAI ads mode.
-    * **public string assetKey**: For live streams. This is used to determine which stream should be played.
-    * **public string contentSrcId**: For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS.
-    * **public string videoId**: For VoD (on-demand) streams. Identifier for the video content source.
-
- * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
-    * **public string baseUrl**: Base URL for video and ads.
-    * **public string manifestUrl**: Video URL to be attached to the baseURL.
-    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL.
 
 ## Functions
 The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script that inherits from **HISPlayerManager**.
