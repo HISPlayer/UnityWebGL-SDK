@@ -34,6 +34,7 @@ The following public APIs are provided by **HISPlayerManager**
 * **public enum AdsMode**: Types of the advertisement library.
     * **DAI**
     * **MEDIA_TAILOR**
+    * **YOSPACE**
     * **IMA**
     * **NONE**
 
@@ -66,6 +67,7 @@ The following public APIs are provided by **HISPlayerManager**
   * **HISPLAYER_EVENT_AD_STARTED**
   * **HISPLAYER_EVENT_AD_STOPPED**
   * **HISPLAYER_EVENT_AD_PODS_INFO**
+  * **HISPLAYER_EVENT_ID3_METADATA**
 
 * **public struct HISPlayerEventInfo**: The information of the triggered event.
   * **public HisPlayerEvent eventType**: The type of the triggered event.
@@ -130,21 +132,34 @@ This event occurs whenever an internal playback has been stopped.
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK** is triggered.
 This event occurs whenever an internal playback has finished seeking.
 
-#### protected virtual void EventVideoTrackChange (HisPlayerEventInfo eventInfo)
+#### protected virtual void EventVideoTrackChange (HisPlayerEventVideoTrackChange eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_VIDEO_TRACK_CHANGE** is triggered. This event occurs whenever an internal playback has a track change.
 
 <table>
   <tr>
     <th>Name</th>
     <th>Description</th>
+    <th>Note</th>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>Width of the video</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>height</td>
+    <td>Height of the video</td>
+    <td></td>
   </tr>
   <tr>
     <td>param1</td>
-    <td>Width of the video.</td>
+    <td>Width of the video</td>
+    <td>Deprecated</td>
   </tr>
    <tr>
     <td>param2</td>
-    <td>Heigth of the video.</td>
+    <td>Height of the video</td>
+    <td>Deprecated</td>
   </tr>
 </table>
 
@@ -167,14 +182,88 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
   <tr>
     <th>Name</th>
     <th>Description</th>
+    <th>Note</th>
   </tr>
   <tr>
+    <td>width</td>
+    <td>Width of the video</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>height</td>
+    <td>Height of the video</td>
+    <td></td>
+  </tr>
     <td>param1</td>
-    <td>Start cue point of ad break in milliseconds</td>
+    <td>Width of the video</td>
+    <td>Deprecated</td>
   </tr>
    <tr>
     <td>param2</td>
+    <td>Height of the video</td>
+    <td>Deprecated</td>
+  </tr>
+</table>
+
+#### protected virtual void EventOnId3Metadata(HisPlayerEventID3Metadata eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_ID3_METADATA** is triggered. This event is fired when a new Yospace ad cue within the segments is encountered.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>ID3Metadata metadata</td>
+    <td>Start cue point of ad break in milliseconds</td>
+  </tr>
+</table>
+
+<table>
+<tr>
+    <th>ID3Metadata</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>int startTime</td>
+    <td>Start cue point of ad break in milliseconds</td>
+  </tr>
+   <tr>
+    <td>int endTime</td>
     <td>End cue point of ad break in milliseconds</td>
+  </tr>
+  <tr>
+    <td>ID3MetadataPayload payload</td>
+    <td>Contains the Yospace specific ad cue's data. Visit Yospace's Dev Tools for more information: https://developer.yospace.com/login.php</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>ID3MetadataPayload</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>string decodedData</td>
+    <td>The decoded data ready to be used</td>
+  </tr>
+  <tr>
+    <td>string data</td>
+    <td>Base64 data</td>
+  </tr>
+  <tr>
+    <td>string description</td>
+    <td>The data description. It might be empty</td>
+  </tr>
+  <tr>
+    <td>string key</td>
+    <td>Cue metadata identifier, e.g. "YMID"</td>
   </tr>
 </table>
 
