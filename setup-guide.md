@@ -61,10 +61,10 @@ Select the **HisPlayerTemplate** inside the **Resolution and Presentation** sect
 </p>
 
 ## 2.1 Setup HISPlayer Manager
-Create a script (for example **WebGLStreamController**) which is going to inherit from **HisPlayerManager**. It is needed to include the namespace by adding **‘using HisPlayerAPI;’** and add this component to a GameObject. It is recommended to create an **Empty GameObject** for this.
-<br>
-Now it’s time to call the **‘SetUpPlayer()’** function in order to initialize the stream environment internally. This function can be called whenever it’s needed, so it could be from the beginning of with an input.
-<br>
+Create a new script which will inherit from HISPlayerManager, for example, **WebGLStreamController** . It is necessary to add the ‘using HISPlayerAPI;’ dependancy. Then, add this component to a new game object (recommended to be empty).
+
+Call the SetUpPlayer() function in order to initialize the stream environment internally. This function can be called whenever it’s needed. For example, using the Awake function:
+
 For example, using the Awake function:
 
 ```C#
@@ -83,54 +83,44 @@ public class WebGLStreamController : HisPlayerManager
 }
 ```
 
-It is strictly necessary to use **SetUpPlayer** before using anything else, because this function will initialize everything from the SDK in order to be able to use the rest of the functions (Play, Pause, Seek…).
+It is strictly necessary to use SetUpPlayer before using anything else. This function initializes everything else that will be needed during the usage of HISPlayer APIs. 
 
-## 2.2 Attach Unity Resources
-Let’s move to **Unity Editor** to attach all the resources. The rendering system supports **Material, RawImage** and **RenderTexture** Unity’s components.
+Remember to call the Release function after closing the app or before changing scenes in Unity for freeing the internal resources. 
 
-### Attach Material
-Move into Assets’ folder for creating a new **Material**. It is possible to create a new **Material** into **Assets > Create > Material**.
-<p align="center">
-<img src="./assets/material.png">
-</p>
-Attach the material to the GameObject which is going to be used as a screen.
-<p align="center">
-<img src="./assets/attach-material.png">
-</p>
+## 2.2 Attach Unity resources
 
-### Attach RawImage
-This action will be related to Unity’s Canvas. If there is not a Canvas created yet, creating a **Raw Image** will create one automatically. 
-For the creation select, select **GameObject > UI > Raw Image**
+Move to **Unity Editor** to attach all the resources. The rendering system is supporting **Material**, **RawImage** and **RenderTexture** Unity’s components.
+
+### <ins>Material</ins>
+Create a new Material from **Assets > Create > Material** and attach it to the GameObject that is going to be used as screen and to the stream controller component. 
+
+You can also use the **Resources > Materials > HISPlayerDefaultMaterial.mat** we provide in our package. 
 
 <p align="center">
-<img src="./assets/rawimage.png">
+<img width=40% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/eacab2a8-7cee-4218-add9-98672f250540">
+<img width=40% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/9781bc85-0abb-49a9-97a2-901d5cbc899f">
 </p>
 
-Once it is created, it can be associated with the stream controller script without doing anything else (Refer to Configure HisPlayer Properties).
+### <ins>Raw Image</ins>
+This action will be related to Unity’s Canvas. If there is not a Canvas created yet, creating a **Raw Image** will create one automatically.
 
-### Attach RenderTexture
-First of all, check if the **Resources** folder exists and contains the **RenderTextures** folder. If it doesn’t exist then do the same process as we did before with the WebGLTemplates. In this case, look for the Resources folder and copy its contents into the Unity **Assets** folder. This folder contains **Unity RenderTexture** resources. Another option is creating **RenderTexture** in **Assets** directly.
-
-<br>
-
-The **RenderTexture** has to be attached to the GameObject which will be a screen for rendering the multimedia stream.
-
-<br>
-
-For creating this object, select **GameObject > 3D Object > Quad**. Then select the GameObject and remove the material attached to its **Mesh Renderer** component, then replace it with the **RenderTexture** created. The **RenderTextures** folder provided by the SDK contains the **Material** folder and this material is the one which is needed to be used for the replacement . If the **RenderTexture** resource has been created from 0, then another option is to grab the **RenderTexture** from the **Assets** folder and drop it at the end of the GameObject’s Inspector, this will create a new material automatically.
+For the creation, select **GameObject > UI > Raw Image**. Once it is created, attach it to the stream controller component
 
 <p align="center">
-<img src="./assets/quad.png" width="45%" height="50%"/>
-&nbsp; &nbsp; &nbsp; &nbsp;  
-<img src="./assets/remove-mesh.png" width="45%" height="50%"/> 
+<img width="400" alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/1eb441fa-1188-427a-bc72-f7be48a44c18">
 </p>
-<br>
+
+### <ins>RenderTexture</ins>
+For this you can use the RenderTexture we provide or create a RenderTexture from zero. In the first case, go to the Resources folder of our package and attach the **Resources > Materials > HISPlayerDefaultMaterialRenderTexture.mat** to the GameObject that is going to be used as screen and the **Resources > RenderTextures > HISPlayerRenderTexture.renderTexture** to the stream controller component.
+
+For creating it from zero, select **Assets > Create > Render Texutre** and then create a **Material** referencing the **Render Texture**. This last action can be done automatically by grabbing the **Render Texture** and dropping it at the end of a GameObject's Inspector with the component **Mesh Renderer** with **Material field empty**. This will create the new material inside a **Materials** folder. 
+
+Once all this process it’s done, associate the **RenderTexture** to the script component.
+
 <p align="center">
-<img src="./assets/drag-drop.png" width="45%" height="50%"/>
-&nbsp; &nbsp; &nbsp; &nbsp;  
-<img src="./assets/rendertexture-added.png" width="45%" height="50%"/> 
+<img src="https://github.com/HISPlayer/UnityiOS-SDK/assets/47497948/a0f26bc1-c7b1-432e-ad87-1a2d203d32c8">
 </p>
-Once all this process it’s done, it’s time to associate the RenderTexture to the script component.
+
 
 ## 2.3 Configure HISPlayer Properties
 
