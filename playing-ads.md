@@ -7,12 +7,14 @@ Supported advertisement systems:
 - Server-side advertisements
   - Google DAI
   - AWS Media Tailor
+  - Yospace
 
 ## Ads Properties
 Use Ads Properties to set all configuration needed to play advertisements for each stream. This property is part of [**Multi Stream Properties**](./setup-guide.md#multi-stream-properties).
 - Ads Mode : Select the types of the advertisement library.
   - DAI
   - MEDIA_TAILOR
+  - YOSPACE
   - IMA
   - NONE
 - IMA Config:
@@ -63,7 +65,7 @@ Error received when the above header is not set correctly:
 
 ## Server-Side Advertisement Systems
 ### Google DAI
-Google DAI is a server-side ad insertion solution offered by Google pre-integrated with HISPlayer and offers playback for HLS and DASH Streams.
+Google DAI is a server-side ad insertion solution offered by Google pre-integrated with HISPlayer and offers playback for HLS and DASH streams.
 
 To use Google DAI:
 - It is needed to include the Google DAI SDK
@@ -105,6 +107,15 @@ To use MediaTailor:
 
 ![image](https://github.com/HISPlayer/UnityWebGL-SDK/assets/32887298/5fd63fb6-a713-4a8e-af1f-066e664271f9)
 
+### Yospace
+Yospace is a server-side ad insertion solution pre-integrated with HISPlayer and offers playback for VOD and live HLS and DASH streams.
+
+To use Yospace:
+- Provide a stream that includes Yospace SSAI
+- It is needed to set Ads Properties > AdsMode : **Yospace**
+
+![image](./assets/yospace.png)
+
 ## Related APIs
 
 ### Properties
@@ -120,6 +131,7 @@ To use MediaTailor:
 * **public enum AdsMode**: Types of the advertisement library.
     * **DAI**
     * **MEDIA_TAILOR**
+    * **YOSPACE**
     * **IMA**
     * **NONE**
 
@@ -146,6 +158,7 @@ To use MediaTailor:
   * **HISPLAYER_EVENT_AD_STARTED**
   * **HISPLAYER_EVENT_AD_STOPPED**
   * **HISPLAYER_EVENT_AD_PODS_INFO**
+  * **HISPLAYER_EVENT_ID3_METADATA**
 
 #### protected virtual void EventAdBlockStarted(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_STARTED** is triggered. This event occurs whenever a group of advertisements starts.
@@ -159,8 +172,39 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
 #### protected virtual void EventAdStopped(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STOPPED** is triggered. This event occurs whenever a single advertisement ends.
 
-#### protected virtual void EventAdPodsInfo(HisPlayerEventInfo eventInfo)
+#### protected virtual void EventAdPodsInfo(HisPlayerEventAdPodsInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_PODS_INFO** is triggered. This event occurs whenever there is an advertisement pods information indicating cue points of ad breaks.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>int startTime</td>
+    <td>Start cue point of ad break in milliseconds</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>int endTime</td>
+    <td>End cue point of ad break in milliseconds</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>int param1</td>
+    <td>Start cue point of ad break in milliseconds</td>
+    <td>Deprecated</td>
+  </tr>
+   <tr>
+    <td>int param2</td>
+    <td>End cue point of ad break in milliseconds</td>
+    <td>Deprecated</td>
+  </tr>
+</table>
+
+#### protected virtual void EventOnId3Metadata(HisPlayerEventID3Metadata eventInfo)
+Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_ID3_METADATA** is triggered. This event is fired when a new Yospace ad cue within the segments is encountered.
 
 <table>
   <tr>
@@ -168,12 +212,56 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
     <th>Description</th>
   </tr>
   <tr>
-    <td>param1</td>
+    <td>ID3Metadata metadata</td>
+    <td>Metadata object that contains information about the ad cue</td>
+  </tr>
+</table>
+
+<table>
+<tr>
+    <th>ID3Metadata</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>int startTime</td>
     <td>Start cue point of ad break in milliseconds</td>
   </tr>
    <tr>
-    <td>param2</td>
+    <td>int endTime</td>
     <td>End cue point of ad break in milliseconds</td>
+  </tr>
+  <tr>
+    <td>ID3MetadataPayload payload</td>
+    <td>Contains the Yospace specific ad cue's data. Visit Yospace's Dev Tools for more information: https://developer.yospace.com/login.php</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>ID3MetadataPayload</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>string decodedData</td>
+    <td>The decoded data ready to be used</td>
+  </tr>
+  <tr>
+    <td>string data</td>
+    <td>Base64 data</td>
+  </tr>
+  <tr>
+    <td>string description</td>
+    <td>The data description. It might be empty</td>
+  </tr>
+  <tr>
+    <td>string key</td>
+    <td>Cue metadata identifier, e.g. "YMID"</td>
   </tr>
 </table>
 
