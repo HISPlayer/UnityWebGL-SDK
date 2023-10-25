@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 1.14.0
+##### October 25, 2023
+- [Added] Yospace server-side ad insertion.
+
 ### Version 1.13.0
 ##### October 17, 2023
 - [Improvement] Increased default connection timeout.
