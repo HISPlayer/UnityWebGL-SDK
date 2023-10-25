@@ -53,6 +53,7 @@ Google IMA has a dependency on the IMA SDK. Hence, this library needs to be incl
 Please, take into account that your ads must be well configured to avoid cross-origin errors. The server, where your ads are hosted, should set the header 'Access-Control-Allow-Origin: "origin used"' appropriately.
 
 Error received when the above header is not set correctly:
+
 ![image](./assets/ima-cross-origin-error.png)
 
 - Enable Vpaid: optional (true or false).
