@@ -69,11 +69,11 @@ The following public APIs are provided by **HISPlayerManager**
   * **HISPLAYER_EVENT_AD_PODS_INFO**
   * **HISPLAYER_EVENT_ID3_METADATA**
 
-* **public struct HISPlayerEventInfo**: The information of the triggered event.
+* **public class HISPlayerEventInfo**: The information of the triggered event.
   * **public HisPlayerEvent eventType**: The type of the triggered event.
-  * **public int param1**: This will have different meanings depending on the event.
-  * **public int param2**: This will have different meanings depending on the event.
-  * **public int param3**: This will have different meanings depending on the event.
+  * **public int param1**: This will have different meanings depending on the event. **Deprecated**.
+  * **public int param2**: This will have different meanings depending on the event. **Deprecated**.
+  * **public int param3**: This will have different meanings depending on the event. **Deprecated**.
   * **public int playerIndex**: The index of the player where the event is triggered.
 
 * **public enum LogLevel**: The current logging level to filter which log messages are output.
@@ -139,7 +139,7 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_V
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Note</th>
+    <th>Notes</th>
   </tr>
   <tr>
     <td>width</td>
@@ -175,32 +175,33 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
 #### protected virtual void EventAdStopped(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STOPPED** is triggered. This event occurs whenever a single advertisement ends.
 
-#### protected virtual void EventAdPodsInfo(HisPlayerEventInfo eventInfo)
+#### protected virtual void EventAdPodsInfo(HisPlayerEventAdPodsInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_PODS_INFO** is triggered. This event occurs whenever there is an advertisement pods information indicating cue points of ad breaks.
 
 <table>
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Note</th>
+    <th>Notes</th>
   </tr>
   <tr>
-    <td>width</td>
-    <td>Width of the video</td>
+    <td>int startTime</td>
+    <td>Start cue point of ad break in milliseconds</td>
     <td></td>
   </tr>
    <tr>
-    <td>height</td>
-    <td>Height of the video</td>
+    <td>int endTime</td>
+    <td>End cue point of ad break in milliseconds</td>
     <td></td>
   </tr>
-    <td>param1</td>
-    <td>Width of the video</td>
+  <tr>
+    <td>int param1</td>
+    <td>Start cue point of ad break in milliseconds</td>
     <td>Deprecated</td>
   </tr>
    <tr>
-    <td>param2</td>
-    <td>Height of the video</td>
+    <td>int param2</td>
+    <td>End cue point of ad break in milliseconds</td>
     <td>Deprecated</td>
   </tr>
 </table>

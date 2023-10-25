@@ -172,7 +172,7 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
 #### protected virtual void EventAdStopped(HisPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STOPPED** is triggered. This event occurs whenever a single advertisement ends.
 
-#### protected virtual void EventAdPodsInfo(HisPlayerEventInfo eventInfo)
+#### protected virtual void EventAdPodsInfo(HisPlayerEventAdPodsInfo eventInfo)
 Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_PODS_INFO** is triggered. This event occurs whenever there is an advertisement pods information indicating cue points of ad breaks.
 
 <table>
