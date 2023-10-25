@@ -213,7 +213,7 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_I
   </tr>
   <tr>
     <td>ID3Metadata metadata</td>
-    <td>Start cue point of ad break in milliseconds</td>
+    <td>Metadata object that contains information about the ad cue</td>
   </tr>
 </table>
 
