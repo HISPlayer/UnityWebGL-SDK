@@ -111,7 +111,6 @@ Once all this process it’s done, associate the **RenderTexture** to the script
 <img src="https://github.com/HISPlayer/UnityiOS-SDK/assets/47497948/a0f26bc1-c7b1-432e-ad87-1a2d203d32c8">
 </p>
 
-
 ## 2.3 Configure HISPlayer Properties
 
 ### <ins>Multi Stream Properties</ins>
