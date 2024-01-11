@@ -9,7 +9,7 @@ If you follow the [Import Sample](https://hisplayer.github.io/UnityWebGL-SDK/#/i
 will see there is a material attach to the **material** attribute named **HISPlayerDefaultMaterialRawImage**.
 
 <p align="center">
-<img width = "600" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/ed4c54bf-01b8-4475-90a3-a11df9979797">
+ <img width="600" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/ecbdc910-7ca4-4e3c-a471-8489e7b36245">
 </p>
 
 This material is using the custom shader **HISPlayer/HISPlayerDefaultShaderRawImage**. 
