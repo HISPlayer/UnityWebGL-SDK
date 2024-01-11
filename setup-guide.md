@@ -87,8 +87,8 @@ Create a new Material from **Assets > Create > Material** and attach it to the G
 You can also use the **Resources > Materials > HISPlayerDefaultMaterial.mat** we provide in our package. 
 
 <p align="center">
-<img width=40% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/eacab2a8-7cee-4218-add9-98672f250540">
-<img width=40% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/9781bc85-0abb-49a9-97a2-901d5cbc899f">
+<img width=37% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/eacab2a8-7cee-4218-add9-98672f250540">
+<img width=45% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/ffe0ea80-d66b-4fac-beb0-01152bce200e">
 </p>
 
 ### <ins>Raw Image</ins>
@@ -97,7 +97,7 @@ This action will be related to Unity’s Canvas. If there is not a Canvas create
 For the creation, select **GameObject > UI > Raw Image**. Once it is created, attach it to the stream controller component
 
 <p align="center">
-<img width="400" alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/1eb441fa-1188-427a-bc72-f7be48a44c18">
+<img width="400" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/5dcc7a3f-7de5-4e87-a5e3-3e08587360b4">
 </p>
 
 ### <ins>RenderTexture</ins>
