@@ -153,7 +153,7 @@ To use Yospace:
 
 ### Event and Virtual Functions
 
-* **public enum HisPlayerEvent**: The list of events provided by HISPlayer SDK for playing advertisements. You can use the event using the virtual functions in the next section.
+* **public enum HISPlayerEvent**: The list of events provided by HISPlayer SDK for playing advertisements. You can use the event using the virtual functions in the next section.
   * **HISPLAYER_EVENT_AD_BLOCK_STARTED**
   * **HISPLAYER_EVENT_AD_BLOCK_ENDY**
   * **HISPLAYER_EVENT_AD_STARTED**
@@ -161,20 +161,20 @@ To use Yospace:
   * **HISPLAYER_EVENT_AD_PODS_INFO**
   * **HISPLAYER_EVENT_ID3_METADATA**
 
-#### protected virtual void EventAdBlockStarted(HisPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_STARTED** is triggered. This event occurs whenever a group of advertisements starts.
+#### protected virtual void EventAdBlockStarted(HISPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_STARTED** is triggered. This event occurs whenever a group of advertisements starts.
 
-#### protected virtual void EventAdBlockEnd(HisPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_END** is triggered. This event occurs whenever a group of advertisements ends.
+#### protected virtual void EventAdBlockEnd(HISPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_END** is triggered. This event occurs whenever a group of advertisements ends.
 
-#### protected virtual void EventAdStarted(HisPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STARTED** is triggered. This event occurs whenever a single advertisement starts.
+#### protected virtual void EventAdStarted(HISPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_AD_STARTED** is triggered. This event occurs whenever a single advertisement starts.
 
-#### protected virtual void EventAdStopped(HisPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STOPPED** is triggered. This event occurs whenever a single advertisement ends.
+#### protected virtual void EventAdStopped(HISPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_AD_STOPPED** is triggered. This event occurs whenever a single advertisement ends.
 
 #### protected virtual void EventAdPodsInfo(HisPlayerEventAdPodsInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_PODS_INFO** is triggered. This event occurs whenever there is an advertisement pods information indicating cue points of ad breaks.
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_AD_PODS_INFO** is triggered. This event occurs whenever there is an advertisement pods information indicating cue points of ad breaks.
 
 <table>
   <tr>
@@ -204,8 +204,8 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
   </tr>
 </table>
 
-#### protected virtual void EventOnId3Metadata(HisPlayerEventID3Metadata eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_ID3_METADATA** is triggered. This event is fired when a new Yospace ad cue within the segments is encountered.
+#### protected virtual void EventOnId3Metadata(HISPlayerEventID3Metadata eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_ID3_METADATA** is triggered. This event is fired when a new Yospace ad cue within the segments is encountered.
 
 <table>
   <tr>
@@ -277,6 +277,6 @@ Get the remaining time of a certain advertisement in milliseconds (ms). The **pl
 #### protected float GetAdCurrentTime(int playerIndex)
 Get the current time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
-#### protected void ChangeVideoContent(int playerIndex, string url, int resumePosition, AdsProperties ads)
-Change video content at run time of a certain stream. The **url** is the new content that will be running on the stream. The **resumePosition** is time position in milliseconds (ms) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+#### protected void ChangeVideoContent(int playerIndex, string url, int resumePosition = 0, AdsProperties ads = null)
+Change the video’s url  of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **urlIndex** is associated with the index of the element in the list of urls. The **resumePosition** is time position in milliseconds (ms) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null
 
