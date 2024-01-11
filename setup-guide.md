@@ -31,33 +31,23 @@ Importing the package is the same as importing other normal packages in Unity. S
 <br>
 
 ## 1.2 Configure Unity for WebGL
-Once the package is imported, please follow below steps.
-First of all switch the platform for **WebGL**. Open **File > Build Settings** and then select **WebGL platform** and **switch platform**.
+
+Open the window **Tools > HISPlayer** located in the upper side of the screen > Click on Player Settings Configuration > Select **Build Target to WebGL** > Set all the required settings.
 
 <p align="center">
-<img src="./assets/build-settings.png" width="45%"/>
-&nbsp; &nbsp; &nbsp; &nbsp;  
-<img src="./assets/switch-platform.png" width="45%"/> 
-</p>
-
-Inside the previous image in the right there is a button in the bottom left corner to open **Player Settings**. Now inside Player configuration, select **WebGL > Other Settings**. The Color Space can be Gamma or Linear. In the second case, it is needed to disable the **Auto Graphics API** option. 
-
-<p align="center">
-<img src="./assets/player-settings.png" width="45%"/>
-&nbsp; &nbsp; &nbsp; &nbsp;  
-<img src="./assets/linear-space.png" width="45%"/> 
+<img width="314" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/d058e22c-72c7-4f47-bbe5-5389c4d8d72a">
 </p>
 
 Copy the **WebGLTemplates** folder from the **HISPlayer** package folder into the **Unity Assets** folder.
 <p align="center">
-<img src="./assets/webgl.png" width="45%" height="50%"/>
-&nbsp; &nbsp; &nbsp; &nbsp;  
-<img src="./assets/webgl-assets.png" width="45%" height="50%"/> 
+<img width=30% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/9a4a54c7-bafc-427b-a40b-e3bfc3494fe3">
+<img width=30% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/39784f17-9eb5-4e14-ab14-fbce80580e49">
 </p>
 
-Select the **HisPlayerTemplate** inside the **Resolution and Presentation** section.
+Select the **HisPlayerTemplate** by opening **Tools > HISPlayer** and clicking the on **Use WebGL HISPlayer Template**:
+
 <p align="center">
-<img src="./assets/resolution-presentation.png"/>
+<img width="321" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/609c4938-f3ff-4fd6-a0f6-ea4c5765c1ec">
 </p>
 
 ## 2.1 Setup HISPlayer Manager
@@ -124,33 +114,20 @@ Once all this process it’s done, associate the **RenderTexture** to the script
 
 ## 2.3 Configure HISPlayer Properties
 
-### Multi Stream Properties
-HISPlayer WebGL SDK supports multi streams to run multiple players with different configurations and contents (not supported on Windows Editor). Use **Multi Stream Properties** to set all configuration needed for multi stream. It starts with 0 elements. Each element added has its own configuration for multiple players and corresponds to 1 Render Surface.
-* **Render Mode**: Select the render surface. It can be **RenderTexture, Material** or **RawImage**.
-* **URL**: Add the **URL** associated to the Render Material. Each URL corresponds to 1 player. Each element can have multiple URLs, therefore users can use the same Render Surface to use multiple players and play different URLs.
-* **Material**: Attach the **Material** asset created to the **Material** section of the element.
-* **Raw Image**: Attach the **RawImage** asset created to the **RawImage** section of the element.
-* **Render Texture**: Attach the **RenderTexture** to the **RenderTexture** section of the element.
+### <ins>Multi Stream Properties</ins>
+Use Multi Stream Properties to set all the configuration needed for multi stream (not supported on Windows Editor). It starts with 0 elements. Each element added has its own configuration for multiple players and corresponds to 1 Render Surface. If you just need a single stream, then you just need to add 1 element with 1 URL.
+
+* <span style="color:blue">**Render Mode**</span>: Select the render surface. It can be RenderTexture, Material, RawImage or NONE.
+* <span style="color:blue">**Material**</span>: Attach the **Material** asset created to the **Material** section of the element.
+* <span style="color:blue">**Raw Image**</span>: Attach the **RawImage** asset created to the **RawImage** section of the element.
+* <span style="color:blue">**Render Texture**</span>: Attach the **RenderTexture** to the **RenderTexture** section of the element.
+* <span style="color:blue">**URL**</span>: Add the URL associated to the stream. Each stream can have multiple URLs, therefore users can use the same render surface to play different URLs.
+* <span style="color:blue">**Autoplay**</span>: Property to determine whether the player will start automatically after set up.
+* <span style="color:blue">**LoopPlayback (Read-only)**</span>: Loop the current playback. It's true by default. To modify this value, please, use the Editor or the constructor **StreamProperties(loopPlayback, autoTransition)**.
+* <span style="color:blue">**AutoTransition (Read-only)**</span>: Change the playback to the next video in the playlist. This action won't have effect when loopPlayback is true. It's false by default. To modify this value, please, use the Editor or the constructor **StreamProperties(loopPlayback, autoTransition)**.
+
 <p align="center">
-<img src="./assets/multistream-properties.png">
-</p>
-If you just need a single stream, then you just need to add 1 element with 1 URL.
-
-### Auto Play
-Property to determine whether all the players will start automatically after set up. This property is shared for all players. Keep in mind that even if the Autoplay is enabled, the videos will have no sound from the beginning due to the browsers autoplay policy.
-
-### Loop Play
-Property to determine whether all the players will play the same content again automatically after reaching the end of the content. This property is shared for all players.
-
-### Disable ABR
-Property to determine whether all the players will disable ABR after set up. This property is shared for all players. This property is set to false by default. 
-Disabling ABR by setting this API to true might improve performance, especially for multi stream usage which will set all streams to the lowest resolution in the beginning.
-If you want to enable or disable the ABR of each player or stream, please refer to the DisableABR and EnableABR API in **HisPlayer API** section.
-
-### License Key
-Input the license key that is associated with the SDK. If there is no license key inputted, the default license key will be used. If the license key is not valid, the player will not work and throw an error message.
-<p align="center">
-<img src="./assets/license-key.png">
+<img width="479" alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/7d94655c-2d91-4a1b-b90e-36ab1dbfa1da">
 </p>
 
 ## 2.4 Build and Run
