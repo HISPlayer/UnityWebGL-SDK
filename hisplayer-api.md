@@ -4,7 +4,7 @@
 
 The following public APIs are provided by **HISPlayerManager**
 
-* **public string licenseKey**: License key for making the SDK works. License key is not required for Unity Editor.
+* **public string licenseKey**: License key for making the SDK works. License key is not required for Unity Editor usage.
 
 * **public List <StreamProperties> multiStreamProperties**: List of properties for multi stream. Please, don't modify this list directly in the code.
 
