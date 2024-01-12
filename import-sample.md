@@ -43,5 +43,5 @@ The UI components in the sample scene are fully modifiable. The sample is intend
 </p>
 
 <p align="center">
-<img width="70%" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/6dfc9bdb-bfff-4b5e-8a68-3180bceef993">
+<img width=70% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/e61b9ade-e10c-424a-ac27-c13055bf0829">
 </p>
