@@ -17,7 +17,6 @@ The following public APIs are provided by **HISPlayerManager**
     * **public List \<string\> url**: List of the URLs for the stream.
     * **public bool autoPlay**: If true, the players will start playing automatically after set-up.
     * **public bool EnableRendering**: Determines if the stream will be rendered or not. The value can change in every moment for toggling between render or non-render mode. If true, the player will be rendered. It only can change in runtime.
-    * **public bool FlipTextureVertically**: Flip the texture of the stream vertically. This value should be called before **SetUpPlayer**  or **AddStream** functions. This API is not supported for WebGL. Supported Platforms: [Android](https://hisplayer.github.io/UnityAndroid-SDK/#/).
     * **public bool LoopPlayback (Read-only)**: Loop the current playback. It's true by default. To modify this value, please, use the Editor or the constructor **StreamProperties(loopPlayback, autoTransition)**.
     * **public bool AutoTransition (Read-only)**: Change the playback to the next video in the playlist. This action won't have effect when loopPlayback is true. It's false by default. To modify this value, please, use the Editor or the constructor **StreamProperties(loopPlayback, autoTransition)**.
     * **public List \<string\> keyServerURI**: List of the DRM license key for each URL. This API is not supported for WebGL. Supported Platforms: [Android](https://hisplayer.github.io/UnityAndroid-SDK/#/), [iOS](https://hisplayer.github.io/UnityiOS-SDK/#/).
