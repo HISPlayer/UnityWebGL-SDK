@@ -1,6 +1,6 @@
 # Update the SDK
 
-Through this guide, you will be introduced how to update the SDK if you already have installed the SDK previously.
+Through this guide, you will be introduced how to update the SDK if you already have installed the SDK previously. Please, restart the Editor before continuing.
 
 ## Remove Old Package
 
