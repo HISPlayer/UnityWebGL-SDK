@@ -1,5 +1,19 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 3.2.0
+##### December 7, 2023
+- [**Added**] AutoTransition and LoopPlayback APIs to multiplatform SDK
+- [**Added**] Unity 2023 support
+- [**Added**] Error system
+- [**Added**] Seek event
+
+### Version 3.1.0
+##### October 11, 2023
+
+### Version 3.0.0
+##### September 5, 2023
+The WebGL SDK is moved to multiplatform HISPlayerSDK (Android, iOS, macOS, WebGL, Windows)
+
 ### Version 1.14.0
 ##### October 25, 2023
 - [Added] Yospace server-side ad insertion.
