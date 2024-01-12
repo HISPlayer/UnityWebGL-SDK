@@ -1,9 +1,9 @@
 # Import HISPlayer Sample
-Please, download the sample here -> [**HISPlayer WebGL Sample**](https://downloads.hisplayer.com/Unity/WebGL/HISPlayerWebGLSample.unitypackage) (no need to download it if you have received it in the email).
+Please, download the sample here -> [**HISPlayer Sample**](https://downloads.hisplayer.com/Unity/AllPlatforms/HISPlayer_Sample.unitypackage) (no need to download it if you have received it in the email).
 
 Importing the package is the same as importing other normal packages in Unity. Select the downloaded package and import it.
 
-- **Assets > Import Package > Custom Package > HISPlayerUnityWebGLSample.unitypackage**
+- **Assets > Import Package > Custom Package > HISPlayer_Sample.unitypackage**
 
 <p align="center">
 <img src="./assets/import-package.png">
@@ -11,37 +11,37 @@ Importing the package is the same as importing other normal packages in Unity. S
 
 - Complete the configuration for WebGL ->  [**Configure Unity for WebGL**](./setup-guide.md#12-configure-unity-for-webgl)
 
-- Open the scene **Assets/HISPlayerWebGLSample/Scenes/HISPlayerWebGLSample.unity**
+- Open the scene **Assets/HISPlayerSample/Scenes/HISPlayerSample.unity**
 
 <p align="center">
-<img src="./assets/webglsample-addscene.PNG" width=50%>
+<img width="392" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/daee6484-ac9f-4313-b4d3-857b7d0b3b9a">
 </p>
 
 - Import TextMesh Pro Essential
 
-- Input the license key through the Inspector Window. **WebGLStreamController** game object -> **HISPlayerWebGLSample** component -> **License Key**
+- Input the license key through the Inspector Window. **StreamController** GameObject -> **HISPlayerSample** component -> **License Key**
 
 <p align="center">
-<img src="./assets/license-key.png">
+  <img width="475" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/09c245f6-0dfb-44ca-9618-3d1aa7174b14"
 </p>
 
 - Open **File** > **Build Settings** > **Add Open Scenes**
 
 <p align="center">
-<img src="./assets/webglsample-buildsetting.PNG" width=80%>
+  <img width="710" alt="AddScene" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/3ae1218a-3478-461f-a27d-f7b0619faefd">
 </p>
 
 - Build and Run
 
-To check how to set up the SDK and API usage, please refer to **Assets/HISPlayerWebGLSample/Scripts/HISPlayerWebGLSample.cs** and **WebGLStreamController GameObject** in the Editor.
+To check how to set up the SDK and API usage, please refer to **Assets/HISPlayerSample/Scripts/HISPlayerSample.cs** and **StreamController GameObject** in the Editor.
 
 ## UI Demo
 The UI components in the sample scene are fully modifiable. The sample is intended to show a comprehensive scene using the HISPlayer SDK to help demonstrate features such as play, pause, seek, etc.
 
 <p align="center">
-<img src="./assets/webglsample-ui.PNG">
+  <img width="196" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/5ca70635-f2e0-4873-863e-d9eaf108255b">
 </p>
 
 <p align="center">
-<img width="70%" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/928ca4d0-5bfe-4231-a511-63e13292b892">
+<img width="70%" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/6dfc9bdb-bfff-4b5e-8a68-3180bceef993">
 </p>
