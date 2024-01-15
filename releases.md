@@ -9,6 +9,7 @@
 
 ### Version 3.1.0
 ##### October 11, 2023
+- [**Improvement**] Improvement of software robustness
 
 ### Version 3.0.0
 ##### September 5, 2023
