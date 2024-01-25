@@ -22,6 +22,8 @@
 ##### September 5, 2023
 The WebGL SDK is moved to multiplatform HISPlayerSDK (Android, iOS, macOS, WebGL, Windows)
 
+Starting from version 3.0.0, the WebGL SDK is part of multiplatform SDK
+
 ### Version 1.14.0
 ##### October 25, 2023
 - [Added] Yospace server-side ad insertion.
