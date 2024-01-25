@@ -2,7 +2,7 @@
 
 ### Version 3.3.0
 ##### January 25, 2024
-- [**Added**] API to change video content using the URL string as a paremeter is added to multiplatform SDK:
+- [**Added**] API to change video content using the URL string as a parameter is added to multiplatform SDK:
     - **ChangeVideoContent(int playerIndex, string url, int resumePosition = 0, AdsProperties ads = null)**
 - [**Improvement**] Optimized Unity logs improvement
 - [**Added**] WebGL Ads Insertion to multiplatform SDK
