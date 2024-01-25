@@ -1,5 +1,12 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 3.3.0
+##### January 25, 2024
+- [**Added**] API to change video content using the URL string as a paremeter added to multiplatform SDK:
+    - **ChangeVideoContent(int playerIndex, string url, int resumePosition = 0, AdsProperties ads = null)**
+- [**Improvement**] Optimized Unity logs improvement
+- [**Added**] WebGL Ads Insertion to multiplatform SDK
+
 ### Version 3.2.0
 ##### December 7, 2023
 - [**Added**] AutoTransition and LoopPlayback APIs to multiplatform SDK
