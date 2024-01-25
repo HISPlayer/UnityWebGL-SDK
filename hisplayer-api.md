@@ -363,7 +363,10 @@ Modify the volume of a certain stream giving a **playerIndex**. The **volume** o
 Call this API after having interaction with the web page/screen, otherwise audio will not play on WebGL due to browser autoplay policy.
 
 #### protected void ChangeVideoContent(int playerIndex, int urlIndex, int resumePosition = 0, AdsProperties ads = null)
-Change the video’s url  of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **urlIndex** is associated with the index of the element in the list of urls. The **resumePosition** is time position in second (s) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null
+Change the video’s URL  of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **urlIndex** is associated with the index of the element in the list of URLs. The **resumePosition** is time position in second (s) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null.
+
+#### protected void ChangeVideoContent(int playerIndex, string url, int resumePosition = 0, AdsProperties ads = null)
+Change the video’s URL  of a certain player given a new URL. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The parameter **url** is the link to the new video. Please, make sure the new URL is correctly written. The **resumePosition** is time position in second (s) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null.
 
 #### protected long GetVideoPosition(int playerIndex)
 Provides information about the timeline position in milliseconds, of the current video of a certain player. The playerIndex is associated with the index of the element of Multi Stream Properties, e.g. the index 0 is the element 0 in the list.
