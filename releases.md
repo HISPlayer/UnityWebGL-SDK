@@ -18,7 +18,7 @@
 ##### October 11, 2023
 - [**Improvement**] Improvement of software robustness
 
-### Version 3.0.0
+### Version 3.0.0 (Multiplatform SDK)
 ##### September 5, 2023
 The WebGL SDK is moved to multiplatform HISPlayerSDK (Android, iOS, macOS, WebGL, Windows)
 
