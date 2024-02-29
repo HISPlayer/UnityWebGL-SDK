@@ -63,9 +63,9 @@ For example, using the Awake function:
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HisPlayerAPI;
+using HISPlayerAPI;
 
-public class WebGLStreamController : HisPlayerManager
+public class WebGLStreamController : HISPlayerManager
 {
     protected override void Awake()
     {
