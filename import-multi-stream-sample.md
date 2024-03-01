@@ -48,7 +48,7 @@ The UI components in the sample scene are fully modifiable and each stream has i
 <img width=70% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/965817d8-32f8-40f9-9bbc-7471929558ae">
 </p>
 
-## MultiStream Streams and URLs
+## Add/Remove Streams and URLs
 In order to add/remove streams and URLs, please refer to the component **HISPlayerMultiStreamController** attached to the **HISPlayerMultiStreamController GameObject** in the **Inspector**. 
 
 ### Add/Remove Streams
