@@ -35,6 +35,10 @@ Importing the package is the same as importing other normal packages in Unity. S
 
 To check how to set up the SDK and API usage, please refer to **Assets/HISPlayerSample/Scripts/HISPlayerSample.cs** and **StreamController GameObject** in the Editor.
 
+To change the default video URL using your own URL, go to **StreamController** game object > Inspector Window > HISPlayerSample (Script) > HISPlayer Attributes > MultiStreamProperties > Url > Replace the element value with your own URL.
+
+![image](https://github.com/HISPlayer/UnityAndroid-SDK/assets/32887298/72f32617-88d6-4d10-b1f6-f44463a60ce0)
+
 ## UI Demo
 The UI components in the sample scene are fully modifiable. The sample is intended to show a comprehensive scene using the HISPlayer SDK to help demonstrate features such as play, pause, seek, etc.
 
