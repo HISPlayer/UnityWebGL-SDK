@@ -45,7 +45,7 @@ The UI components in the sample scene are fully modifiable and each stream has i
 </p>
 
 <p align="center">
-<img width=70% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/965817d8-32f8-40f9-9bbc-7471929558ae">
+<img width=90% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/965817d8-32f8-40f9-9bbc-7471929558ae">
 </p>
 
 ## Add/Remove Streams and URLs
