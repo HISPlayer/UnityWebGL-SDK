@@ -63,6 +63,12 @@ You can add/remove streams by pressing the buttons **+/-** in the **Multi Stream
   <img width=70% alt="render" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/4e93b5bd-c0e8-420b-aa67-fae5c4e59f7c">
 </p>
 
+### Change URL
+To change the default video URL using your own URL, please replace the element value with your own URL in the **URL list** of the stream you want to modify.
+
+<p align="center">
+  <img width=60% alt="image" src="https://github.com/HISPlayer/UnityiOS-SDK/assets/47497948/9f0cd526-bc77-468e-95a3-324def7d4e10">
+</p>
 
 ### Add/Remove URLs
 
