@@ -16,7 +16,7 @@ Importing the package is the same as importing other normal packages in Unity. S
 - Open the scene **Assets/HISPlayerMultiStream/Scenes/HISPlayerMultiStream.unity**
 
 <p align="center">
-<img width=40% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/6ef8749d-5c7d-4597-84ec-357cc5936a67">
+<img width=60% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/6ef8749d-5c7d-4597-84ec-357cc5936a67">
 </p>
 
 - Import TextMesh Pro Essential
@@ -24,7 +24,7 @@ Importing the package is the same as importing other normal packages in Unity. S
 - Input the license key through the Inspector. **HISPlayerMultiStreamController** GameObject -> **HISPlayerMultiStreamController** component -> **License Key**
 
 <p align="center">
-  <img width=70% alt="image" src="https://github.com/HISPlayer/UnityiOS-SDK/assets/47497948/af5403d2-1d0c-46c0-b70e-c4217c52d151"
+  <img width=80 alt="image" src="https://github.com/HISPlayer/UnityiOS-SDK/assets/47497948/af5403d2-1d0c-46c0-b70e-c4217c52d151">
 </p>
 
 - Open **File** > **Build Settings** > **Add Open Scenes**
@@ -67,7 +67,7 @@ You can add/remove streams by pressing the buttons **+/-** in the **Multi Stream
 ### Add/Remove URLs
 
 You can add/remove URLs by selecting one element from the **Multi Stream Properties list** and then pressing the buttons **+/-** in the **Url list**. 
-For changing the content of the videos, please refer to **[ChangeVideoContent](https://hisplayer.github.io/UnityWebGL-SDK/#/hisplayer-api)** API.
+For changing the content of the videos, please refer to **[ChangeVideoContent](https://hisplayer.github.io/UnityWebGL-SDK/#/hisplayer-api?id=protected-void-changevideocontentint-playerindex-int-urlindex-int-resumeposition-0-adsproperties-ads-null)** API.
 
 <p align="center">
   <img width=70% alt="urls" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/bf03d4a3-d1a5-4e4d-b572-10bbe18c1f86">
