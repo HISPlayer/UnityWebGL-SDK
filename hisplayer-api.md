@@ -131,7 +131,7 @@ The following functions are provided by **HISPlayerManager**. They are not publi
 #### protected virtual void Awake()
 MonoBehaviour function which will be called from the beginning of the scene. It can be overridden but to make the system work it’s necessary to call **base.Awake()** into the overridden function.
 
-#### protected virtual void EventPlaybackReady(HisPlayerEventInfo eventInfo)
+#### protected virtual void EventPlaybackReady(HISPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_READY** is triggered.
 This event occurs when the current playback of a stream is ready to be used.
 Calling functions such as GetTracks before this event is triggered will provide null information.
