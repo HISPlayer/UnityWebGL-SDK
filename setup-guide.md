@@ -44,7 +44,7 @@ Copy the **WebGLTemplates** folder from the **HISPlayer** package folder into th
 <img width=30% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/39784f17-9eb5-4e14-ab14-fbce80580e49">
 </p>
 
-Select the **HisPlayerTemplate** by opening **Tools > HISPlayer** and clicking the on **Use WebGL HISPlayer Template**:
+Select the **HisPlayerTemplate** by opening **Tools > HISPlayer** and click **Use WebGL HISPlayer Template**:
 
 <p align="center">
 <img width="321" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/609c4938-f3ff-4fd6-a0f6-ea4c5765c1ec">
