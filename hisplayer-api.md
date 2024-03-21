@@ -80,6 +80,15 @@ The following public APIs are provided by **HISPlayerManager**
     * **HISPLAYER_EVENT_AD_STOPPED**
     * **HISPLAYER_EVENT_AD_PODS_INFO**
     * **HISPLAYER_EVENT_ID3_METADATA**
+ 
+* **public enum HISPlayerError**: The list of errors provided by HISPlayer SDK. The errors can be used with the virtual functions in the next section:
+   * **HISPLAYER_ERROR_LICENSE_EXPIRED** (no function on this)
+   * **HISPLAYER_ERROR_NOT_VALID_APPID** (no function on this)
+   * **HISPLAYER_ERROR_GENERAL_LICENSE_ERROR** (no function on this)
+   * **HISPLAYER_ERROR_LICENSE_DISABLED** (no function on this)
+   * **HISPLAYER_ERROR_IMPRESSIONS_LIMIT_REACHED** (no function on this)
+   * **HISPLAYER_ERROR_PLAYBACK_DURATION_LIMIT_REACHED** (no function on this)
+   * **HISPLAYER_ERROR_PLATFORM_NOT_REGISTERED** (no function on this)
 
 * **public struct HISPlayerEventInfo**: The information of the triggered event.
    * **public HISPlayerEvent eventType**: The type of the event triggered.
@@ -334,7 +343,7 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
   </tr>
 </table>
 
-#### protected virtual void ErrorInfo(HISPlayerErrorInfo subtitlesInfo)
+#### protected virtual void ErrorInfo(HISPlayerErrorInfo errorIndo)
 Override this method to add custom logic when an error callback is triggered. Please, refer to the **HISPlayerError** list.
 
 ### Non-virtual functions
