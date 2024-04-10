@@ -1,5 +1,13 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 3.4.0
+##### April 10, 2024
+- [**Added**] Multi stream support on Windows Editor
+- [**Added**] HISPLAYER_ERROR_PLATFORM_NOT_REGISTERED error event
+- [**Improvement**] Optimized initialization of the player
+- [**Improvement**] Optimized HISPlayer Settings
+    - A warning message will be displayed in case a field required by HISPlayer SDK is missing
+
 ### Version 3.3.0
 ##### January 25, 2024
 - [**Added**] API to change video content using the URL string as a parameter is added to multiplatform SDK:

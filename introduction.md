@@ -28,7 +28,7 @@
 * WebGL 2.0
 
 ### Supported Unity Editor
-* Windows (Multi stream is not supported)
+* Windows
 * MacOS
 
 ### Supported Unity Render Pipeline
