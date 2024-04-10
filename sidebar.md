@@ -1,6 +1,5 @@
 - [HISPlayer Unity WebGL SDK](/introduction.md)
 - [Quickstart Guide](/setup-guide.md)
-- [Import HISPlayer Sample](/import-sample.md)
 - [Custom Shaders for Linear Color Space](/shaders.md)
 - [Safari Playback Limitation](/safari.md)
 - [Playing Ads](/playing-ads.md)
