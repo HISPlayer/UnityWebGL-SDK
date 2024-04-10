@@ -343,7 +343,7 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
   </tr>
 </table>
 
-#### protected virtual void ErrorInfo(HISPlayerErrorInfo errorIndo)
+#### protected virtual void ErrorInfo(HISPlayerErrorInfo errorInfo)
 Override this method to add custom logic when an error callback is triggered. Please, refer to the **HISPlayerError** list.
 
 ### Non-virtual functions
