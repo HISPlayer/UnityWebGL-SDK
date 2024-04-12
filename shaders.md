@@ -36,7 +36,7 @@ For more details, you can check the following folders and files:
 - **Packages/HisPlayerSDK/HisPlayer/Resources/RenderTextures/**
   - **HISPlayerDefaultRenderTexture.renderTexture** - This file is a custom RenderTexture to be used with the **HISPlayerDefaultMaterialRenderTexture.mat**.
 
-## HISPlayer 360 Shader for Linear Color Space
+## HISPlayer 360 Shader for 360 Video Playback
 If you are using **HISPlayer SDK version 3.4.0** and above, you will find **HISPlayer360Shader.shader** in *Packages/com.hisplayer.hisplayersdk/HISPlayer/Scripts/Shaders/*.
 <p align="center">
   <img width="70%" alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/32887298/e95a25a0-82ca-4c7b-b27b-e5ea3a84ae84">
