@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 3.4.1
+##### April 23, 2024
+- [**Improvement**] Improvement of software robustness
+
 ### Version 3.4.0
 ##### April 10, 2024
 - [**Added**] Multi stream support on Windows Editor
@@ -21,6 +25,10 @@
 - [**Added**] Unity 2023 support
 - [**Added**] Error system
 - [**Added**] Seek event
+
+### Version 3.1.1
+##### November 23, 2023
+- [**Improvement**] Improvement of software robustness
 
 ### Version 3.1.0
 ##### October 11, 2023
