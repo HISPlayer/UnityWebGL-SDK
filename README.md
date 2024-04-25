@@ -5,11 +5,11 @@ HISPlayer is the most advanced Unity video streaming player for WebGL, supportin
 # [The full Documentation](https://hisplayer.github.io/UnityWebGL-SDK)
 
 
+<br>
 
-## Try our UnityEngine Video Player SDK Now!
+## [Try our UnityEngine Video Player SDK Here!](https://github.com/HISPlayer/Unity_Video_Player/releases/tag/v3.4.1)
 
-To get a demo of our latest Unity SDK for WebGL, contact us here.
+<br>
 
-* [Request demo](https://www.hisplayer.com/demo-unity-player-sdk-github/?utm_source=github&utm_medium=referral&utm_campaign=unitygithub&utm_content=20200211--unitydemocontact)
-
-* contact@hisplayer.com
+> [!NOTE]
+> ***If you need DRM protection, custom development, and expedited customer support, please [contact us here](https://hisplayer.com/contact-hisplayer-unity-sdk-premium/) to get the HISPlayer SDK Premium Version.***
