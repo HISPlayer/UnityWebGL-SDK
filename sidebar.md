@@ -6,7 +6,7 @@
 - [Unity URP](/unity-urp.md)
 - [Unity HDRP](/unity-hdrp.md)
 - [Obtaining Logs](/obtaining-logs.md)
+- [Update the SDK](/update-the-sdk.md)
 - [CORS Error](/cors-error.md)
 - [Safari Playback Limitation](/safari.md)
-- [Update the SDK](/update-the-sdk.md)
 - [Releases](/releases.md)
