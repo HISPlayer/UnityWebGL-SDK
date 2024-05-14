@@ -3,7 +3,7 @@
 Audio will not play in WebGL without having interaction with the web page due to [browser autoplay policy](https://developer.chrome.com/blog/autoplay/). 
 You need to call [SetVolume() API](https://hisplayer.github.io/UnityWebGL-SDK/#/hisplayer-api?id=protected-void-setvolumeint-playerindex-float-volume) after you interact with the screen.
 
-You may refer to [HISPlayer Sample](https://hisplayer.github.io/UnitySamples/#/hisplayer-sample). On WebGL build, we interact first with the web page by clicking the "Start" button. 
+You may refer to [HISPlayer Sample](https://hisplayer.github.io/UnitySamples/#/hisplayer-sample). After building the project for WebGL, we interact first with the web page by clicking the "Start" button. 
 Then, **SetVolume** API is called through the script **HISPlayerController.cs** after interacting with the web page.
 
 <p align="center">
