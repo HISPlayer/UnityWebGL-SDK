@@ -8,5 +8,6 @@
 - [Obtaining Logs](/obtaining-logs.md)
 - [Update the SDK](/update-the-sdk.md)
 - [CORS Error](/cors-error.md)
+- [Audio Autoplay](/audio-autoplay.md)
 - [Safari Playback Limitation](/safari.md)
 - [Releases](/releases.md)
