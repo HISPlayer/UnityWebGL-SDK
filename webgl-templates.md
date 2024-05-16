@@ -50,7 +50,7 @@ Every Unity Project includes these templates by default. Copy a template and pla
 and rename it to something meaningful so you can identify your template later.
 
 Once you have created your own template, please, copy the files *hisplayer.js* and *HisPlayerUnity.js* into your files, open the index.html file and
-refer to those files following the previous point [Index.html](#index-file).
+refer to those files following the previous point [Index File](#index-file).
 
 The files are located in:
 
