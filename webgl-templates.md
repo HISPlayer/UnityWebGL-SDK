@@ -44,7 +44,7 @@ You can always modify this file, but these references are needed. Otherwise, HIS
 
 ### Custom WebGL Template
 It is also possible to create your own template from scratch. The easiest way to create a new custom WebGL template is to make a copy of the built-in Default or Minimal templates,
-which are stored in corresponding subfolders under **<Unity Installation> > PlaybackEngines > WebGLSupport > BuildTools > WebGLTemplates**.
+which are stored in corresponding subfolders under **\<Unity Installation\> > PlaybackEngines > WebGLSupport > BuildTools > WebGLTemplates**.
 
 Every Unity Project includes these templates by default. Copy a template and place it in your own **Assets > WebGLTemplates** folder,
 and rename it to something meaningful so you can identify your template later.
