@@ -60,7 +60,7 @@ The files are located in:
 Finally, open **Edit > Project Settings > Player > Resolution and Presentation** and choose your template. 
 
 <p align="center">
-<img width=70% src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/bc6f2f0b-cbee-47b9-95ae-c9cd2d7b1bf3">
+<img width=90% src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/bc6f2f0b-cbee-47b9-95ae-c9cd2d7b1bf3">
 </p>
 
 At this point, you can also ignore the error that appears on the _HISPlayer Settings_ related with the **WebGL HISPlayer Template**:
