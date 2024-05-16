@@ -26,9 +26,9 @@ Please, keep in mind that you will always need these files for HISPlayer SDK to 
 <img width=70% src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/9d87a913-f278-4772-9f8f-3f9c4130c303">
 </p>
 
-### Index.html 
+### Index File
 
-The index.html contains the code necessary to load the build. Use this file to modify the entire page where your application will be running. 
+The **index.html** contains the code necessary to load the build. Use this file to modify the entire page where your application will be running. 
 
 The _\<head\>_ is containing the references to *hisplayer.js* and *HisPlayerUnity.js*. 
 You can always modify this file, but these references are needed. Otherwise, HISPlayer won't work on your sample.
@@ -50,7 +50,7 @@ Every Unity Project includes these templates by default. Copy a template and pla
 and rename it to something meaningful so you can identify your template later.
 
 Once you have created your own template, please, copy the files *hisplayer.js* and *HisPlayerUnity.js* into your files, open the index.html file and
-refer to those files following the previous point [Index.html](#index.html).
+refer to those files following the previous point [Index.html](#index-file).
 
 The files are located in:
 
