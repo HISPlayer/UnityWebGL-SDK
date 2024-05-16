@@ -30,7 +30,7 @@ Please, keep in mind that you will always need these files for HISPlayer SDK to 
 
 The index.html contains the code necessary to load the build. Use this file to modify the entire page where your application will be running. 
 
-The _<head>_ is containing the references to *hisplayer.js* and *HisPlayerUnity.js*. 
+The _\<head\>_ is containing the references to *hisplayer.js* and *HisPlayerUnity.js*. 
 You can always modify this file, but these references are needed. Otherwise, HISPlayer won't work on your sample.
 
 ```html
