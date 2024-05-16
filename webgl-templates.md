@@ -4,7 +4,7 @@
 
 A WebGL template is a configuration setting that lets you control the appearance of the HTML page, so that you can: test, demonstrate, and preview your WebGL application in a browser.
 
-We provide our custom HISPlayerTemplate for you to use our SDK. In the case you want to create your own template, please, refer to [Custom WebGL Template](#Custom_WebGL_Template). 
+We provide our custom HISPlayerTemplate for you to use our SDK. In the case you want to create your own template, please, refer to [Custom WebGL Template](#custom-webgl-template). 
 
 A WebGL Template is always needed when for creating a WebGL application and it will always be stored within **Assets > WebGL Templates** to be used. 
 You can refer to [Unity: WebGL Templates](https://docs.unity3d.com/Manual/webgl-templates.html) for more information. 
@@ -50,7 +50,7 @@ Every Unity Project includes these templates by default. Copy a template and pla
 and rename it to something meaningful so you can identify your template later.
 
 Once you have created your own template, please, copy the files *hisplayer.js* and *HisPlayerUnity.js* into your files, open the index.html file and
-refer to those files following the previous point [Index.html](#Index.html).
+refer to those files following the previous point [Index.html](#index.html).
 
 The files are located in:
 
