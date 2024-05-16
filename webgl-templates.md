@@ -20,7 +20,7 @@ The most important files within HISPlayer Template are:
 * HisPlayerTemplate > hisplayer.js
 * HisPlayerTemplate > js > HisPlayerUnity.js
 
-Please, keep in mind that you will always need these files to make HISPlayer SDK works on your project.
+Please, keep in mind that you will always need these files for HISPlayer SDK to work on your project.
 
 <p align="center">
 <img width=70% src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/9d87a913-f278-4772-9f8f-3f9c4130c303">
