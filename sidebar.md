@@ -1,6 +1,7 @@
 - [HISPlayer Unity WebGL SDK](/introduction.md)
 - [Quickstart Guide](/setup-guide.md)
 - [HISPlayer API](/hisplayer-api.md)
+- [WebGL Templates](/webgl-templates.md)
 - [Custom Shaders for Linear Color Space](/shaders.md)
 - [Playing Ads](/playing-ads.md)
 - [Unity URP](/unity-urp.md)
