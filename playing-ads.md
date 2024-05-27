@@ -136,7 +136,7 @@ To use Yospace:
     * **IMA**
     * **NONE**
 
-* **public struct ImaConfig**: Config for DAI ads mode.
+* **public struct ImaConfig**: Config for IMA ads mode.
     * **public string adTagUri**: Client-side ad to be used. AdsMode must be IMA.
     * **public bool enableVpaid**: Enables the usage of VPAID. AdsMode must be IMA.
     * **public bool pageUrl**: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. AdsMode must be IMA.
