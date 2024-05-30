@@ -7,7 +7,7 @@ HISPlayer is the most advanced Unity video streaming player for WebGL, supportin
 <br>
 
 ##  [NEW!](https://hisplayer.github.io/UnityVideoUpload/#/README)
-> **[HISPlayer Video Upload / Hosting](https://hisplayer.github.io/UnityVideoUpload/#/README)** is a new feature of our **Unity Video Player SDK** that allows you to upload local video files to our server and transcode them into HLS and DASH streaming formats directly from our Unity SDK. Need to convert file-based content into HLS and DASH streaming for multi-screen delivery at scale? Contact us here: [contact@hisplayer.com](mailto:contact@hisplayer.com)
+> **[HISPlayer Video Upload / Hosting](https://hisplayer.github.io/UnityVideoUpload/#/README)** is a new feature of our **Unity Video Player SDK** that allows you to upload local video files to our server and transcode them into HLS and DASH streaming formats directly from our Unity SDK. Need to convert your videos into HLS and DASH streams for multi-screen delivery at scale? Contact us here: [contact@hisplayer.com](mailto:contact@hisplayer.com)
 > 
 > We can help you with the full **end-to-end** delivery and playback.
 
