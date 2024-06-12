@@ -155,7 +155,7 @@ To use Yospace:
 
 * **public enum HISPlayerEvent**: The list of events provided by HISPlayer SDK for playing advertisements. You can use the event using the virtual functions in the next section.
   * **HISPLAYER_EVENT_AD_BLOCK_STARTED**
-  * **HISPLAYER_EVENT_AD_BLOCK_ENDY**
+  * **HISPLAYER_EVENT_AD_BLOCK_END**
   * **HISPLAYER_EVENT_AD_STARTED**
   * **HISPLAYER_EVENT_AD_STOPPED**
   * **HISPLAYER_EVENT_AD_PODS_INFO**
