@@ -1,6 +1,6 @@
 # HISPlayer Unity WebGL SDK
 
-For more information and the complete documentation for all platforms visit **[HISPlayer Unity SDKs](https://hisplayer.github.io/)**
+For more information and the complete Documentation for all platforms, visit **[HISPlayer Unity SDKs](https://hisplayer.github.io/)**
 
 ## Compatibility
 
