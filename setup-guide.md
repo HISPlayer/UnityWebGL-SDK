@@ -145,11 +145,13 @@ Once all this process it’s done, associate the **RenderTexture** to the script
 ## 2.3 Configure HISPlayer Properties
 
 ### <ins>License Key</ins>
-Input the license key that is associated with the SDK. If the license key is not valid, the player won't work and will throw an error message. License key is not required for Unity Editor usage.
+If you received a license key from HISPlayer, please input the license key in the **License Key** field. 
 
 <p align="center">
 <img width="600" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/7e7ca754-8d92-4c1b-b4aa-8218b6108bbc">
 </p>
+
+If the license key is not valid, the player won't work and will throw an error message. License key is not required for Unity Editor usage.
 
 ### <ins>Multi Stream Properties</ins>
 Use Multi Stream Properties to set all the configuration needed for multi stream. It starts with 0 elements. Each element added has its own configuration for multiple players and corresponds to 1 Render Surface. If you just need a single stream, then you just need to add 1 element with 1 URL.
