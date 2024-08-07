@@ -59,7 +59,6 @@ The following public APIs are provided by **HISPlayerManager**
 
 * **public enum HISPlayerEvent**: The list of events provided by HISPlayer SDK. The events can be used with the virtual functions in the next section:
     * **HISPLAYER_EVENT_PLAYBACK_READY**
-    * **HISPLAYER_EVENT_PLAYLIST_CHANGE**
     * **HISPLAYER_EVENT_VIDEO_SIZE_CHANGE**
     * **HISPLAYER_EVENT_PLAYBACK_PLAY**
     * **HISPLAYER_EVENT_PLAYBACK_PAUSE**
