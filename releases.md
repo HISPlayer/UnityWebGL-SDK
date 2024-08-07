@@ -4,10 +4,15 @@
 ##### August 7, 2024
 - [**Added**] New HISPlayer Video Uploader feature. Turn local videos into streaming videos such as HLS or DASH. This videos are going to be stored in our server for you. Please, on the Editor refer to:
     - [HISPlayer Video Upload documentation](https://hisplayer.github.io/UnityVideoUpload/#/)
-- [**Update**] HISPlayer360Shader.shader is now including the field Flip Vertically. Please, refer to:
+- [**Added**] Custom resources to support the stereoscopic rendering mode
+    - Packages > HISPlayer SDK > HISPlayer > Scripts > Shaders > **HISPlayerStereoscopicShader.shader**
+    - Packages > HISPlayer SDK > HISPlayer > Resources > Materials > **HISPlayerStereoscopicMaterial.mat**
+    - Packages > HISPlayer SDK > HISPlayer > Scripts > RenderTextures > **HISPlayerStereoscopicRenderTexture.rendertexture**
+- [**Added**] Custom resources to play 180/360 videos
     - Packages > HISPlayer SDK > HISPlayer > Resources > Materials > **HISPlayer360Material.mat**
     - Packages > HISPlayer SDK > HISPlayer > Resources > Materials > **HISPlayer180Material.mat**
     - Packages > HISPlayer SDK > HISPlayer > Scripts > Shaders > **HISPlayer360Shader.shader**
+    - Packages > HISPlayer SDK > HISPlayer > Scripts > RenderTextures > **HISPlayer360RenderTexture.rendertexture**
 - [**Improvement**] Optimized HISPlayer Settings log messages
 - [**Improvement**] Optimized Event and Error listeners
 - [**Improvement**] Optimized license checking
