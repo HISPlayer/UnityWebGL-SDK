@@ -9,8 +9,8 @@
 - [**Improvement**] Optimized license checking
 - [**Improvement**] Optimized HISPlayer API function commentaries to be more clear
 - [**Improvement**] Optimized runtime log messages
-- [**Improvement**] Optimized Safari browser experience
-
+- [**Improvement**] Optimized video playback on Safari browser
+  
 ### Version 3.4.1
 ##### April 23, 2024
 - [**Improvement**] Improvement of software robustness
