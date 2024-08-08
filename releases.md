@@ -1,7 +1,7 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
 ### Version 4.3.0
-##### August 7, 2024
+##### August 8, 2024
 - [**Added**] New HISPlayer Video Uploader feature. Turn local videos into streaming videos such as HLS or DASH. This videos are going to be stored in our server for you. Please, on the Editor refer to:
     - [HISPlayer Video Upload documentation](https://hisplayer.github.io/UnityVideoUpload/#/)
 - [**Improvement**] Optimized HISPlayer Settings log messages
