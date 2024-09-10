@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.4.0
+##### September 10, 2024
+- [**Added**] Release API is called automatically when stopping the Editor, changing scenes or closing the app
+
 ### Version 4.3.0
 ##### August 8, 2024
 - [**Added**] New HISPlayer Video Uploader feature. Turn local videos into streaming videos such as HLS or DASH. This videos are going to be stored in our server for you. Please, on the Editor refer to:
