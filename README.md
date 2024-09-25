@@ -22,7 +22,7 @@ Enhance your WebGL games with premium quality video/audio publishing as well as 
 
 <br>
 
-## [Try FREE DEMO of our Unity WebGL Video Player SDK Here!](https://github.com/HISPlayer/Unity_Video_Player/releases/tag/v3.4.1)
+## [Try FREE DEMO of our Unity WebGL Player SDK Here!](https://github.com/HISPlayer/Unity_Video_Player/releases/tag/v3.4.1)
 
 <br>
 
