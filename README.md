@@ -9,10 +9,12 @@ Enhance your WebGL games with premium quality video/audio publishing as well as 
 
 <br>
 
-## NEW!: Upload and Host your videos with HISPlayer
+## 📣 NEW!: ✨ 
+**Upload and Host your videos with HISPlayer**
+>
 > Need to convert your videos into HLS and DASH streams for multi-platform delivery at scale? HISPlayer includes now the option to upload and host your videos that can be played by HISPlayer Unity SDK. **[Start your FREE trial here!](https://dashboard.hisplayer.com/signup)**
 > 
-> Moreover, there is a version of HISPlayer SDK that allows you to upload your videos directly from the Unity Editor, **[contact our team to get more info about it](https://hisplayer.com/contact-unity3d-video-upload-hosting/).**
+> Moreover, there is a version of HISPlayer SDK that allows you to upload your videos directly from the **Unity Editor**, **[contact our team to get more info about it](https://hisplayer.com/contact-unity3d-video-upload-hosting/).**
 > 
 >The following videos show how it works:
 > * **[How to upload videos from the Unity Editor with HISPlayer](https://www.youtube.com/watch?v=POzM5U31tzc)**
