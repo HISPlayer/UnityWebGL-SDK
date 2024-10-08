@@ -48,11 +48,11 @@ Select the **HisPlayerTemplate** by opening **Tools > HISPlayer** and clicking t
 </p>
 
 ## Update License Key
-Input the license key that is associated with the SDK through HISPlayer properties. If the license key is not valid, the player won't work and will throw an error message.
-
-License key is not required for Unity Editor.
+If you received a license key from HISPlayer, please input the license key in the License Key field.
 
 <p align="center">
-<img width="478" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/50b10c75-c6e0-438d-ba1f-da6e66d51eed">
+<img width=70% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/50b10c75-c6e0-438d-ba1f-da6e66d51eed">
 </p>
+
+If the license key is not valid, the player won’t work and will throw an error message. License key is not required for Unity Editor usage.
 
