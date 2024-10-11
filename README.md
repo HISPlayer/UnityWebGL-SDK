@@ -24,7 +24,7 @@ Enhance your WebGL games with premium quality video/audio publishing as well as 
 
 <br>
 
-## [REQUEST FREE DEMO HERE!](https://hisplayer.com/demo-unity-player-sdk-github/?utm_source=github&utm_medium=referral&utm_campaign=unitygithub&utm_content=20200211--unitydemocontact)
+## [REQUEST A DEMO HERE!](https://hisplayer.com/demo-unity-player-sdk-github/?utm_source=github&utm_medium=referral&utm_campaign=unitygithub&utm_content=20200211--unitydemocontact)
 
 <br>
 
