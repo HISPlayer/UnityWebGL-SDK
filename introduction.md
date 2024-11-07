@@ -13,6 +13,7 @@ For more information and the complete Documentation for all platforms, visit **[
 * 2021
 * 2022
 * 2023
+* Unity 6
 
 ### Supported Browsers
 * Chrome
