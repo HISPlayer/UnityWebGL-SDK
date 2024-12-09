@@ -2,7 +2,7 @@
 
 HISPlayer is the most advanced Unity video streaming player for WebGL, supporting Video on Demand (VOD) and live contents. It enables premium DASH and HLS video streaming inside your Unity games and metaverses on WebGL across all web browsers in any device. We include advanced features such as multistream / multiview, ad insertion (SSAI, SGAI & CSAI), or automatic bitrate adaptation to secure the best video quality. You can use the HISPlayer's WebGL Video Player component to control how to time video playback relative to other interactive behaviors in WebGL metaverse or games.
 
-Enhance your WebGL games with premium quality video/audio publishing as well as viewing capabilities. Bring advanced video streaming and playback in WebGL with HISPlayer Unity SDK. 
+Enhance your Unity WebGL games with premium video streaming and playback. 
 
 
 ## [The full Documentation](https://hisplayer.github.io/UnityWebGL-SDK)
