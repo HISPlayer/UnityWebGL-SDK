@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.7.0
+##### March 3, 2025
+- [**Added**] GetPlaybackSpeedRate and SetPlaybackSpeedRate APIs
+
 ### Version 4.4.0
 ##### September 10, 2024
 - [**Added**] Release API is called automatically when stopping the Editor, changing scenes or closing the app
