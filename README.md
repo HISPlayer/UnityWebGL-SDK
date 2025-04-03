@@ -12,11 +12,10 @@ HISPlayer is the most advanced Unity video streaming player for WebGL, supportin
 >
 > HISPlayer now includes the option to upload and host any video files to your HISPlayer account, converting them into HLS and DASH streaming URLs. You can stream all these videos using HISPlayer Unity SDK into Unity. **[Start your FREE trial here!](https://hisplayer.com/unity-asset-store-saas-registration/)**
 > 
-> Moreover, there is a version of HISPlayer Unity SDK that allows you to upload your videos directly from the **Unity Editor**, **[contact our team to get more info here](https://hisplayer.com/contact-unity3d-video-upload-hosting/).**
+> Moreover, there is a version of HISPlayer Unity SDK that allows you to upload your videos directly from the **Unity Editor**.
 > 
->Tutorial videos:
-> * **[Host videos from the Unity Editor](https://www.youtube.com/watch?v=POzM5U31tzc)**
-> * **[Host videos from HISPlayer Dashboard](https://www.youtube.com/watch?v=awfN0zz-8zQ)**
+>Tutorial:
+> * **[Host videos from the Unity Editor](https://www.youtube.com/watch?v=vSI7U6TjHqI)**
 >
 > We can help you with the full **end-to-end** video content delivery and playback.
 
