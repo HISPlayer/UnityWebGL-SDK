@@ -369,13 +369,22 @@ Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_A
 Override this method to add custom logic when an error callback is triggered. Please, refer to the **HISPlayerError** list.
 
 ### Non-virtual functions
+
 These functions can’t be overridden and they can be used only inside the inherited script. If it’s needed to use some of these functions in the Unity scene, for example with buttons, it is needed to create a public function that connects the button with the API.
+
+---
+
+### 🟢 Initialization
 
 #### protected void SetUpPlayer()
 Initialize the player video stream system internally. It is necessary to use this function before anything else.
 
 #### protected void Release()
 Free all resources internally. In the SDK v4.3.0 and below, it's necessary to call this function before changing between Unity scenes or before quitting the application. In the SDK v4.4.0 and above, the release is called automatically when changing scenes or quitting the application and it's not required to call this function.
+
+---
+
+### ▶️ Core Player
 
 #### protected void Play(int playerIndex)
 Play a certain stream giving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
@@ -390,8 +399,18 @@ Stop a certain stream giving a **playerIndex**. The **playerIndex** is associate
 Seek a certain stream to a certain time giving a **playerIndex** and the time of the track to be sought in **milliseconds**. The stream is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### protected void SetVolume(int playerIndex, float volume)
-Modify the volume of a certain stream giving a **playerIndex**. The **volume** of the track value ranges between 0.0f and 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Modify the volume of a certain stream giving a **playerIndex**. The **volume** of the track value ranges between 0.0f and 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.  
 Call this API after having interaction with the web page/screen, otherwise audio will not play on WebGL due to browser autoplay policy.
+
+#### protected void SetPlaybackSpeedRate(int playerIndex, float speed)
+Modify the **speed rate** of a certain stream giving a **playerIndex**. The value of the player's speed must be greater (>) than 0.0f and less than or equal (<=) to 8.0f. The default value of player's speed is 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected float GetPlaybackSpeedRate(int playerIndex)
+Obtain the **speed rate** of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+---
+
+### 🎞️ Video Content
 
 #### protected void ChangeVideoContent(int playerIndex, int urlIndex, int resumePosition = 0 (optional), AdsProperties ads = null (optional))
 Change the video’s URL of a certain player. The next playback will start paused if **autoPlay** is disabled. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **urlIndex** is associated with the index of the element in the list of URLs. The **resumePosition** parameter is optional and is the time position in second(s) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null.
@@ -399,98 +418,110 @@ Change the video’s URL of a certain player. The next playback will start pause
 #### protected void ChangeVideoContent(int playerIndex, string url, int resumePosition = 0 (optional), AdsProperties ads = null (optional))
 Change the video’s URL of a certain player given a new URL. The next playback will start paused if **autoPlay** is disabled. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The parameter **url** is the link to the new video. Please, make sure the new URL is correctly written. The **resumePosition** parameter is optional and is the time position in second(s) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null.
 
+---
+
+### ⏱️ Timeline
+
 #### protected long GetVideoPosition(int playerIndex)
 Provides information about the timeline position in milliseconds, of the current video of a certain player. The playerIndex is associated with the index of the element of Multi Stream Properties, e.g. the index 0 is the element 0 in the list.
 
 #### protected long GetVideoDuration(int playerIndex)
 Provides information about the total duration in milliseconds, of the current video of a certain player. The playerIndex is associated with the index of the element of Multi Stream Properties, e.g. the index 0 is the element 0 in the list.
 
+---
+
+### 🧩 Tracks
+
 #### protected HISPlayerTrack[] GetTracks(int playerIndex)
-Provides the list of the video tracks of the current video playing on a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Provides the list of the video tracks of the current video playing on a certain stream.
 
 #### protected int GetTrackBitrate(int playerIndex, int trackIndex)
-Get the bitrate of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Get the bitrate of a certain track of a certain stream.
 
 #### protected int GetTrackWidth(int playerIndex, int trackIndex)
-Get the width of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Get the width of a certain track of a certain stream.
 
 #### protected int GetTrackHeight(int playerIndex, int trackIndex)
-Get the height of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 of the list.
-
-#### protected int GetVideoWidth(int playerIndex)
-Get the width of the current track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### protected int GetVideoHeight(int playerIndex)
-Get the height of the current track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Get the height of a certain track of a certain stream.
 
 #### protected int GetTrackID(int playerIndex, int trackIndex)
-Get the ID of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Get the ID of a certain track of a certain stream.
 
 #### protected int GetTrackCount(int playerIndex)
-Get the number of tracks of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Get the number of tracks of a certain stream.
 
 #### protected void SelectTrack(int playerIndex, int trackIndex)
-Select a certain track of a certain stream to be used as the main track. This action will disable ABR, to enable it again you can use **EnableABR** API. The possible tracks can be obtained from the tracks returned from the method GetTracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Select a certain track of a certain stream to be used as the main track. This action will disable ABR, to enable it again you can use **EnableABR** API.
 
-#### public void EnableCaptions(int playerIndex, bool enabled)
-Enables the captions of the stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+---
 
-#### public HISPlayerCaptionTrack[] GetCaptionTrackList(int playerIndex)
-Provide information about all the captions of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### public int GetCaptionsCount(int playerIndex)
-Obtain the number of captions of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### public string GetCaptionID(int playerIndex, int ccTrackIndex)
-Obtain the ID of a certain caption of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### public string GetCaptionLanguage(int playerIndex, int ccTrackIndex)
-Obtain the language of a certain caption of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### public void SelectCaptionTrack(int playerIndex, int ccTrackIndex)
-Select a certain caption of a certain stream to be used. Before using this functions is recommended to use GetCaptionTrackList in order to know all the information about the captions. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### public HisPlayerAudioTrack[] GetAudioTrackList(int playerIndex)
-Provide information about all the audio tracks of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### public int GetAudioCount(int playerIndex)
-Obtain the number of audio of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### public string GetAudioID(int playerIndex, int audioTrackIndex)
-Obtain the ID of a certain audio of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### protected string GetAudioLanguage(int playerIndex, int audioTrackIndex)
-Obtain the language of a certain audio of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### protected void SelectAudioTrack(int playerIndex, int audioTrackIndex)
-Select a certain audio-track of a certain stream to be used. Before using this functions is recommended to use GetAudioTrackList in order to know all the information about the audio-tracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+### 📶 ABR (Adaptive Bitrate)
 
 #### protected void EnableABR(int playerIndex)
-Enables the ABR to change automatically between tracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### protected void SetMaxBitrate(int playerIndex, int bitrate)
-Set a new maximum bitrate (in bits per second) of a specific track. This doesn’t disable ABR. The possible tracks can be obtained from the tracks returned from the method GetTracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### protected void SetMinBitrate(int playerIndex, int bitrate)
-Set a new minimum bitrate (in bits per second) of a specific track. This doesn’t disable ABR. The possible tracks can be obtained from the tracks returned from the method GetTracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Enables the ABR to change automatically between tracks.
 
 #### protected void DisableABR(int playerIndex)
-Disables the ABR to prevent the player from changing tracks regardless of bandwidth. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Disables the ABR to prevent the player from changing tracks regardless of bandwidth.
+
+#### protected void SetMaxBitrate(int playerIndex, int bitrate)
+Set a new maximum bitrate (in bits per second) of a specific track.
+
+#### protected void SetMinBitrate(int playerIndex, int bitrate)
+Set a new minimum bitrate (in bits per second) of a specific track.
+
+---
+
+### 💬 Captions
+
+#### public void EnableCaptions(int playerIndex, bool enabled)
+Enables the captions of the stream.
+
+#### public HISPlayerCaptionTrack[] GetCaptionTrackList(int playerIndex)
+Provide information about all the captions of a certain stream.
+
+#### public int GetCaptionsCount(int playerIndex)
+Obtain the number of captions of a certain stream.
+
+#### public string GetCaptionID(int playerIndex, int ccTrackIndex)
+Obtain the ID of a certain caption of a certain player.
+
+#### public string GetCaptionLanguage(int playerIndex, int ccTrackIndex)
+Obtain the language of a certain caption of a certain player.
+
+#### public void SelectCaptionTrack(int playerIndex, int ccTrackIndex)
+Select a certain caption of a certain stream to be used. Before using this function, it is recommended to use GetCaptionTrackList in order to know all the information about the captions.
+
+---
+
+### 🔊 Audio
+
+#### public HisPlayerAudioTrack[] GetAudioTrackList(int playerIndex)
+Provide information about all the audio tracks of a certain stream.
+
+#### public int GetAudioCount(int playerIndex)
+Obtain the number of audio of a certain stream.
+
+#### public string GetAudioID(int playerIndex, int audioTrackIndex)
+Obtain the ID of a certain audio of a certain player.
+
+#### protected string GetAudioLanguage(int playerIndex, int audioTrackIndex)
+Obtain the language of a certain audio of a certain player.
+
+#### protected void SelectAudioTrack(int playerIndex, int audioTrackIndex)
+Select a certain audio-track of a certain stream to be used.
+
+---
+
+### 📡 Live & Ads
 
 #### protected bool IsLive(int playerIndex)
-Returns true if a certain stream is a live stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Returns true if a certain stream is a live stream.
 
 #### protected float GetAdDuration(int playerIndex)
-Get the duration of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Get the duration of a certain advertisement in milliseconds (ms).
 
 #### protected float GetAdRemainingTime(int playerIndex)
-Get the remaining time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Get the remaining time of a certain advertisement in milliseconds (ms).
 
 #### protected float GetAdCurrentTime(int playerIndex)
-Get the current time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### protected void SetPlaybackSpeedRate(int playerIndex, float speed)
-Modify the **speed rate** of a certain stream giving a **playerIndex**. The value of the player's speed must be greater (>) than 0.0f and less than or equal (<=) to 8.0f. The default value of player's speed is 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
-
-#### protected float GetPlaybackSpeedRate(int playerIndex)
-Obtain the **speed rate** of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Get the current time of a certain advertisement in milliseconds (ms).
