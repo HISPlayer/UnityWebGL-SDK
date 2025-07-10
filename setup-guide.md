@@ -166,9 +166,13 @@ Use Multi Stream Properties to set all the configuration needed for multi stream
 * <span style="color:blue">**LoopPlayback**</span>: Loop the current playback. It's true by default.
 * <span style="color:blue">**AutoTransition**</span>: Change the playback to the next video in the playlist. This action won't have effect when loopPlayback is true. It's false by default.
 * <span style="color:blue">**AdsProperties**</span>: List of properties to configure advertisement insertions for each player in the scene. For more information, please refer to [**Playing Ads**](./playing-ads.md)
+* <span style="color:blue">**Starting Bitrate**</span>: The bitrate in bps the player will try to start playing. Setting it to 0 will make the player start with the lowest track.
+* <span style="color:blue">**Track Bitrate Range**</span>: Limits the tracks by bitrate range. X = Minimum bitrate, Y = Maximum bitrate (in bps).
+* <span style="color:blue">**Resolution Max Size**</span>: Limits the tracks by maximum resolution. X = Max width (px), Y = Max height (px).
+* <span style="color:blue">**Resolution Min Size**</span>: Limits the tracks by minimum resolution. X = Min width (px), Y = Min height (px).
 
 <p align="center">
-<img width="802" height="655" alt="image" src="https://github.com/user-attachments/assets/370fcf9e-3c99-44ee-97fc-b6adced5c475" />
+<img width="776" height="748" alt="image" src="https://github.com/user-attachments/assets/429d95d0-bd09-4759-b9e0-7f217d3c7247" />
 </p>
 
 ## 2.4 Build and Run
