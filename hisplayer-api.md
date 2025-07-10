@@ -177,231 +177,125 @@ public enum LogLevel
 ## Functions
 The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script that inherits from **HISPlayerManager**.
 
-### Overridable Functions
+### 4.1 Overridable Functions
 
-#### protected virtual void Awake()
-MonoBehaviour function which will be called from the beginning of the scene. It can be overridden but to make the system work it’s necessary to call **base.Awake()** into the overridden function.
+These methods can be overridden to inject custom logic into the player's behavior when certain events are triggered.  
+**Important**: Always call `base.MethodName()` in the overridden method to preserve internal behavior.
 
-#### protected virtual void EventPlaybackReady(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_READY** is triggered.
-This event occurs when the current playback of a stream is ready to be used.
-Calling functions such as GetTracks before this event is triggered will provide null information.
+---
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>param1</td>
-    <td>Number of tracks of the playback.</td>
-  </tr>
-</table>
+#### 🔁 Playback Lifecycle Events
 
-#### protected virtual void EventVideoSizeChange(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_VIDEO_SIZE_CHANGE** is triggered.
-This event occurs whenever the internal video size of the current track changes.
-This event is triggered by the ABR feature.
+These methods are triggered during playback transitions.
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>param1</td>
-    <td>Width of the video.</td>
-  </tr>
-   <tr>
-    <td>param2</td>
-    <td>Heigth of the video.</td>
-  </tr>
-</table>
+- `EventPlaybackReady(HISPlayerEventInfo eventInfo)`  
+  Triggered when the stream is ready to be used.
 
-#### protected virtual void EventPlaybackPlay(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_PLAY** is triggered.
-This event occurs whenever an internal playback has been played.
+- `EventPlaybackPlay(HISPlayerEventInfo eventInfo)`  
+  Triggered when playback starts.
 
-#### protected virtual void EventPlaybackPause(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_PAUSE** is triggered.
-This event occurs whenever an internal playback has been paused.
+- `EventPlaybackPause(HISPlayerEventInfo eventInfo)`  
+  Triggered when playback is paused.
 
-#### protected virtual void EventPlaybackStop(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_STOP** is triggered.
-This event occurs whenever an internal playback has been stopped.
+- `EventPlaybackStop(HISPlayerEventInfo eventInfo)`  
+  Triggered when playback is stopped.
 
-#### protected virtual void EventPlaybackSeek(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK** is triggered.
-This event occurs whenever an internal playback has been sought to a new time position.
+- `EventPlaybackSeek(HISPlayerEventInfo eventInfo)`  
+  Triggered when seeking to a new time position.  
+  | Name | Description |
+  |------|-------------|
+  | `param1` | Old track position (ms) |
+  | `param2` | New track position (ms) |
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>param1</td>
-    <td>Value of the old track position in milliseconds.</td>
-  </tr>
-   <tr>
-    <td>param2</td>
-    <td>Value of the new track position in milliseconds.</td>
-  </tr>
-</table>
+- `EventPlaybackBuffering(HISPlayerEventInfo eventInfo)`  
+  Triggered when buffering occurs.
 
-#### protected virtual void EventVolumeChange(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_VOLUME_CHANGE** is triggered.
-This event occurs whenever the volume has been modified.
+- `EventEndOfContent(HISPlayerEventInfo eventInfo)`  
+  Triggered when the end of the content is reached.
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>param1</td>
-    <td>New value for the volume.</td>
-  </tr>
-</table>
+- `EventEndOfPlaylist(HISPlayerEventInfo eventInfo)`  
+  Triggered at the end of the playlist.
 
-#### protected virtual void EventEndOfPlaylist(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_END_OF_PLAYLIST** is triggered.
-This event occurs whenever an internal playlist reaches the end of the list.
+- `EventAutoTransition(HISPlayerCaptionElement subtitlesInfo)`  
+  Triggered when the next video auto-plays in the playlist.
 
-#### protected virtual void EventTextRender(HISPlayerCaptionElement subtitlesInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_TEXT_RENDER** is triggered.
-This event occurs whenever a caption’s text has been generated.
+---
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>caption</td>
-    <td>The next generated caption text.</td>
-  </tr>
-</table>
+#### 🔊 Volume Events
 
-#### protected virtual void EventAutoTransition(HISPlayerCaptionElement subtitlesInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPlayerEvent.HISPLAYER_EVENT_AUTO_TRANSITION** is triggered.
-This event occurs when the playback has changed to the next video in the playlist automatically.
+- `EventVolumeChange(HISPlayerEventInfo eventInfo)`  
+  Triggered when volume is modified.  
+  | Name | Description |
+  |------|-------------|
+  | `param1` | New volume value |
 
-#### protected virtual void EventPlaybackBuffering(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_BUFFERING** is triggered.
-This event occurs whenever an internal playback is buffering.
+---
 
-#### protected virtual void EventEndOfContent(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPlayer_EVENT_END_OF_CONTENT** is triggered.
-This event occurs whenever an internal playback reaches the end of the video content.
+#### 🖼️ Video Track Events
 
-#### protected virtual void EventOnId3Metadata(HISPlayerEventID3Metadata eventInfo)
-Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_ID3_METADATA** is triggered. This event is fired when a new Yospace ad cue within the segments is encountered.
+- `EventVideoSizeChange(HISPlayerEventInfo eventInfo)`  
+  Triggered when video resolution changes due to ABR.  
+  | Name | Description |
+  |------|-------------|
+  | `param1` | Width |
+  | `param2` | Height |
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>ID3Metadata metadata</td>
-    <td>Metadata object that contains information about the ad cue</td>
-  </tr>
-</table>
+---
 
-<table>
-<tr>
-    <th>ID3Metadata</th>
-  </tr>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>int startTime</td>
-    <td>Start cue point of ad break in milliseconds</td>
-  </tr>
-   <tr>
-    <td>int endTime</td>
-    <td>End cue point of ad break in milliseconds</td>
-  </tr>
-  <tr>
-    <td>ID3MetadataPayload payload</td>
-    <td>Contains the Yospace specific ad cue's data. Visit Yospace's Dev Tools for more information: https://developer.yospace.com/login.php</td>
-  </tr>
-</table>
+#### 📄 Caption Events
 
-<table>
-  <tr>
-    <th>ID3MetadataPayload</th>
-  </tr>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>string decodedData</td>
-    <td>The decoded data ready to be used</td>
-  </tr>
-  <tr>
-    <td>string data</td>
-    <td>Base64 data</td>
-  </tr>
-  <tr>
-    <td>string description</td>
-    <td>The data description. It might be empty</td>
-  </tr>
-  <tr>
-    <td>string key</td>
-    <td>Cue metadata identifier, e.g. "YMID"</td>
-  </tr>
-</table>
+- `EventTextRender(HISPlayerCaptionElement subtitlesInfo)`  
+  Triggered when caption text is rendered.  
+  | Name | Description |
+  |------|-------------|
+  | `caption` | The generated caption text |
 
-#### protected virtual void EventAdBlockStarted(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_STARTED** is triggered. This event occurs whenever a group of advertisements starts.
+---
 
-#### protected virtual void EventAdBlockEnd(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_BLOCK_END** is triggered. This event occurs whenever a group of advertisements ends.
+#### 🧩 Metadata Events
 
-#### protected virtual void EventAdStarted(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STARTED** is triggered. This event occurs whenever a single advertisement starts.
+- `EventOnId3Metadata(HISPlayerEventID3Metadata eventInfo)`  
+  Triggered when a Yospace ID3 ad cue is found.
 
-#### protected virtual void EventAdStopped(HISPlayerEventInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_STOPPED** is triggered. This event occurs whenever a single advertisement ends.
+**ID3Metadata**
+| Name | Description |
+|------|-------------|
+| `startTime` | Start of ad break (ms) |
+| `endTime` | End of ad break (ms) |
+| `payload` | Metadata payload (see below) |
 
-#### protected virtual void EventAdPodsInfo(HISPlayerEventAdPodsInfo eventInfo)
-Override this method to add custom logic when **HisPlayerEvent.HISPLAYER_EVENT_AD_PODS_INFO** is triggered. This event occurs whenever there is an advertisement pods information indicating cue points of ad breaks.
+**ID3MetadataPayload**
+| Name | Description |
+|------|-------------|
+| `decodedData` | Decoded metadata |
+| `data` | Base64-encoded data |
+| `description` | Optional description |
+| `key` | Metadata identifier (e.g. "YMID") |
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>int startTime</td>
-    <td>Start cue point of ad break in milliseconds</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>int endTime</td>
-    <td>End cue point of ad break in milliseconds</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>int param1</td>
-    <td>Start cue point of ad break in milliseconds</td>
-    <td>Deprecated</td>
-  </tr>
-   <tr>
-    <td>int param2</td>
-    <td>End cue point of ad break in milliseconds</td>
-    <td>Deprecated</td>
-  </tr>
-</table>
+---
 
-#### protected virtual void ErrorInfo(HISPlayerErrorInfo errorInfo)
-Override this method to add custom logic when an error callback is triggered. Please, refer to the **HISPlayerError** list.
+#### 📺 Advertisement Events
+
+- `EventAdBlockStarted(HISPlayerEventInfo eventInfo)`  
+- `EventAdBlockEnd(HISPlayerEventInfo eventInfo)`  
+- `EventAdStarted(HISPlayerEventInfo eventInfo)`  
+- `EventAdStopped(HISPlayerEventInfo eventInfo)`
+
+- `EventAdPodsInfo(HISPlayerEventAdPodsInfo eventInfo)`  
+  Triggered when ad pod cue point information is available.  
+  | Name | Description | Notes |
+  |------|-------------|-------|
+  | `startTime` | Start of ad break (ms) | |
+  | `endTime` | End of ad break (ms) | |
+  | `param1` | Deprecated start cue | Deprecated |
+  | `param2` | Deprecated end cue | Deprecated |
+
+---
+
+#### ❌ Error Handling
+
+- `ErrorInfo(HISPlayerErrorInfo errorInfo)`  
+  Triggered when an error occurs. Refer to `HISPlayerError` for types and descriptions.
 
 ### Non-virtual functions
 
