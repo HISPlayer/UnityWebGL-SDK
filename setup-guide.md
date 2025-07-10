@@ -168,7 +168,7 @@ Use Multi Stream Properties to set all the configuration needed for multi stream
 * <span style="color:blue">**AdsProperties**</span>: List of properties to configure advertisement insertions for each player in the scene. For more information, please refer to [**Playing Ads**](./playing-ads.md)
 
 <p align="center">
-<img src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/32887298/a6cddeab-c0d2-4607-b14f-1cbaf97db56c">
+<img width="802" height="655" alt="image" src="https://github.com/user-attachments/assets/370fcf9e-3c99-44ee-97fc-b6adced5c475" />
 </p>
 
 ## 2.4 Build and Run
