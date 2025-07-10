@@ -106,6 +106,18 @@ The following public APIs are provided by **HISPlayerManager**
    * **public int width**: Width of the track.
    * **public int height**: Height of the track.
    * **public int framerate**: Framerate of the track in frames per second.
+ 
+* **public struct HISPlayerCaptionTrack**:
+   * **public string id**: Id of the caption
+   * **public string language**: Language of the caption
+ 
+* **public struct HisPlayerAudioTrack**:
+   * **public string id**: Id of the audio
+   * **public string caption**: Language of the audio
+ 
+* **public struct HISPlayerCaptionElement**: The information of the triggered event turns into caption’s format.
+   * **public int playerIndex**: The index of the player where the event is triggered.
+   * **public string language**: The next generated caption text.
 
 * **public enum LogLevel**: The current logging level to filter which log messages are output.
   * **ERROR** : Indicates critical errors that may prevent the application from functioning correctly.
