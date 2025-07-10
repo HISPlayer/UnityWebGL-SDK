@@ -3,20 +3,18 @@
 1. [Classes](#classes)  
 2. [Structs](#structs)  
 3. [Enums](#enums)  
-4. [Functions](#functions)  
-   - [Overridable Functions](#overridable-functions)  
-     - [Events](#events)  
-     - [Errors](#errors)  
-   - [Non-Overridable Functions](#non-overridable-functions)  
-     - [Initialization](#initialization)  
-     - [Core Player](#core-player)  
-     - [Video Content](#video-content)  
-     - [Timeline](#timeline)  
-     - [Tracks](#tracks)  
-     - [Captions](#captions)  
-     - [Audio](#audio)  
-     - [ABR (Adaptive Bitrate)](#abr-adaptive-bitrate)  
-     - [Live & Ads](#live--ads)
+4. Functions  
+   4.1. [Overridable Functions](#overridable-functions) – includes [Events](#events) and [Errors](#errors)  
+   4.2. [Non-Overridable Functions](#non-overridable-functions) – includes:  
+        • [Initialization](#initialization)  
+        • [Core Player](#core-player)  
+        • [Video Content](#video-content)  
+        • [Timeline](#timeline)  
+        • [Tracks](#tracks)  
+        • [Captions](#captions)  
+        • [Audio](#audio)  
+        • [ABR (Adaptive Bitrate)](#abr-adaptive-bitrate)  
+        • [Live & Ads](#live--ads)
 
 
 ## Classes
