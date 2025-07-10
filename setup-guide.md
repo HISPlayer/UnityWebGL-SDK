@@ -119,7 +119,7 @@ You can also use the **Resources > Materials > HISPlayerDefaultMaterial.mat** we
 
 <p align="center">
 <img width=37% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/eacab2a8-7cee-4218-add9-98672f250540">
-<img width=45% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/ffe0ea80-d66b-4fac-beb0-01152bce200e">
+<img width=45% alt="image" src="https://github.com/user-attachments/assets/e334db64-fa93-45d7-944b-27f98cb5599a" />
 </p>
 
 ### <ins>Raw Image</ins>
@@ -128,7 +128,7 @@ This action will be related to Unity’s Canvas. If there is not a Canvas create
 For the creation, select **GameObject > UI > Raw Image**. Once it is created, attach it to the stream controller component
 
 <p align="center">
-<img width="816" height="597" alt="image" src="https://github.com/user-attachments/assets/7a2f6b4d-832b-43ff-97e8-2203e9d5b74b" />
+<img width="819" height="597" alt="image" src="https://github.com/user-attachments/assets/fda93ea3-72a7-4142-ad81-f93f0ce002a7" />
 </p>
 
 ### <ins>RenderTexture</ins>
@@ -139,7 +139,7 @@ For creating it from zero, select **Assets > Create > Render Texutre** and then 
 Once all this process it’s done, associate the **RenderTexture** to the script component.
 
 <p align="center">
-<img src="https://github.com/HISPlayer/UnityiOS-SDK/assets/47497948/a0f26bc1-c7b1-432e-ad87-1a2d203d32c8">
+<img width="824" height="596" alt="image" src="https://github.com/user-attachments/assets/41154693-08aa-4d74-8a70-c5a587723d37" />
 </p>
 
 ## 2.3 Configure HISPlayer Properties
