@@ -1,5 +1,22 @@
 # HISPlayer API
 
+## Table of Contents
+
+1. [Structs](#1-structs)
+2. [Enums](#2-enums)
+3. [Functions](#3-functions)
+   - [3.1. Overridable Functions](#31-overridable-functions)
+   - [3.2. Non-Overridable Functions](#32-non-overridable-functions)
+     - [Initialization](#initialization)
+     - [Core Player](#core-player)
+     - [Video Content](#video-content)
+     - [Timeline](#timeline)
+     - [Tracks](#tracks)
+     - [ABR (Adaptive Bitrate)](#abr-adaptive-bitrate)
+     - [Captions](#captions)
+     - [Audio](#audio)
+     - [Live & Ads](#live--ads)
+
 ## Public API
 
 The following public APIs are provided by **HISPlayerManager**
