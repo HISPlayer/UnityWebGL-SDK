@@ -119,7 +119,7 @@ You can also use the **Resources > Materials > HISPlayerDefaultMaterial.mat** we
 
 <p align="center">
 <img width=37% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/eacab2a8-7cee-4218-add9-98672f250540">
-<img width=45% alt="image" src="https://github.com/user-attachments/assets/e334db64-fa93-45d7-944b-27f98cb5599a" />
+<img width=45% alt="image" src="https://github.com/user-attachments/assets/b27744d4-1f21-4237-ae1c-e241a022f8d4" />
 </p>
 
 ### <ins>Raw Image</ins>
