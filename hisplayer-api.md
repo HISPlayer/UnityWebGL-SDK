@@ -27,7 +27,6 @@
 
 - `public StreamProperties(bool isLoopPlaybackEnabled = true, bool isAutoTransitionEnabled = false)`
   - Constructor for the class. Parameters define `LoopPlayback` and `AutoTransition`.
-
 - `public HISPlayerRenderMode renderMode`: Type of texture for rendering. Default is `HISPlayerRenderMode.NONE`.
 - `public Material material`: Reference to the Unity Material.
 - `public RawImage rawImage`: Reference to the Unity Raw Image.
