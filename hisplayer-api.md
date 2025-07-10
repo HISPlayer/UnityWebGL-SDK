@@ -1,27 +1,24 @@
 # HISPlayer API
 
-## Table of Contents
-
-1. [Classes](#1-classes)
-2. [Structs](#2-structs)
-3. [Enums](#3-enums)
-4. [Functions](#4-functions)
-   - [4.1. Overridable Functions](#41-overridable-functions)
-   - [4.2. Non-Overridable Functions](#42-non-overridable-functions)
-     - [Initialization](#initialization)
-     - [Core Player](#core-player)
-     - [Video Content](#video-content)
-     - [Timeline](#timeline)
-     - [Tracks](#tracks)
-     - [ABR (Adaptive Bitrate)](#abr-adaptive-bitrate)
-     - [Captions](#captions)
-     - [Audio](#audio)
+1. [Classes](#Classes)
+2. [Structs](#Structs)
+3. [Enums](#Enums)
+4. [Functions](#Functions)
+   - [4.1. Overridable Functions](#Overridable-functions)
+     - [Events](#Events)
+     - [Errors](#Errors)
+   - [4.2. Non-Overridable Functions](#Non-overridable-functions)
+     - [Initialization](#Initialization)
+     - [Core Player](#Core-Player)
+     - [Video Content](#Video-Content)
+     - [Timeline](#Timeline)
+     - [Tracks](#Tracks)
+     - [Captions](#Captions)
+     - [Audio](#Audio)
+     - [ABR (Adaptive Bitrate)](#ABR-adaptive-bitrate)
      - [Live & Ads](#live--ads)
 
-
-## Public API
-
-### 1. Classes
+## Classes
 
 #### StreamProperties
 
@@ -47,7 +44,8 @@
 - `public struct ImaConfig`: Configuration for IMA ad mode.
 - `public struct DaiConfig`: Configuration for DAI ad mode.
 - `public struct MediaTailorConfig`: Configuration for MediaTailor ad mode.
-### 2. Structs
+
+## Structs
 
 #### HISPlayerEventInfo
 
@@ -178,7 +176,7 @@ public enum LogLevel
 ## Functions
 The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script that inherits from **HISPlayerManager**.
 
-### Virtual functions - These functions can be overridden
+### Overridable Functions
 
 #### protected virtual void Awake()
 MonoBehaviour function which will be called from the beginning of the scene. It can be overridden but to make the system work it’s necessary to call **base.Awake()** into the overridden function.
