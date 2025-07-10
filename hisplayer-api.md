@@ -2,11 +2,12 @@
 
 ## Table of Contents
 
-1. [Structs](#1-structs)
-2. [Enums](#2-enums)
-3. [Functions](#3-functions)
-   - [3.1. Overridable Functions](#31-overridable-functions)
-   - [3.2. Non-Overridable Functions](#32-non-overridable-functions)
+1. [Classes](#1-classes)
+2. [Structs](#2-structs)
+3. [Enums](#3-enums)
+4. [Functions](#4-functions)
+   - [4.1. Overridable Functions](#41-overridable-functions)
+   - [4.2. Non-Overridable Functions](#42-non-overridable-functions)
      - [Initialization](#initialization)
      - [Core Player](#core-player)
      - [Video Content](#video-content)
@@ -17,131 +18,150 @@
      - [Audio](#audio)
      - [Live & Ads](#live--ads)
 
+
 ## Public API
 
-The following public APIs are provided by **HISPlayerManager**
+### 1. Classes
 
-* **public string licenseKey**: License key for making the SDK works. License key is not required for Unity Editor usage.
+#### StreamProperties
 
-* **public List <StreamProperties> multiStreamProperties**: List of properties for multi stream. Please, don't modify this list directly in the code.
+- `public StreamProperties(bool isLoopPlaybackEnabled = true, bool isAutoTransitionEnabled = false)`
+  - Constructor for the class. Parameters define `LoopPlayback` and `AutoTransition`.
 
-* **public class StreamProperties**:
-    * **public StreamProperties(bool isLoopPlaybackEnabled = true, bool isAutoTransitionEnabled = false)**: Constructor of the class. The received parameters will set the value of **LoopPlayback** and **AutoTransition** properties respectively. 
-    * **public HISPlayerRenderMode renderMode**: Type of texture for rendering. **HISPlayerRenderMode.NONE** by default.
-    * **public Material material**: Reference to the Unity Material.
-    * **public RawImage rawImage**: Reference to the Unity Raw Image.
-    * **public RenderTexture renderTexture**: Reference to the Unity Render Texture.
-    * **public List \<string\> url**: List of the URLs for the stream.
-    * **public bool autoPlay**: If true, the players will start playing automatically after set-up.
-    * **public bool EnableRendering**: Determines if the stream will be rendered or not. The value can change in every moment for toggling between render or non-render mode. If true, the player will be rendered. It only can change in runtime.
-    * **public bool LoopPlayback (Read-only)**: Loop the current playback. It's true by default. To modify this value, please, use the Editor or the constructor **StreamProperties(loopPlayback, autoTransition)**.
-    * **public bool AutoTransition (Read-only)**: Change the playback to the next video in the playlist. This action won't have effect when loopPlayback is true. It's false by default. To modify this value, please, use the Editor or the constructor **StreamProperties(loopPlayback, autoTransition)**.
-    * **public List <AdsProperties> adsProperties**: List of properties to configure advertisement insertions for each player in the scene.
-    * **public int startingBitrate**: The bitrate in bps the player will try to start playing. Setting it to 0 will make the player start with the lowest track.
-    * **public int manifestTimeout**: The manifest request connection timeout, in milliseconds. Zero means unlimited. Defaults to 10000 milliseconds. Not visible in the Editor.
-    * **public int segmentsTimeout**: The segments requests connection timeout, in milliseconds. Zero means unlimited. Defaults to 5000 milliseconds. Not visible in the Editor.
+- `public HISPlayerRenderMode renderMode`: Type of texture for rendering. Default is `HISPlayerRenderMode.NONE`.
+- `public Material material`: Reference to the Unity Material.
+- `public RawImage rawImage`: Reference to the Unity Raw Image.
+- `public RenderTexture renderTexture`: Reference to the Unity Render Texture.
+- `public List<string> url`: List of URLs for the stream.
+- `public bool autoPlay`: Whether the stream auto-plays after setup.
+- `public bool EnableRendering`: Whether the stream is rendered. Can change at runtime.
+- `public bool LoopPlayback (Read-only)`: Loops current playback. Default is true.
+- `public bool AutoTransition (Read-only)`: Switches to next video in the playlist. Default is false.
+- `public List<AdsProperties> adsProperties`: Advertisement configuration list.
+- `public int startingBitrate`: Starting bitrate in bps. `0` starts with lowest track.
+- `public int manifestTimeout`: Timeout for manifest request in ms. `0` means unlimited. Default is `10000ms`.
+- `public int segmentsTimeout`: Timeout for segment requests in ms. `0` means unlimited. Default is `5000ms`.
 
-* **public enum HISPlayerRenderMode**: Type of texture for rendering.
-    * **RenderTexture**
-    * **Material**
-    * **RawImage**
+#### AdsProperties
 
-* **public class AdsProperties**:
-  * **public enum AdsMode**: Types of the advertisement library.
-  * **public struct ImaConfig**: Config for IMA ads mode.
-  * **public struct DaiConfig**: Config for DAI ads mode.
-  * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
+- `public enum AdsMode`: Types of the advertisement library.
+- `public struct ImaConfig`: Configuration for IMA ad mode.
+- `public struct DaiConfig`: Configuration for DAI ad mode.
+- `public struct MediaTailorConfig`: Configuration for MediaTailor ad mode.
+### 2. Structs
 
-* **public enum AdsMode**: Types of the advertisement library.
-    * **DAI**
-    * **MEDIA_TAILOR**
-    * **YOSPACE**
-    * **IMA**
-    * **NONE**
+#### HISPlayerEventInfo
 
- * **public struct ImaConfig**: Config for DAI ads mode.
-    * **public string adTagUri**: Advertisement URL that is going to be played. VAST, VPAID, VMAP are supported. If the IMA ad mode is used this parameter is mandatory.
-    * **public bool enableVpaid**: Enables the usage of VPAID. The ads mode must be IMA.
-    * **public string pageUrl**: Adds a parameter to the ad request to keep track of the domain that sent the request. For targeting purposes. The ad mode must be IMA.
+- `public HISPlayerEvent eventType`
+- `public int playerIndex`
+- `public float param1`
+- `public float param2`
+- `public float param3`
+- `public float param4`
+- `public string stringInfo`
 
- * **public struct DaiConfig**: Config for DAI ads mode.
-    * **public string assetKey**: For live streams. This is used to determine which stream should be played.
-    * **public string contentSrcId**: For VoD (on-demand) streams. Unique identifier for the publisher content, from a CMS.
-    * **public string videoId**: For VoD (on-demand) streams. Identifier for the video content source.
+#### HISPlayerErrorInfo
 
- * **public struct MediaTailorConfig**: Config for MediaTailor ads mode.
-    * **public string baseUrl**: Base URL for video and ads.
-    * **public string manifestUrl**: Video URL to be attached to the baseURL.
-    * **public string adsParams**: Contains 'Params: string' this is the ad URL to be attached to the baseURL.
+- `public HISPlayerError errorType`
+- `public int playerIndex`
+- `public float param1`
+- `public string stringInfo`
 
-* **public enum HISPlayerEvent**: The list of events provided by HISPlayer SDK. The events can be used with the virtual functions in the next section:
-    * **HISPLAYER_EVENT_PLAYBACK_READY**
-    * **HISPLAYER_EVENT_VIDEO_SIZE_CHANGE**
-    * **HISPLAYER_EVENT_PLAYBACK_PLAY**
-    * **HISPLAYER_EVENT_PLAYBACK_PAUSE**
-    * **HISPLAYER_EVENT_PLAYBACK_STOP**
-    * **HISPLAYER_EVENT_PLAYBACK_SEEK**
-    * **HISPLAYER_EVENT_VOLUME_CHANGE**
-    * **HISPLAYER_EVENT_END_OF_PLAYLIST**
-    * **HISPLAYER_EVENT_AUTO_TRANSITION**
-    * **HISPLAYER_EVENT_PLAYBACK_BUFFERING**
-    * **HISPLAYER_EVENT_END_OF_CONTENT**
-    * **HISPLAYER_EVENT_AD_BLOCK_STARTED**
-    * **HISPLAYER_EVENT_AD_BLOCK_ENDY**
-    * **HISPLAYER_EVENT_AD_STARTED**
-    * **HISPLAYER_EVENT_AD_STOPPED**
-    * **HISPLAYER_EVENT_AD_PODS_INFO**
-    * **HISPLAYER_EVENT_ID3_METADATA**
- 
-* **public enum HISPlayerError**: The list of errors provided by HISPlayer SDK. The errors can be used with the virtual functions in the next section:
-   * **HISPLAYER_ERROR_LICENSE_EXPIRED** (no function on this)
-   * **HISPLAYER_ERROR_NOT_VALID_APPID** (no function on this)
-   * **HISPLAYER_ERROR_GENERAL_LICENSE_ERROR** (no function on this)
-   * **HISPLAYER_ERROR_LICENSE_DISABLED** (no function on this)
-   * **HISPLAYER_ERROR_IMPRESSIONS_LIMIT_REACHED** (no function on this)
-   * **HISPLAYER_ERROR_PLAYBACK_DURATION_LIMIT_REACHED** (no function on this)
-   * **HISPLAYER_ERROR_PLATFORM_NOT_REGISTERED** (no function on this)
+#### HISPlayerTrack
 
-* **public struct HISPlayerEventInfo**: The information of the triggered event.
-   * **public HISPlayerEvent eventType**: The type of the event triggered.
-   * **public int playerIndex**: The index of the player where the event is triggered.
-   * **public float param1**: This will have different meanings depending on the event. If there is no information about the parameter, it will have the default value -1.
-   * **public float param2**: This will have different meanings depending on the event. If there is no information about the parameter, it will have the default value -1.
-   * **public float param3**: This will have different meanings depending on the event. If there is no information about the parameter, it will have the default value -1.
-   * **public float param4**: This will have different meanings depending on the event. If there is no information about the parameter, it will have the default value -1.
-   * **public string stringInfo**: Log information about the event.
+- `public string id`
+- `public int bitrate`
+- `public int width`
+- `public int height`
+- `public int framerate`
 
-* **public struct HISPlayerErrorInfo**: The information of the triggered error.
-   * **public HISPlayerError errorType**: The type of the error triggered.
-   * **public int playerIndex**: The index of the player where the error is triggered.
-   * **public float param1**: This will have different meanings depending on the error. If there is no information about the parameter, it will have the default value -1.
-   * **public string stringInfo**: Log information about the error.
+#### HISPlayerCaptionTrack
 
-* **public struct HISPlayerTrack**:
-   * **public string id**: Id of the track
-   * **public int bitrate**: Bitrate of the track in bits per second.
-   * **public int width**: Width of the track.
-   * **public int height**: Height of the track.
-   * **public int framerate**: Framerate of the track in frames per second.
- 
-* **public struct HISPlayerCaptionTrack**:
-   * **public string id**: Id of the caption
-   * **public string language**: Language of the caption
- 
-* **public struct HisPlayerAudioTrack**:
-   * **public string id**: Id of the audio
-   * **public string caption**: Language of the audio
- 
-* **public struct HISPlayerCaptionElement**: The information of the triggered event turns into caption’s format.
-   * **public int playerIndex**: The index of the player where the event is triggered.
-   * **public string language**: The next generated caption text.
+- `public string id`
+- `public string language`
 
-* **public enum LogLevel**: The current logging level to filter which log messages are output.
-  * **ERROR** : Indicates critical errors that may prevent the application from functioning correctly.
-  * **WARNING** : Indicates potential issues or situations that may require attention.
-  * **INFO** : Provides general informational messages about the application's execution.
-  * **DEBUG** : Logs messages useful for debugging and troubleshooting purposes, typically only visible during development.
-  * **NONE** : No log messages will appear.
+#### HisPlayerAudioTrack
+
+- `public string id`
+- `public string caption`
+
+#### HISPlayerCaptionElement
+
+- `public int playerIndex`
+- `public string language`
+
+#### ImaConfig
+
+- `public string adTagUri`
+- `public bool enableVpaid`
+- `public string pageUrl`
+
+#### DaiConfig
+
+- `public string assetKey`
+- `public string contentSrcId`
+- `public string videoId`
+
+#### MediaTailorConfig
+
+- `public string baseUrl`
+- `public string manifestUrl`
+- `public string adsParams`
+
+### 3. Enums
+
+#### HISPlayerRenderMode
+
+- `RenderTexture`
+- `Material`
+- `RawImage`
+
+#### AdsMode
+
+- `DAI`
+- `MEDIA_TAILOR`
+- `YOSPACE`
+- `IMA`
+- `NONE`
+
+#### HISPlayerEvent
+
+- `HISPLAYER_EVENT_PLAYBACK_READY`
+- `HISPLAYER_EVENT_VIDEO_SIZE_CHANGE`
+- `HISPLAYER_EVENT_PLAYBACK_PLAY`
+- `HISPLAYER_EVENT_PLAYBACK_PAUSE`
+- `HISPLAYER_EVENT_PLAYBACK_STOP`
+- `HISPLAYER_EVENT_PLAYBACK_SEEK`
+- `HISPLAYER_EVENT_VOLUME_CHANGE`
+- `HISPLAYER_EVENT_END_OF_PLAYLIST`
+- `HISPLAYER_EVENT_AUTO_TRANSITION`
+- `HISPLAYER_EVENT_PLAYBACK_BUFFERING`
+- `HISPLAYER_EVENT_END_OF_CONTENT`
+- `HISPLAYER_EVENT_AD_BLOCK_STARTED`
+- `HISPLAYER_EVENT_AD_BLOCK_ENDY`
+- `HISPLAYER_EVENT_AD_STARTED`
+- `HISPLAYER_EVENT_AD_STOPPED`
+- `HISPLAYER_EVENT_AD_PODS_INFO`
+- `HISPLAYER_EVENT_ID3_METADATA`
+
+#### HISPlayerError
+
+- `HISPLAYER_ERROR_LICENSE_EXPIRED`
+- `HISPLAYER_ERROR_NOT_VALID_APPID`
+- `HISPLAYER_ERROR_GENERAL_LICENSE_ERROR`
+- `HISPLAYER_ERROR_LICENSE_DISABLED`
+- `HISPLAYER_ERROR_IMPRESSIONS_LIMIT_REACHED`
+- `HISPLAYER_ERROR_PLAYBACK_DURATION_LIMIT_REACHED`
+- `HISPLAYER_ERROR_PLATFORM_NOT_REGISTERED`
+
+#### LogLevel
+
+- `ERROR`
+- `WARNING`
+- `INFO`
+- `DEBUG`
+- `NONE`
+
 
 These log levels are represented as an enum of integers, so every type of log whose representative integer is greater or equal to the established log level will be shown. The log levels are represented as follows:
 
