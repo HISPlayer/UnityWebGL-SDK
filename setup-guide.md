@@ -119,7 +119,7 @@ You can also use the **Resources > Materials > HISPlayerDefaultMaterial.mat** we
 
 <p align="center">
 <img width=37% alt="image" src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/eacab2a8-7cee-4218-add9-98672f250540">
-<img width=45% alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/ffe0ea80-d66b-4fac-beb0-01152bce200e">
+<img width=45% alt="image" src="https://github.com/user-attachments/assets/b27744d4-1f21-4237-ae1c-e241a022f8d4" />
 </p>
 
 ### <ins>Raw Image</ins>
@@ -128,7 +128,7 @@ This action will be related to Unity’s Canvas. If there is not a Canvas create
 For the creation, select **GameObject > UI > Raw Image**. Once it is created, attach it to the stream controller component
 
 <p align="center">
-<img width="600" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/5dcc7a3f-7de5-4e87-a5e3-3e08587360b4">
+<img width="819" height="597" alt="image" src="https://github.com/user-attachments/assets/fda93ea3-72a7-4142-ad81-f93f0ce002a7" />
 </p>
 
 ### <ins>RenderTexture</ins>
@@ -139,7 +139,7 @@ For creating it from zero, select **Assets > Create > Render Texutre** and then 
 Once all this process it’s done, associate the **RenderTexture** to the script component.
 
 <p align="center">
-<img src="https://github.com/HISPlayer/UnityiOS-SDK/assets/47497948/a0f26bc1-c7b1-432e-ad87-1a2d203d32c8">
+<img width="824" height="596" alt="image" src="https://github.com/user-attachments/assets/41154693-08aa-4d74-8a70-c5a587723d37" />
 </p>
 
 ## 2.3 Configure HISPlayer Properties
@@ -166,9 +166,13 @@ Use Multi Stream Properties to set all the configuration needed for multi stream
 * <span style="color:blue">**LoopPlayback**</span>: Loop the current playback. It's true by default.
 * <span style="color:blue">**AutoTransition**</span>: Change the playback to the next video in the playlist. This action won't have effect when loopPlayback is true. It's false by default.
 * <span style="color:blue">**AdsProperties**</span>: List of properties to configure advertisement insertions for each player in the scene. For more information, please refer to [**Playing Ads**](./playing-ads.md)
+* <span style="color:blue">**Starting Bitrate**</span>: The bitrate in bps the player will try to start playing. Setting it to 0 will make the player start with the lowest track.
+* <span style="color:blue">**Track Bitrate Range**</span>: Limits the tracks by bitrate range. X = Minimum bitrate, Y = Maximum bitrate (in bps).
+* <span style="color:blue">**Resolution Max Size**</span>: Limits the tracks by maximum resolution. X = Max width (px), Y = Max height (px).
+* <span style="color:blue">**Resolution Min Size**</span>: Limits the tracks by minimum resolution. X = Min width (px), Y = Min height (px).
 
 <p align="center">
-<img src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/32887298/a6cddeab-c0d2-4607-b14f-1cbaf97db56c">
+<img width="776" height="748" alt="image" src="https://github.com/user-attachments/assets/429d95d0-bd09-4759-b9e0-7f217d3c7247" />
 </p>
 
 ## 2.4 Build and Run

@@ -1,5 +1,19 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.9.0
+##### July 10, 2025
+- [**Added**] Added GetCaptionTrackList, GetCaptionCount, GetCaptionID, GetCaptionLanguage, EnableCaptions, SelectCaptionTrack APIs to get and select different caption tracks.
+- [**Added**] Added GetAudioTrackList, GetAudioCount, GetAudioID, GetAudioLanguage, SelectAudioTrack APIs to get and select different audio tracks.
+
+### Version 4.8.0
+##### July 7, 2025
+- [**Improvement**] Enhancement to InspectorGUI to dynamically show/hide certain options.
+- [**Added**] StartingBitrate moved from the general settings to the settings of each individual stream
+- [**Added**] Added TrackBitrateRange to select the bitrate range allowed in each stream
+- [**Added**] Added ResolutionMaxSize to select the resolution max size allowed in each stream
+- [**Added**] Added ResolutionMinSize to select the resolution min size allowed in each stream
+- [**Added**] Added SetMaxABRResolution and SetMinABRResolution to change the resolution settings allowed by the ABR in runtime
+
 ### Version 4.7.0
 ##### March 3, 2025
 - [**Added**] GetPlaybackSpeedRate and SetPlaybackSpeedRate APIs

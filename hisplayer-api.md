@@ -106,6 +106,18 @@ The following public APIs are provided by **HISPlayerManager**
    * **public int width**: Width of the track.
    * **public int height**: Height of the track.
    * **public int framerate**: Framerate of the track in frames per second.
+ 
+* **public struct HISPlayerCaptionTrack**:
+   * **public string id**: Id of the caption
+   * **public string language**: Language of the caption
+ 
+* **public struct HisPlayerAudioTrack**:
+   * **public string id**: Id of the audio
+   * **public string caption**: Language of the audio
+ 
+* **public struct HISPlayerCaptionElement**: The information of the triggered event turns into caption’s format.
+   * **public int playerIndex**: The index of the player where the event is triggered.
+   * **public string language**: The next generated caption text.
 
 * **public enum LogLevel**: The current logging level to filter which log messages are output.
   * **ERROR** : Indicates critical errors that may prevent the application from functioning correctly.
@@ -220,6 +232,21 @@ This event occurs whenever the volume has been modified.
 #### protected virtual void EventEndOfPlaylist(HISPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_END_OF_PLAYLIST** is triggered.
 This event occurs whenever an internal playlist reaches the end of the list.
+
+#### protected virtual void EventTextRender(HISPlayerCaptionElement subtitlesInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_TEXT_RENDER** is triggered.
+This event occurs whenever a caption’s text has been generated.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>caption</td>
+    <td>The next generated caption text.</td>
+  </tr>
+</table>
 
 #### protected virtual void EventAutoTransition(HISPlayerCaptionElement subtitlesInfo)
 Override this method to add custom logic when **HISPlayerEvent.HISPlayerEvent.HISPLAYER_EVENT_AUTO_TRANSITION** is triggered.
@@ -405,8 +432,47 @@ Get the number of tracks of a certain stream. The **playerIndex** is associated 
 #### protected void SelectTrack(int playerIndex, int trackIndex)
 Select a certain track of a certain stream to be used as the main track. This action will disable ABR, to enable it again you can use **EnableABR** API. The possible tracks can be obtained from the tracks returned from the method GetTracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
+#### public void EnableCaptions(int playerIndex, bool enabled)
+Enables the captions of the stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### public HISPlayerCaptionTrack[] GetCaptionTrackList(int playerIndex)
+Provide information about all the captions of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### public int GetCaptionsCount(int playerIndex)
+Obtain the number of captions of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### public string GetCaptionID(int playerIndex, int ccTrackIndex)
+Obtain the ID of a certain caption of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### public string GetCaptionLanguage(int playerIndex, int ccTrackIndex)
+Obtain the language of a certain caption of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### public void SelectCaptionTrack(int playerIndex, int ccTrackIndex)
+Select a certain caption of a certain stream to be used. Before using this functions is recommended to use GetCaptionTrackList in order to know all the information about the captions. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### public HisPlayerAudioTrack[] GetAudioTrackList(int playerIndex)
+Provide information about all the audio tracks of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### public int GetAudioCount(int playerIndex)
+Obtain the number of audio of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### public string GetAudioID(int playerIndex, int audioTrackIndex)
+Obtain the ID of a certain audio of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected string GetAudioLanguage(int playerIndex, int audioTrackIndex)
+Obtain the language of a certain audio of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected void SelectAudioTrack(int playerIndex, int audioTrackIndex)
+Select a certain audio-track of a certain stream to be used. Before using this functions is recommended to use GetAudioTrackList in order to know all the information about the audio-tracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
 #### protected void EnableABR(int playerIndex)
 Enables the ABR to change automatically between tracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected void SetMaxBitrate(int playerIndex, int bitrate)
+Set a new maximum bitrate (in bits per second) of a specific track. This doesn’t disable ABR. The possible tracks can be obtained from the tracks returned from the method GetTracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### protected void SetMinBitrate(int playerIndex, int bitrate)
+Set a new minimum bitrate (in bits per second) of a specific track. This doesn’t disable ABR. The possible tracks can be obtained from the tracks returned from the method GetTracks. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### protected void DisableABR(int playerIndex)
 Disables the ABR to prevent the player from changing tracks regardless of bandwidth. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
