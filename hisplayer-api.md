@@ -184,6 +184,14 @@ These methods can be overridden to inject custom logic into the player's behavio
 
 ---
 
+#### 🧠 Unity Lifecycle
+
+- `Awake()`  
+  Unity's lifecycle method. Called at the beginning of the scene.  
+  You **must** call `base.Awake()` in your override for the system to work correctly.
+
+---
+
 #### 🔁 Playback Lifecycle Events
 
 These methods are triggered during playback transitions.
