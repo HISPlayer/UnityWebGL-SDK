@@ -106,7 +106,7 @@
 - `public string manifestUrl`
 - `public string adsParams`
 
-### 3. Enums
+## ENUMS
 
 #### HISPlayerRenderMode
 
@@ -174,10 +174,10 @@ public enum LogLevel
 }
 ```
 
-## Functions
+## FUNCTIONS
 The following functions are provided by **HISPlayerManager**. They are not public so it’s necessary to create a custom script that inherits from **HISPlayerManager**.
 
-### 4.1 Overridable Functions
+### Overridable Functions
 
 These methods can be overridden to inject custom logic into the player's behavior when certain events are triggered.  
 **Important**: Always call `base.MethodName()` in the overridden method to preserve internal behavior.
@@ -202,11 +202,13 @@ These methods are triggered during playback transitions.
 
 - `EventPlaybackSeek(HISPlayerEventInfo eventInfo)`  
   Triggered when seeking to a new time position.  
+  |------|-------------|
   | Name | Description |
   |------|-------------|
   | `param1` | Old track position (ms) |
   | `param2` | New track position (ms) |
-
+  |------|-------------|
+  
 - `EventPlaybackBuffering(HISPlayerEventInfo eventInfo)`  
   Triggered when buffering occurs.
 
