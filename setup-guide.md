@@ -128,7 +128,7 @@ This action will be related to Unity’s Canvas. If there is not a Canvas create
 For the creation, select **GameObject > UI > Raw Image**. Once it is created, attach it to the stream controller component
 
 <p align="center">
-<img width="600" alt="image" src="https://github.com/HISPlayer/UnityWebGL-SDK/assets/47497948/5dcc7a3f-7de5-4e87-a5e3-3e08587360b4">
+<img width="816" height="597" alt="image" src="https://github.com/user-attachments/assets/7a2f6b4d-832b-43ff-97e8-2203e9d5b74b" />
 </p>
 
 ### <ins>RenderTexture</ins>
