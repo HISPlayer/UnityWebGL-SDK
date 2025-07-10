@@ -4,7 +4,7 @@
 2. [Structs](#Structs)
 3. [Enums](#Enums)
 4. [Functions](#Functions)
-   - [4.1. Overridable Functions](#Overridable-functions)
+   - 4.1. [Overridable Functions](#Overridable-functions)
      - [Events](#Events)
      - [Errors](#Errors)
    - [4.2. Non-Overridable Functions](#Non-overridable-functions)
