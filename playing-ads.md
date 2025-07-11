@@ -268,15 +268,15 @@ Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_I
 
 ### Non-virtual Functions
 
-#### protected float GetAdDuration(int playerIndex)
+#### float GetAdDuration(int playerIndex)
 Get the duration of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
-#### protected float GetAdRemainingTime(int playerIndex)
+#### float GetAdRemainingTime(int playerIndex)
 Get the remaining time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
-#### protected float GetAdCurrentTime(int playerIndex)
+#### float GetAdCurrentTime(int playerIndex)
 Get the current time of a certain advertisement in milliseconds (ms). The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
-#### protected void ChangeVideoContent(int playerIndex, string url, int resumePosition = 0, AdsProperties ads = null)
+#### void ChangeVideoContent(int playerIndex, string url, int resumePosition = 0, AdsProperties ads = null)
 Change the video’s url  of a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **urlIndex** is associated with the index of the element in the list of urls. The **resumePosition** is time position in milliseconds (ms) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null
 
