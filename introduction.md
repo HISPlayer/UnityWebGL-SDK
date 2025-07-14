@@ -9,7 +9,6 @@ For more information and the complete Documentation for all platforms, visit **[
 * DASH
 
 ### Supported Unity Versions
-* 2020
 * 2021
 * 2022
 * 2023
