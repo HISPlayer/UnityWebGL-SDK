@@ -21,16 +21,12 @@ It's also possible to import the [HISPlayer Sample](https://hisplayer.github.io/
 
 ## 1.1 Import package
 
-### HISPlayer SDK versions 3.4.0 and above
-
-The _HISPlayer Sample_ is included in the _HISPlayer SDK Unity Package_.
-
 Importing the package is the same as importing other normal packages in Unity. 
 Select the package of _HISPlayer SDK_ and import it.
 
 **Assets > Import Package > Custom Package > HISPlayerSDK unity package**
 
-Refer to [Import HISPlayer Sample](https://hisplayer.github.io/UnitySamples/#/hisplayer-sample) to know more about the HISPlayer Sample.
+The _HISPlayer Sample_ is included in the package. Refer to [Import HISPlayer Sample](https://hisplayer.github.io/UnitySamples/#/hisplayer-sample) to know more about the HISPlayer Sample.
 
 <p align="center">
 <img width=70% src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/c8ff9e55-524e-48f1-a323-95b00aa5c6c7">
@@ -40,20 +36,6 @@ In the case you don't want to include the HISPlayer Sample, please disable it fr
 
 <p align="center">
 <img width=60% src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/e9cb3d17-8adf-490f-b910-46dff943c870">
-</p>
-
-### HISPlayer SDK versions 3.3.0 and below
-
-Importing the package is the same as importing other normal packages in Unity. 
-Select the package of HISPlayer SDK and import it.
-
-**Assets > Import Package > Custom Package > HISPlayerSDK unity package**
-
-Only the SDK will be imported using HISPlayer SDK versions lower than 3.4.0. 
-Refer to [Import HISPlayer Sample](https://hisplayer.github.io/UnitySamples/#/hisplayer-sample) to know more about the _HISPlayer Sample_.
-
-<p align="center">
-<img width=70% src="https://github.com/HISPlayer/UnityAndroid-SDK/assets/47497948/7c52ba95-4420-4db3-972d-77930ce5cb9f">
 </p>
 
 <br>
