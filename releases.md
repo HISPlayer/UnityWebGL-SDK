@@ -8,70 +8,70 @@
 ### Version 4.8.0
 ##### July 7, 2025
 - [**Improvement**] Enhancement to InspectorGUI to dynamically show/hide certain options.
-- [**Added**] StartingBitrate moved from the general settings to the settings of each individual stream
-- [**Added**] Added TrackBitrateRange to select the bitrate range allowed in each stream
-- [**Added**] Added ResolutionMaxSize to select the resolution max size allowed in each stream
-- [**Added**] Added ResolutionMinSize to select the resolution min size allowed in each stream
-- [**Added**] Added SetMaxABRResolution and SetMinABRResolution to change the resolution settings allowed by the ABR in runtime
+- [**Added**] StartingBitrate moved from the general settings to the settings of each individual stream.
+- [**Added**] Added TrackBitrateRange to select the bitrate range allowed in each stream.
+- [**Added**] Added ResolutionMaxSize to select the resolution max size allowed in each stream.
+- [**Added**] Added ResolutionMinSize to select the resolution min size allowed in each stream.
+- [**Added**] Added SetMaxABRResolution and SetMinABRResolution to change the resolution settings allowed by the ABR in runtime.
 
 ### Version 4.7.0
 ##### March 3, 2025
-- [**Added**] GetPlaybackSpeedRate and SetPlaybackSpeedRate APIs
+- [**Added**] GetPlaybackSpeedRate and SetPlaybackSpeedRate APIs.
 
 ### Version 4.4.0
 ##### September 10, 2024
-- [**Added**] Release API is called automatically when stopping the Editor, changing scenes or closing the app
+- [**Added**] Release API is called automatically when stopping the Editor, changing scenes or closing the app.
 
 ### Version 4.3.0
 ##### August 8, 2024
 - [**Added**] New HISPlayer Video Uploader feature. Turn local videos into streaming videos such as HLS or DASH. This videos are going to be stored in our server for you. Please, on the Editor refer to:
-    - [HISPlayer Video Upload documentation](https://hisplayer.github.io/UnityVideoUpload/#/)
-- [**Improvement**] Optimized HISPlayer Settings log messages
-- [**Improvement**] Optimized Event and Error listeners
-- [**Improvement**] Optimized license checking
-- [**Improvement**] Optimized HISPlayer API function commentaries to be more clear
-- [**Improvement**] Optimized runtime log messages
-- [**Improvement**] Optimized video playback on Safari browser
+    - [HISPlayer Video Upload documentation](https://hisplayer.github.io/UnityVideoUpload/#/).
+- [**Improvement**] Optimized HISPlayer Settings log messages.
+- [**Improvement**] Optimized Event and Error listeners.
+- [**Improvement**] Optimized license checking.
+- [**Improvement**] Optimized HISPlayer API function commentaries to be more clear.
+- [**Improvement**] Optimized runtime log messages.
+- [**Improvement**] Optimized video playback on Safari browser.
   
 ### Version 3.4.1
 ##### April 23, 2024
-- [**Improvement**] Improvement of software robustness
+- [**Improvement**] Improvement of software robustness.
 
 ### Version 3.4.0
 ##### April 10, 2024
-- [**Added**] Multi stream support on Windows Editor
-- [**Added**] HISPLAYER_ERROR_PLATFORM_NOT_REGISTERED error event
-- [**Improvement**] Optimized initialization of the player
-- [**Improvement**] Optimized HISPlayer Settings
-    - A warning message will be displayed in case a field required by HISPlayer SDK is missing
+- [**Added**] Multi stream support on Windows Editor.
+- [**Added**] HISPLAYER_ERROR_PLATFORM_NOT_REGISTERED error event.
+- [**Improvement**] Optimized initialization of the player.
+- [**Improvement**] Optimized HISPlayer Settings.
+    - A warning message will be displayed in case a field required by HISPlayer SDK is missing.
 
 ### Version 3.3.0
 ##### January 25, 2024
 - [**Added**] API to change video content using the URL string as a parameter is added to multiplatform SDK:
-    - **ChangeVideoContent(int playerIndex, string url, int resumePosition = 0, AdsProperties ads = null)**
-- [**Improvement**] Optimized Unity logs improvement
-- [**Added**] WebGL Ads Insertion to multiplatform SDK
+    - **ChangeVideoContent(int playerIndex, string url, int resumePosition = 0, AdsProperties ads = null)**.
+- [**Improvement**] Optimized Unity logs improvement.
+- [**Added**] WebGL Ads Insertion to multiplatform SDK.
 
 ### Version 3.2.0
 ##### December 7, 2023
-- [**Added**] AutoTransition and LoopPlayback APIs to multiplatform SDK
-- [**Added**] Unity 2023 support
-- [**Added**] Error system
-- [**Added**] Seek event
+- [**Added**] AutoTransition and LoopPlayback APIs to multiplatform SDK.
+- [**Added**] Unity 2023 support.
+- [**Added**] Error system.
+- [**Added**] Seek event.
 
 ### Version 3.1.1
 ##### November 23, 2023
-- [**Improvement**] Improvement of software robustness
+- [**Improvement**] Improvement of software robustness.
 
 ### Version 3.1.0
 ##### October 11, 2023
-- [**Improvement**] Improvement of software robustness
+- [**Improvement**] Improvement of software robustness.
 
 ### Version 3.0.0 (Multiplatform SDK)
 ##### September 5, 2023
-The WebGL SDK is moved to multiplatform HISPlayerSDK (Android, iOS, macOS, WebGL, Windows)
+The WebGL SDK is moved to multiplatform HISPlayerSDK (Android, iOS, macOS, WebGL, Windows).
 
-Starting from version 3.0.0, the WebGL SDK is part of multiplatform SDK
+Starting from version 3.0.0, the WebGL SDK is part of multiplatform SDK.
 
 ### Version 1.14.0
 ##### October 25, 2023
