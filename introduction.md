@@ -8,6 +8,14 @@ For more information and the complete Documentation for all platforms, visit **[
 * HLS
 * DASH
 
+### Supported Subtitles
+* WebVTT
+* CEA-608/CEA-708
+* TTML
+* SRT
+* SSA/ASS
+* LRC
+
 ### Supported Unity Versions
 * 2021
 * 2022
