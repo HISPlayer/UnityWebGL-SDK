@@ -110,7 +110,7 @@ This action will be related to Unity’s Canvas. If there is not a Canvas create
 For the creation, select **GameObject > UI > Raw Image**. Once it is created, attach it to the stream controller component
 
 <p align="center">
-<img width="819" height="597" alt="image" src="https://github.com/user-attachments/assets/fda93ea3-72a7-4142-ad81-f93f0ce002a7" />
+<img width="60%" height="60%" alt="image" src="https://github.com/user-attachments/assets/fda93ea3-72a7-4142-ad81-f93f0ce002a7" />
 </p>
 
 ### <ins>RenderTexture</ins>
@@ -121,7 +121,7 @@ For creating it from zero, select **Assets > Create > Render Texutre** and then 
 Once all this process it’s done, associate the **RenderTexture** to the script component.
 
 <p align="center">
-<img width="824" height="596" alt="image" src="https://github.com/user-attachments/assets/41154693-08aa-4d74-8a70-c5a587723d37" />
+<img width="60%" height="60%" alt="image" src="https://github.com/user-attachments/assets/41154693-08aa-4d74-8a70-c5a587723d37" />
 </p>
 
 ## 2.3 Configure HISPlayer Properties
@@ -154,7 +154,7 @@ Use Multi Stream Properties to set all the configuration needed for multi stream
 * <span style="color:blue">**Resolution Min Size**</span>: Limits the tracks by minimum resolution. X = Min width (px), Y = Min height (px).
 
 <p align="center">
-<img width="776" height="748" alt="image" src="https://github.com/user-attachments/assets/429d95d0-bd09-4759-b9e0-7f217d3c7247" />
+<img width="60%" height="60%" alt="image" src="https://github.com/user-attachments/assets/429d95d0-bd09-4759-b9e0-7f217d3c7247" />
 </p>
 
 ## 2.4 Build and Run
