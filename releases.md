@@ -2,7 +2,7 @@
 
 ### Version 4.9.0
 ##### July 10, 2025
-- [**Added**] Added GetCaptionTrackList, GetCaptionCount, GetCaptionID, GetCaptionLanguage, EnableCaptions, SelectCaptionTrack APIs to get and select different caption tracks.
+- [**Added**] Added GetCaptionTrackList, GetCaptionCount, GetCaptionID, GetCaptionLanguage, EnableCaptions, SelectCaptionTrack APIs to get and select different caption tracks. Supported subtitle formats: WebVTT, TTML, CEA-608/CEA-708, SRT, SSA/ASS, LRC.
 - [**Added**] Added GetAudioTrackList, GetAudioCount, GetAudioID, GetAudioLanguage, SelectAudioTrack APIs to get and select different audio tracks.
 
 ### Version 4.8.0
