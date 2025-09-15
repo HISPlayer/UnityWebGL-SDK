@@ -1,5 +1,13 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.10.0
+##### September 11, 2025
+- [**Improvement**] Optimized RemoveStream after Stop.
+- [**Improvement**] Editor no longer clears console logs after stopping Play mode.
+- [**Improvement**] Improved log when releasing player.
+- [**Improvement**] Improved package architecture for multiple packages combination.
+- [**Improvement**] Enhanced HLS+AES stream handling to ensure reliable playback.
+
 ### Version 4.9.0
 ##### July 10, 2025
 - [**Added**] Added GetCaptionTrackList, GetCaptionCount, GetCaptionID, GetCaptionLanguage, EnableCaptions, SelectCaptionTrack APIs to get and select different caption tracks. Supported formats: WebVTT, TTML, CEA-608/CEA-708, SRT, SSA/ASS, LRC.
