@@ -2,7 +2,6 @@
 
 ### Version 4.10.0
 ##### September 11, 2025
-- [**Improvement**] Optimized RemoveStream after Stop.
 - [**Improvement**] Editor no longer clears console logs after stopping Play mode.
 - [**Improvement**] Improved log when releasing player.
 - [**Improvement**] Improved package architecture for multiple packages combination.
