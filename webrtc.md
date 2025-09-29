@@ -47,3 +47,16 @@ This event occurs whenever an internal playback has been paused.
 #### protected virtual void EventEndOfContent(HISPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HISPlayerEvent.HISPlayer_EVENT_END_OF_CONTENT** is triggered.
 This event occurs whenever an internal playback reaches the end of the video content.
+
+### Non-virtual functions
+These functions can’t be overridden and they can be used only inside the inherited script. If it’s needed to use some of these functions in the Unity scene, for example with buttons, it is needed to create a public function that connects the button with the API.
+
+#### void Play(int playerIndex)
+Play a certain stream giving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### void Pause(int playerIndex)
+Pause a certain stream giving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### void SetVolume(int playerIndex, float volume)
+Modify the volume of a certain stream giving a **playerIndex**. The **volume** of the track value ranges between 0.0f and 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+Call this API after having interaction with the web page/screen, otherwise audio will not play on WebGL due to browser autoplay policy.
