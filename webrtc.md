@@ -14,7 +14,7 @@ To use **WebRTC** in Unity, you must change the Player Mode in the Platform WebG
 
 When the WebRTC platform mode is enabled, the SDK is still managed by **HISPlayerManager**, but only a subset of the public API is supported.
 
-### Virtual Functions - These functions can be overriden
+### Virtual Functions - These functions can be overridden
 
 #### protected virtual void EventPlaybackReady(HISPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_READY** is triggered.
