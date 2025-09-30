@@ -7,7 +7,7 @@ For more information and the complete Documentation for all platforms, visit **[
 ### Video Delivery Formats
 * HLS
 * DASH
-* Web RTC
+* WebRTC
 
 ### Supported Subtitles
 * WebVTT
