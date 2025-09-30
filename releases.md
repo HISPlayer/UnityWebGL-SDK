@@ -1,5 +1,10 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.11.0
+##### September 26, 2025
+- [**Improvement**] Integrated new HTML5 SDK for WebRTC, compatible with Multiview.
+- [**Improvement**] Adjusted autoplay behavior on macOS editor to respect configuration instead of forcing playback automatically.
+
 ### Version 4.10.0
 ##### September 11, 2025
 - [**Improvement**] Editor no longer clears console logs after stopping Play mode.
