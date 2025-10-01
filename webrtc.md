@@ -1,5 +1,7 @@
 # HISPlayer WebRTC
 
+If you need **WebRTC** live streaming server, please **[contact us here](https://hisplayer.com/unity-video-player-webrtc-server/)**.
+
 ## Configuration
 
 To use **WebRTC** in Unity, you must change the Player Mode in the Platform WebGL settings:
@@ -10,7 +12,7 @@ To use **WebRTC** in Unity, you must change the Player Mode in the Platform WebG
 
 ---
 
-## WebRTCPlayer API
+## WebRTC Player API
 
 When the WebRTC platform mode is enabled, the SDK is still managed by **HISPlayerManager**, but only a subset of the public API is supported.
 
