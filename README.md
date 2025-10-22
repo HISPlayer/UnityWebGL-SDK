@@ -12,10 +12,7 @@ HISPlayer is the most advanced Unity video streaming player for WebGL, supportin
 >
 > Upload and host any video files to your HISPlayer account, converting them into HLS and DASH streaming URLs. You can stream all these videos using HISPlayer Unity SDK into Unity. **[Start your FREE trial here!](https://hisplayer.com/unity-asset-store-saas-registration/)**
 >
-> HISPlayer Unity Player SDK is included **for free**, allowing you to host your videos inside the **Unity Editor**.
-> 
->Tutorial:
-> * **[Host videos inside the Unity Editor](https://www.youtube.com/watch?v=vSI7U6TjHqI)**
+> Our Video Hosting Platform includes this advanced WebGL Video Player SDK **for free**.
 >
 > We can help you with the full **end-to-end** video content delivery and playback.
 
