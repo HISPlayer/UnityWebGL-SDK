@@ -18,11 +18,10 @@ HISPlayer is the most advanced Unity video streaming player for WebGL, supportin
 
 <br>
 
-## [REQUEST A DEMO HERE!](https://hisplayer.com/demo-unity-player-sdk-github/?utm_source=github&utm_medium=referral&utm_campaign=unitygithub&utm_content=20200211--unitydemocontact)
+## SDK - Premium Version!
+*If you need a WebRTC live streaming server, ad insertion, WebGPU, or dedicated support and customization, [please contact us here](https://hisplayer.com/contact-hisplayer-unity-sdk-premium/) to get the **HISPlayer Unity SDK Premium Version**.*
 
 <br>
-
-
 
 
 <sub><sup>Related Keywords:
