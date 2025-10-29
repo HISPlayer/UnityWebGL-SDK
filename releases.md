@@ -1,5 +1,10 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.12.0
+##### October 29, 2025
+- [**Added**] GetProgramDateTimeEpoch and GetProgramDateTimeString APIs to obtain the EXT-X-PROGRAM-DATE-TIME information from HLS streams.
+- [**Improvement**] Improved the UI appearance of HISPlayerManager in the inspector.
+
 ### Version 4.11.0
 ##### September 26, 2025
 - [**Improvement**] Integrated new HTML5 SDK for WebRTC, compatible with Multiview.
