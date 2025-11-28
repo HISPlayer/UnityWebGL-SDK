@@ -218,7 +218,7 @@ This event occurs whenever an internal playback has been sought to a new time po
 
 #### protected virtual void EventPlaybackSeekBegin(HISPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK_BEGIN** is triggered.
-This event occurs whenever an internal playback has been sought to a new time position.
+This event occurs when an internal playback begins seeking to a new time position.
 
 <table>
   <tr>
@@ -237,7 +237,7 @@ This event occurs whenever an internal playback has been sought to a new time po
 
 #### protected virtual void EventPlaybackSeekEnd(HISPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK_END** is triggered.
-This event occurs whenever an internal playback has been sought to a new time position.
+This event occurs after an internal playback has finished seeking to a new time position.
 
 <table>
   <tr>
