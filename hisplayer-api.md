@@ -63,7 +63,9 @@ The following public APIs are provided by **HISPlayerManager**
     * **HISPLAYER_EVENT_PLAYBACK_PLAY**
     * **HISPLAYER_EVENT_PLAYBACK_PAUSE**
     * **HISPLAYER_EVENT_PLAYBACK_STOP**
-    * **HISPLAYER_EVENT_PLAYBACK_SEEK**
+    * **HISPLAYER_EVENT_PLAYBACK_SEEK**  [OBSOLETE]
+    * **HISPLAYER_EVENT_PLAYBACK_SEEK_BEGIN**
+    * **HISPLAYER_EVENT_PLAYBACK_SEEK_END**
     * **HISPLAYER_EVENT_VOLUME_CHANGE**
     * **HISPLAYER_EVENT_END_OF_PLAYLIST**
     * **HISPLAYER_EVENT_AUTO_TRANSITION**
@@ -195,9 +197,47 @@ This event occurs whenever an internal playback has been paused.
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_STOP** is triggered.
 This event occurs whenever an internal playback has been stopped.
 
-#### protected virtual void EventPlaybackSeek(HISPlayerEventInfo eventInfo)
+#### protected virtual void EventPlaybackSeek(HISPlayerEventInfo eventInfo) [OBSOLETE]
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK** is triggered.
 This event occurs whenever an internal playback has been sought to a new time position.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>param1</td>
+    <td>Value of the old track position in milliseconds.</td>
+  </tr>
+   <tr>
+    <td>param2</td>
+    <td>Value of the new track position in milliseconds.</td>
+  </tr>
+</table>
+
+#### protected virtual void EventPlaybackSeekBegin(HISPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK_BEGIN** is triggered.
+This event occurs when an internal playback begins seeking to a new time position.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>param1</td>
+    <td>Value of the old track position in milliseconds.</td>
+  </tr>
+   <tr>
+    <td>param2</td>
+    <td>Value of the new track position in milliseconds.</td>
+  </tr>
+</table>
+
+#### protected virtual void EventPlaybackSeekEnd(HISPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK_END** is triggered.
+This event occurs after an internal playback has finished seeking to a new time position.
 
 <table>
   <tr>
@@ -386,8 +426,8 @@ Pause a certain stream giving a **playerIndex**. The **playerIndex** is associat
 #### void Stop(int playerIndex)
 Stop a certain stream giving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
-#### void Seek(int playerIndex, int milliseconds)
-Seek a certain stream to a certain time giving a **playerIndex** and the time of the track to be sought in **milliseconds**. The stream is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+#### void Seek(int playerIndex, long time)
+Seek a certain stream to a certain time giving a **playerIndex**. For **non-live content**: seeks to the specified time in milliseconds. For **live content**: seeks to the specified epoch time (WebGL only). The stream is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### void SetVolume(int playerIndex, float volume)
 Modify the volume of a certain stream giving a **playerIndex**. The **volume** of the track value ranges between 0.0f and 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
@@ -500,3 +540,16 @@ Get the epoch time (in seconds since 1970) of the first EXT-X-PROGRAM-DATE-TIME 
 
 #### string GetProgramDateTimeString(int playerIndex)
 Get the EXT-X-PROGRAM-DATE-TIME value seen in the manifest of a certain player. Only available for HLS manifests that have the tag information. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### void SetLogLevel(LogLevel logLevel)
+Establishes the amount of logs to be shown.
+**logLevel**: The log level to be used: 0->DEBUG, 1->INFO, 2->WARNING, 3->ERROR, 4->NONE
+
+#### void SetLogSystemColorized(bool show)
+Enables or disables colorized logs in the HISPlayer log system. Only available for Unity Editor.
+
+#### void SetLogSystemPlatform(bool show)
+Enables or disables colorized logs in the HISPlayer log system.
+
+#### void SetLogSystemTimestamp(bool show)
+Enables or disables timestamps in the HISPlayer log system.
