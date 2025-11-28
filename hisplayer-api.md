@@ -63,7 +63,7 @@ The following public APIs are provided by **HISPlayerManager**
     * **HISPLAYER_EVENT_PLAYBACK_PLAY**
     * **HISPLAYER_EVENT_PLAYBACK_PAUSE**
     * **HISPLAYER_EVENT_PLAYBACK_STOP**
-    * **HISPLAYER_EVENT_PLAYBACK_SEEK** (deprecated)
+    * **HISPLAYER_EVENT_PLAYBACK_SEEK**  [OBSOLETE]
     * **HISPLAYER_EVENT_PLAYBACK_SEEK_BEGIN**
     * **HISPLAYER_EVENT_PLAYBACK_SEEK_END**
     * **HISPLAYER_EVENT_VOLUME_CHANGE**
@@ -197,8 +197,46 @@ This event occurs whenever an internal playback has been paused.
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_STOP** is triggered.
 This event occurs whenever an internal playback has been stopped.
 
-#### protected virtual void EventPlaybackSeek(HISPlayerEventInfo eventInfo)
+#### protected virtual void EventPlaybackSeek(HISPlayerEventInfo eventInfo) [OBSOLETE]
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK** is triggered.
+This event occurs whenever an internal playback has been sought to a new time position.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>param1</td>
+    <td>Value of the old track position in milliseconds.</td>
+  </tr>
+   <tr>
+    <td>param2</td>
+    <td>Value of the new track position in milliseconds.</td>
+  </tr>
+</table>
+
+#### protected virtual void EventPlaybackSeekBegin(HISPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK_BEGIN** is triggered.
+This event occurs whenever an internal playback has been sought to a new time position.
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>param1</td>
+    <td>Value of the old track position in milliseconds.</td>
+  </tr>
+   <tr>
+    <td>param2</td>
+    <td>Value of the new track position in milliseconds.</td>
+  </tr>
+</table>
+
+#### protected virtual void EventPlaybackSeekEnd(HISPlayerEventInfo eventInfo)
+Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK_END** is triggered.
 This event occurs whenever an internal playback has been sought to a new time position.
 
 <table>
