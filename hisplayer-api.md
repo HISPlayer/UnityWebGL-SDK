@@ -63,7 +63,9 @@ The following public APIs are provided by **HISPlayerManager**
     * **HISPLAYER_EVENT_PLAYBACK_PLAY**
     * **HISPLAYER_EVENT_PLAYBACK_PAUSE**
     * **HISPLAYER_EVENT_PLAYBACK_STOP**
-    * **HISPLAYER_EVENT_PLAYBACK_SEEK**
+    * **HISPLAYER_EVENT_PLAYBACK_SEEK** (deprecated)
+    * **HISPLAYER_EVENT_PLAYBACK_SEEK_BEGIN**
+    * **HISPLAYER_EVENT_PLAYBACK_SEEK_END**
     * **HISPLAYER_EVENT_VOLUME_CHANGE**
     * **HISPLAYER_EVENT_END_OF_PLAYLIST**
     * **HISPLAYER_EVENT_AUTO_TRANSITION**
@@ -500,3 +502,16 @@ Get the epoch time (in seconds since 1970) of the first EXT-X-PROGRAM-DATE-TIME 
 
 #### string GetProgramDateTimeString(int playerIndex)
 Get the EXT-X-PROGRAM-DATE-TIME value seen in the manifest of a certain player. Only available for HLS manifests that have the tag information. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### void SetLogLevel(LogLevel logLevel)
+Establishes the amount of logs to be shown.
+**logLevel**: The log level to be used: 0->DEBUG, 1->INFO, 2->WARNING, 3->ERROR, 4->NONE
+
+#### void SetLogSystemColorized(bool show)
+Enables or disables colorized logs in the HISPlayer log system. Only available for Unity Editor.
+
+#### void SetLogSystemPlatform(bool show)
+Enables or disables colorized logs in the HISPlayer log system.
+
+#### void SetLogSystemTimestamp(bool show)
+Enables or disables timestamps in the HISPlayer log system.
