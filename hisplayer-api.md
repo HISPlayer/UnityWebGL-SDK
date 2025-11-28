@@ -426,8 +426,8 @@ Pause a certain stream giving a **playerIndex**. The **playerIndex** is associat
 #### void Stop(int playerIndex)
 Stop a certain stream giving a **playerIndex**. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
-#### void Seek(int playerIndex, int milliseconds)
-Seek a certain stream to a certain time giving a **playerIndex** and the time of the track to be sought in **milliseconds**. The stream is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+#### void Seek(int playerIndex, long time)
+Seek a certain stream to a certain time giving a **playerIndex**. For **non-live content**: seeks to the specified time in milliseconds. For **live content**: seeks to the specified epoch time (WebGL only). The stream is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### void SetVolume(int playerIndex, float volume)
 Modify the volume of a certain stream giving a **playerIndex**. The **volume** of the track value ranges between 0.0f and 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
