@@ -2,7 +2,7 @@
 
 ### Version 4.14.0
 ##### December 18, 2025
-- [**Added**] Integrated new stream management functions: AddStream, RemoveStream, AddVideoContent, and RemoveVideoContent to allow dynamic handling of streams and video content at runtime.
+- [**Added**] Added AddStream, RemoveStream, AddVideoContent, and RemoveVideoContent APIs to allow dynamic handling of streams and video content at runtime.
 - [**Improvement**] Improved volume change event handling to ensure HISPLAYER_EVENT_VOLUME_CHANGE is triggered consistently and behaves uniformly across all supported platforms.
 - [**Improvement**] Updated GetProgramDateTimeEpoch to return the exact Epoch time of the current frame, ensuring consistent behavior across WebGL, Windows, Android, iOS, and macOS.
 - [**Improvement**] Improved seek event handling to ensure HISPLAYER_EVENT_PLAYBACK_SEEK_END is consistently triggered across all platforms, including WebGL.
