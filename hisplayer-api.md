@@ -433,6 +433,18 @@ Seek a certain stream to a certain time giving a **playerIndex**. For **non-live
 Modify the volume of a certain stream giving a **playerIndex**. The **volume** of the track value ranges between 0.0f and 1.0f. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 Call this API after having interaction with the web page/screen, otherwise audio will not play on WebGL due to browser autoplay policy.
 
+#### void AddStream(StreamProperties newStream)
+Add a new stream to the list multiStreamProperties. The stream must be added using this function instead of changing the list manually.
+
+#### void AddVideoContent(int playerIndex, string url, HISPlayerMimeTypes mimeType = HISPlayerMimeTypes.URL_EXTENSION (optional))
+Add new content to a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **url** is the link to the new video. Please, make sure the string is correct. This function supports local file paths. The parameter **mimeType** is optional and indicates which MIME type will be used for the new url.
+
+#### void RemoveStream(int playerIndex)
+Remove a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
+
+#### void RemoveVideoContent(int playerIndex, int urlIndex)
+Remove content from a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.  The **urlIndex** is associated with the index of the element in the list of URLs.
+
 #### void ChangeVideoContent(int playerIndex, int urlIndex, int resumePosition = 0 (optional), AdsProperties ads = null (optional))
 Change the video’s URL of a certain player. The next playback will start paused if **autoPlay** is disabled. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **urlIndex** is associated with the index of the element in the list of URLs. The **resumePosition** parameter is optional and is the time position in second(s) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null.
 
