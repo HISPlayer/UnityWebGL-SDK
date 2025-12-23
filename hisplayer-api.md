@@ -198,6 +198,7 @@ Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_P
 This event occurs whenever an internal playback has been stopped.
 
 #### protected virtual void EventPlaybackSeek(HISPlayerEventInfo eventInfo) [OBSOLETE]
+This method has been deprecated and replaced by **EventPlaybackSeekEnd**.
 Override this method to add custom logic when **HISPlayerEvent.HISPLAYER_EVENT_PLAYBACK_SEEK** is triggered.
 This event occurs whenever an internal playback has been sought to a new time position.
 
