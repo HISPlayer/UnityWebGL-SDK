@@ -10,7 +10,7 @@
 ### Version 4.13.0
 ##### November 28, 2025
 - [**Added**] Support for seeking using epoch time in HLS live streams.
-- [**Added**] New playback seek events: HISPLAYER_EVENT_PLAYBACK_SEEK_BEGIN and HISPLAYER_EVENT_PLAYBACK_SEEK_END with their respective overridable functions.
+- [**Added**] New playback seek events: HISPLAYER_EVENT_PLAYBACK_SEEK_BEGIN and HISPLAYER_EVENT_PLAYBACK_SEEK_END with their respective overridable functions. HISPLAYER_EVENT_PLAYBACK_SEEK and the overridable function are deprecated.
 - [**Added**] Customizable logging system allowing configuration of logLevel, showPlatform, showColorized, and showTimestamp.
 
 ### Version 4.12.0
