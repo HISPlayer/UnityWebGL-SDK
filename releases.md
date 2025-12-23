@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.14.1
+##### December 23, 2025
+- [**Improvement**] Updated eventType of EventPlaybackSeekEnd to output HISPLAYER_EVENT_PLAYBACK_SEEK_END.
+
 ### Version 4.14.0
 ##### December 18, 2025
 - [**Added**] Added AddStream, RemoveStream, AddVideoContent, and RemoveVideoContent APIs to allow dynamic handling of streams and video content at runtime.
