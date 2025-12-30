@@ -289,7 +289,7 @@ This event occurs whenever a caption’s text has been generated.
   </tr>
 </table>
 
-#### protected virtual void EventAutoTransition(HISPlayerCaptionElement subtitlesInfo)
+#### protected virtual void EventAutoTransition(HISPlayerEventInfo eventInfo)
 Override this method to add custom logic when **HISPlayerEvent.HISPlayerEvent.HISPLAYER_EVENT_AUTO_TRANSITION** is triggered.
 This event occurs when the playback has changed to the next video in the playlist automatically.
 
