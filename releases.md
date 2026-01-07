@@ -24,7 +24,7 @@
 
 ### Version 4.11.0
 ##### September 26, 2025
-- [**Improvement**] Integrated new HTML5 SDK for WebRTC, compatible with Multiview.
+- [**Added**] WebRTC player mode.
 - [**Improvement**] Adjusted autoplay behavior on macOS editor to respect configuration instead of forcing playback automatically.
 
 ### Version 4.10.0
