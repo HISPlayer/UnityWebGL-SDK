@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.14.3
+##### January 8, 2026
+- [**Added**] SDK import and compilation for Unity Linux editor.
+
 ### Version 4.14.1
 ##### December 23, 2025
 - [**Improvement**] Updated eventType of EventPlaybackSeekEnd to output HISPLAYER_EVENT_PLAYBACK_SEEK_END.
