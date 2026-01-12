@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.14.4
+##### January 9, 2026
+- [**Improvement**] Updated playerIndex of HISPlayerEventInfo after removing and adding streams.
+
 ### Version 4.14.3
 ##### January 8, 2026
 - [**Added**] SDK import and compilation for Unity Linux editor.
