@@ -4,10 +4,10 @@ If you need **WebRTC** live streaming server, please **[contact us here](https:/
 
 ## Configuration
 
-To use **WebRTC** in Unity, you must change the Player Mode in the Platform WebGL settings:
+To use **WebRTC** in Unity, you must change the WebGL Mode in the Platform WebGL settings:
 
 <p align="center">
-  <img width="466" height="74" alt="image" src="https://github.com/user-attachments/assets/68b6267d-89c0-4ab3-bb42-64f7d530a9f3" />
+  <img alt="image" src="https://github.com/user-attachments/assets/e9bce49f-4a5f-4e55-8a51-ede30cd0d61d" />
 </p>
 
 ---
