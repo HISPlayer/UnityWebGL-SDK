@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.14.5
+##### January 15, 2026
+- [**Improvement**] Updated param1 of EventVolumeChange to return the correct volume value.
+
 ### Version 4.14.4
 ##### January 9, 2026
 - [**Improvement**] Updated playerIndex of HISPlayerEventInfo after removing and adding streams.
