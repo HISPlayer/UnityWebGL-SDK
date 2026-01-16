@@ -162,3 +162,10 @@ Now the configuration it’s done, so it’s time to **Build And Run**. Open **B
 <p align="center">
 <img src="./assets/build-run.png" width=60%>
 </p>
+
+## Windows Editor and Unity 6
+If you are using Unity and Windows editor, open your Unity Project Settings > Player Settings for Editor, please change the Graphics API for Windows to **Direct3D11**, then close and reopen your Unity project.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/c8f839b5-d044-481d-9350-7885217a94e3">
+</p>
