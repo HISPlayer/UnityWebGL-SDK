@@ -3,6 +3,7 @@
 ### Version 4.15.0
 ##### January 21, 2026
 - [**Added**] Windows editor supports Direct3D12 Graphics API and Auto Graphics API in Unity6.
+- [**Improvement**] Optimized HISPLAYER_EVENT_PLAYBACK_SEEK_END and EventPlaybackSeekEnd for Windows editor.
 
 ### Version 4.14.5
 ##### January 15, 2026
