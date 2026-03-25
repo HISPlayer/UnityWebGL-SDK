@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.16.0
+##### March 25, 2026
+- [**Improvement**] Updated HISPlayer WebGL video player inside the package for better video performance.
+
 ### Version 4.15.0
 ##### January 21, 2026
 - [**Added**] Windows editor supports Direct3D12 Graphics API and Auto Graphics API in Unity6.
