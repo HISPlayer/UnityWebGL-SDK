@@ -1,5 +1,10 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.17.0
+##### April 7, 2026
+- [**Improvement**] Updated stereoscopic shader to improve rendering behavior and added support for Side-by-Side and Top-Bottom layouts.
+- [**Improvement**] Improved playback state synchronization to ensure correct status.
+
 ### Version 4.16.0
 ##### March 25, 2026
 - [**Improvement**] Updated HISPlayer WebGL video player inside the package for better video performance.
