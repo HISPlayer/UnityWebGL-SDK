@@ -476,7 +476,7 @@ Get the width of the current track of a certain stream. The **playerIndex** is a
 #### int GetVideoHeight(int playerIndex)
 Get the height of the current track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
-#### int GetTrackID(int playerIndex, int trackIndex)
+#### string GetTrackID(int playerIndex, int trackIndex)
 Get the ID of a certain track of a certain stream. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
 #### int GetTrackCount(int playerIndex)
