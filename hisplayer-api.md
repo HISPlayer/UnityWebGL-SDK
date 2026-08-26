@@ -455,6 +455,9 @@ Add a new stream to the list multiStreamProperties. The stream must be added usi
 #### void AddVideoContent(int playerIndex, string url, HISPlayerMimeTypes mimeType = HISPlayerMimeTypes.URL_EXTENSION (optional))
 Add new content to a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **url** is the link to the new video. Please, make sure the string is correct. This function supports local file paths. The parameter **mimeType** is optional and indicates which MIME type will be used for the new url.
 
+#### void AddVideoContent(int playerIndex, string url, HTTPHeaderList httpHeaderList, HISPlayerMimeTypes mimeType = HISPlayerMimeTypes.URL_EXTENSION (optional))
+Add new content to a certain player including custom HTTP headers. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The **url** is the link to the new video. Please, make sure the string is correct. This function supports local file paths. The **httpHeaderList** contains the custom HTTP headers that will be attached to the requests for this content. The parameter **mimeType** is optional and indicates which MIME type will be used for the new url.
+
 #### void RemoveStream(int playerIndex)
 Remove a certain player. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list.
 
@@ -466,6 +469,9 @@ Change the video’s URL of a certain player. The next playback will start pause
 
 #### void ChangeVideoContent(int playerIndex, string url, int resumePosition = 0 (optional), AdsProperties ads = null (optional))
 Change the video’s URL of a certain player given a new URL. The next playback will start paused if **autoPlay** is disabled. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The parameter **url** is the link to the new video. Please, make sure the new URL is correctly written. The **resumePosition** parameter is optional and is the time position in second(s) where the new content is starting the playback, default value is 0. The **AdsProperties** is an ads properties to use when loading the new content, default value is null.
+
+#### void ChangeVideoContent(int playerIndex, string url, HTTPHeaderList httpHeaderList)
+Change the video's URL of a certain player given a new URL including custom HTTP headers. The next playback will start paused if **autoPlay** is disabled. The **playerIndex** is associated with the index of the element of **Multi Stream Properties**, e.g. the index 0 is the element 0 in the list. The parameter **url** is the link to the new video. Please, make sure the new URL is correctly written. This function supports local file paths. This function will replace the Playlist with the new URL. The **httpHeaderList** contains the custom HTTP headers that will be attached to the requests for this content.
 
 #### long GetVideoPosition(int playerIndex)
 Provides information about the timeline position in milliseconds, of the current video of a certain player. The playerIndex is associated with the index of the element of Multi Stream Properties, e.g. the index 0 is the element 0 in the list.
