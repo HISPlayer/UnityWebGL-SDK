@@ -120,6 +120,21 @@ The following public APIs are provided by **HISPlayerManager**
 * **public struct HISPlayerCaptionElement**: The information of the triggered event turns into caption’s format.
    * **public int playerIndex**: The index of the player where the event is triggered.
    * **public string language**: The next generated caption text.
+ 
+* **public struct HTTPHeader**: Information for a custom HTTP header:
+    * **public string key**: Key of the HTTP header.
+    * **public string value**: Value of the HTTP header.
+
+* **public class HTTPHeaderList**: Wrapper class for a list of custom HTTP headers.
+    * **public List \<HTTPHeader\> headers**: List of HTTP headers.
+    * **public int Count (Read-only)**: Number of HTTP headers.
+    * **public void Add(string key, string value)**: Adds a new HTTP header given a **key** and a **value**.
+    * **public void Add(HTTPHeader header)**: Adds an existing **HTTPHeader**.
+    * **public bool Remove(string key)**: Removes the first header matching the given **key**. Returns true if a header was removed.
+    * **public bool Remove(HTTPHeader header)**: Removes a specific **HTTPHeader**. Returns true if the header was removed.
+    * **public void Clear()**: Removes all HTTP headers.
+    * **public bool Contains(string key)**: Returns true if a header with the given **key** exists.
+    * **public string Get(string key)**: Returns the value of the header matching the given **key**, or null if it does not exist.
 
 * **public enum LogLevel**: The current logging level to filter which log messages are output.
   * **ERROR** : Indicates critical errors that may prevent the application from functioning correctly.
