@@ -3,6 +3,7 @@
 - [HISPlayer API](/hisplayer-api.md)
 - [WebGL Templates](/webgl-templates.md)
 - [Custom Shaders for Linear Color Space](/shaders.md)
+- [Custom HTTP Headers](/custom-http-headers.md)
 - [Playing Ads](/playing-ads.md)
 - [WebRTC](/webrtc.md)
 - [Unity URP](/unity-urp.md)
