@@ -1,5 +1,9 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
+### Version 4.19.2
+##### November XX, 2026
+- 
+
 ### Version 4.19.0
 ##### August 26, 2026
 - [**Added**] Custom HTTP Authorization Headers support.
