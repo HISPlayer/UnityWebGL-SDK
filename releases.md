@@ -1,8 +1,12 @@
 # HISPlayer Unity WebGL SDK Release Notes
 
 ### Version 4.19.2
-##### November XX, 2026
-- 
+##### November 20, 2026
+- [**Improvement**] Improvement of software robustness.
+
+### Version 4.19.1
+##### October 8, 2026
+- [**Improvement**] Improvement of software robustness.
 
 ### Version 4.19.0
 ##### August 26, 2026
